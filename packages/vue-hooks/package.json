@@ -1,6 +1,6 @@
 {
-  "name": "@cqfe/utils",
-  "description": "toolkit for front end developer",
+  "name": "@cqfe/vue-hooks",
+  "description": "vue3 hooks",
   "version": "0.2.1",
   "private": false,
   "main": "lib/index.js",
@@ -21,5 +21,7 @@
     "prebuild": "tsc --build --clean",
     "build": "tsc --build"
   },
-  "gitHead": "b5ea5813c0146322bfe2fb60d803d5abb761ca0d"
+  "dependencies": {
+    "vue": "^3.0.5"
+  }
 }

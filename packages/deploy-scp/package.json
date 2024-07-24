@@ -1,6 +1,7 @@
 {
   "name": "@cqfe/deploy-scp",
   "version": "0.2.1",
+  "description": "Deploy files to remote server via scp",
   "private": false,
   "bin": {
     "sdeploy": "bin/index.js"
@@ -28,5 +29,5 @@
     "prebuild": "tsc --build --clean",
     "build": "tsc --build"
   },
-  "gitHead": "ceb88ecf858b6088280b08c0eaac37036e243d3a"
+  "gitHead": "b5ea5813c0146322bfe2fb60d803d5abb761ca0d"
 }
