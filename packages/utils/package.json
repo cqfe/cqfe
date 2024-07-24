@@ -1,0 +1,23 @@
+{
+  "name": "@llleo/utils",
+  "version": "0.0.1",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "author": "leo <434330692@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "scripts": {
+    "test": "jest",
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build"
+  }
+}

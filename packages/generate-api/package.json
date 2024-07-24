@@ -1,0 +1,33 @@
+{
+  "name": "@llleo/generate-api",
+  "version": "0.0.1",
+  "description": "Open API toolkits for JS",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib",
+    "templates",
+    "README.md"
+  ],
+  "keywords": [
+    "util"
+  ],
+  "author": "leo <434330692@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@readme/openapi-parser": "^2.6.0",
+    "lodash": "^4.17.21"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  }
+}

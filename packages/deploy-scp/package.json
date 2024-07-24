@@ -1,0 +1,27 @@
+{
+  "name": "@llleo/deploy-scp",
+  "version": "0.0.1",
+  "private": false,
+  "bin": {
+    "sdeploy": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "README.md"
+  ],
+  "types": "index.d.ts",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "lodash": "^4.17.21",
+    "signale": "^1.4.0"
+  },
+  "author": "leo <434330692@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build"
+  }
+}

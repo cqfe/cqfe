@@ -1,0 +1,46 @@
+{
+  "name": "llleo",
+  "version": "0.0.0",
+  "description": "some personal front end develop utils",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "husky init",
+    "test": "lerna run test",
+    "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
+    "build": "lerna run build",
+    "release": "lerna publish --conventional-commits",
+    "prepare": "husky"
+  },
+  "development": {},
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-typescript": "^7.23.0",
+    "@pixas/prettier-config": "^0.12.0",
+    "@types/jest": "^29.5.12",
+    "@types/lodash": "^4.14.185",
+    "@types/signale": "^1.4.7",
+    "husky": "^9.1.1",
+    "jest": "^29.7.0",
+    "lerna": "^8.1.7",
+    "lint-staged": "^15.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "util",
+    "hook"
+  ],
+  "author": "leo",
+  "license": "MIT",
+  "prettier": "@pixas/prettier-config",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier -c --write"
+    ]
+  }
+}
