@@ -1,6 +1,6 @@
 {
   "name": "@llleo/generate-api",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Open API toolkits for JS",
   "private": false,
   "main": "lib/index.js",
