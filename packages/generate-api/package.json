@@ -1,5 +1,5 @@
 {
-  "name": "@llleo/generate-api",
+  "name": "@cqfe/generate-api",
   "version": "0.1.0",
   "description": "Open API toolkits for JS",
   "private": false,
@@ -10,11 +10,15 @@
     "templates",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:leoDreamer/cqfe.git"
+  },
+  "author": "leoDreamer <leoDreamer@qq.com>",
   "keywords": [
     "util"
   ],
-  "author": "leo <434330692@qq.com>",
-  "homepage": "",
+  "homepage": "https://github.com/leoDreamer/cqfe",
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -26,8 +30,5 @@
     "@readme/openapi-parser": "^2.6.0",
     "lodash": "^4.17.21"
   },
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  }
+  "gitHead": "c04a6165a23a8850b85609d751985715fd0259ff"
 }
