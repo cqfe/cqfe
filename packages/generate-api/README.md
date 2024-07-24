@@ -2,13 +2,13 @@
 
 ## Description
 
-generate api for axios, based on swagger json.support `Swagger2.0`&`OpenAPI3.0`.
+Generate api for axios, based on swagger json.support `Swagger2.0`&`OpenAPI3.0`.
 
 ## Useage
 
-1. install `npm install @cqfe/generate-api`
+1. Install `npm install @cqfe/generate-api`
 
-2. create a script file, and write the following code:
+2. Create a script file, and write the following code:
 
 ```js
 // scripts/gen-api.mjs

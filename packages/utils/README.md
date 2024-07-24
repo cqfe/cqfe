@@ -1,10 +1,10 @@
 # `utils`
 
-> some usefull utils
+> Some useful utils
 
 ## Usage
 
-1. install `npm install @cqfe/utils`
+1. Install `npm install @cqfe/utils`
 
 ```
 const utils = require('utils');

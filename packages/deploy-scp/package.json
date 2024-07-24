@@ -28,5 +28,5 @@
     "prebuild": "tsc --build --clean",
     "build": "tsc --build"
   },
-  "gitHead": "c04a6165a23a8850b85609d751985715fd0259ff"
+  "gitHead": "ceb88ecf858b6088280b08c0eaac37036e243d3a"
 }

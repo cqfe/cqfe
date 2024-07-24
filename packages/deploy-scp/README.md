@@ -6,10 +6,10 @@ A front end deploy tool for scp. init config file in your project root directory
 
 ## Useage
 
-1. global install tool `sudo npm install @cqfe/deploy-scp -g`
-2. init config file `sdeploy init`
-3. edit config file to your need
-4. deploy `sdeploy -n xxx(your namespace)`
+1. Global install tool `sudo npm install @cqfe/deploy-scp -g`
+2. Init config file `sdeploy init`
+3. Edit config file to your need
+4. Deploy `sdeploy -n xxx(your namespace)`
 
 ## Config Field
 
