@@ -19,7 +19,8 @@
   "scripts": {
     "test": "jest",
     "prebuild": "tsc --build --clean",
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "publish": "npm publish --access public"
   },
-  "gitHead": "b5ea5813c0146322bfe2fb60d803d5abb761ca0d"
+  "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
 }

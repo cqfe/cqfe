@@ -7,7 +7,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:leoDreamer/cqfe.git"
+    "url": "git+ssh://git@github.com/leoDreamer/cqfe.git"
   },
   "author": "leoDreamer <leoDreamer@qq.com>",
   "files": [
@@ -19,9 +19,11 @@
   "scripts": {
     "test": "jest",
     "prebuild": "tsc --build --clean",
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "vue": "^3.0.5"
-  }
+  },
+  "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
 }

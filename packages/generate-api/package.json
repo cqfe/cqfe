@@ -24,11 +24,12 @@
     "test": "jest",
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
     "prebuild": "tsc --build --clean",
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "@readme/openapi-parser": "^2.6.0",
     "lodash": "^4.17.21"
   },
-  "gitHead": "b5ea5813c0146322bfe2fb60d803d5abb761ca0d"
+  "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
 }
