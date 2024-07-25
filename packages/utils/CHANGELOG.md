@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.4.0...@cqfe/utils@0.5.0) (2024-07-25)
+
+
+### Features
+
+* retry util ([4631bd3](https://github.com/leoDreamer/cqfe/commit/4631bd344d5372624f437c106fa66f93cfa5bb8f))
+
+
+
+
+
 # [0.4.0](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.3.0...@cqfe/utils@0.4.0) (2024-07-25)
 
 
