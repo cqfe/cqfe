@@ -9,7 +9,7 @@ const state = reactive(new Map());
  */
 export function useEvent() {
   // 触发事件
-  function emitEvent(eventCode: string, param: any) {
+  function emitEvent<T>(eventCode: string, param: T) {
     state.set(eventCode, param);
   }
 

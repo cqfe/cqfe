@@ -16,7 +16,10 @@
   },
   "author": "leoDreamer <leoDreamer@qq.com>",
   "keywords": [
-    "util"
+    "generate",
+    "swagger",
+    "openapi",
+    "api"
   ],
   "homepage": "https://github.com/leoDreamer/cqfe",
   "license": "MIT",

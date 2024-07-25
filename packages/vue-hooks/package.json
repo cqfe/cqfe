@@ -14,6 +14,11 @@
     "lib",
     "README.md"
   ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "hooks"
+  ],
   "homepage": "",
   "license": "MIT",
   "scripts": {

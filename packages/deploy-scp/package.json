@@ -11,6 +11,10 @@
     "templates",
     "README.md"
   ],
+  "keywords": [
+    "scp",
+    "deploy"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:leoDreamer/cqfe.git"
