@@ -1,0 +1,11 @@
+{
+  "name": "@cqfe/docs",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@cqfe/vue-hooks": "^0.4.0"
+  }
+}
