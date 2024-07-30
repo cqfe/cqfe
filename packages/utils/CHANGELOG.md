@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.5.1...@cqfe/utils@0.5.2) (2024-07-30)
+
+
+### Bug Fixes
+
+* pkg scripts modify ([e71d242](https://github.com/leoDreamer/cqfe/commit/e71d242779e2d4211e6d88377533523b83338563))
+
+
+
+
+
 ## [0.5.1](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.5.0...@cqfe/utils@0.5.1) (2024-07-30)
 
 **Note:** Version bump only for package @cqfe/utils

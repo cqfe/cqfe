@@ -1,7 +1,7 @@
 {
   "name": "@cqfe/utils",
   "description": "toolkit for front end developer",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": false,
   "main": "lib/index.js",
   "types": "index.d.ts",
