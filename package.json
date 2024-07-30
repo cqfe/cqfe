@@ -11,7 +11,8 @@
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
     "build": "lerna run build",
     "release": "lerna publish --conventional-commits",
-    "prepare": "husky"
+    "prepare": "husky",
+    "dev:doc": "lerna run docs:dev --scope=@cqfe/docs"
   },
   "development": {},
   "devDependencies": {
@@ -23,7 +24,7 @@
     "@types/signale": "^1.4.7",
     "husky": "^9.1.1",
     "jest": "^29.7.0",
-    "jsdom": "^24.1.1",
+    "jest-environment-jsdom": "^29.7.0",
     "lerna": "^8.1.7",
     "lint-staged": "^15.2.0",
     "rimraf": "^6.0.1",

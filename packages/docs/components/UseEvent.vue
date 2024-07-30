@@ -4,6 +4,7 @@
 </template>
 
 <script setup>
+debugger
 import { useEvent } from '@cqfe/vue-hooks';
 import { ref } from 'vue';
 

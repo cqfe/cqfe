@@ -11,10 +11,9 @@ Simple event bus,by vue3 reactive,used when you need to communicate between comp
 
 ## Example
 
-<UseEvent />
+<!-- <UseEvent /> -->
 
 ## Useage
-
 ```js-vue
 {{code.content}}
 ```

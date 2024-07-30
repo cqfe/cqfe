@@ -1,10 +1,10 @@
-# `utils`
+# `VueHooks`
 
-> Some useful utils
+> Some useful vue hooks
 
 ## Usage
 
-1. Install `npm install @cqfe/utils`
+1. Install `npm install @cqfe/vue-hooks`
 
 ## Hooks
 
