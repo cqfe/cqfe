@@ -28,7 +28,7 @@
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
     "prebuild": "tsc --build --clean",
     "build": "tsc --build",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access=public"
   },
   "dependencies": {
     "@readme/openapi-parser": "^2.6.0",
