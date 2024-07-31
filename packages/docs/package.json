@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/docs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "docs:dev": "vitepress dev",
@@ -9,6 +9,6 @@
     "link:hooks": "ln -s /Users/leo/Documents/projects/self/cqfe/packages/vue-hooks /Users/leo/Documents/projects/self/cqfe/packages/docs/node_modules/@cqfe/"
   },
   "dependencies": {
-    "@cqfe/vue-hooks": "^0.5.0"
+    "@cqfe/vue-hooks": "^0.6.0"
   }
 }
