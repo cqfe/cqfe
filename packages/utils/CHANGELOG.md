@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.5.2...@cqfe/utils@0.7.0) (2024-07-31)
+
+
+### Features
+
+* **utils:** debounce throttle ([6e0cb5b](https://github.com/leoDreamer/cqfe/commit/6e0cb5b90f3b292f41cb263405b8789b047b7baa))
+
+
+
+
+
 # [0.6.0](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.5.2...@cqfe/utils@0.6.0) (2024-07-31)
 
 
