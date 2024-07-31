@@ -25,7 +25,7 @@
     "test": "jest",
     "prebuild": "tsc --build --clean",
     "build": "tsc --build",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access=public"
   },
   "dependencies": {
     "vue": "^3.0.5"

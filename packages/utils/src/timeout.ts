@@ -57,3 +57,52 @@ export function setAccuracyInterval(callback: () => void, delay: number): Accura
     },
   };
 }
+
+/**
+ * 节流函数，限制函数在一定时间内只执行一次
+ *
+ * @param fn 需要节流的函数
+ * @param delay 节流时间间隔，单位毫秒
+ * @returns 返回节流后的函数
+ */
+export function throttle(fn: () => void, delay: number) {
+  let timer: NodeJS.Timeout | null;
+  let lastCallTime = 0;
+
+  return function () {
+    const now = Date.now();
+    const remaining = delay - (now - lastCallTime);
+
+    if (remaining <= 0) {
+      fn.apply(null, arguments as unknown as any);
+      lastCallTime = now;
+    } else if (!timer) {
+      timer = setTimeout(() => {
+        fn.apply(null, arguments as unknown as any);
+        lastCallTime = Date.now();
+        timer = null;
+      }, remaining);
+    }
+  };
+}
+
+/**
+ * 防抖函数，用于延迟执行函数，避免高频触发
+ *
+ * @param fn 要执行的函数
+ * @param delay 延迟时间（毫秒）
+ * @returns 返回防抖后的函数
+ */
+export function debounce(fn: () => void, delay: number) {
+  let timer: NodeJS.Timeout | null;
+
+  return function () {
+    // 清除之前设置的定时器
+    if (timer) clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      // 延迟结束后执行函数
+      fn.apply(null, arguments as unknown as any);
+    }, delay);
+  };
+}
