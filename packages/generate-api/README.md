@@ -21,7 +21,7 @@ generateApi.default({
   // output api js file path
   outPut: path.resolve(process.cwd(), './apis.js'),
   // basic service path, used for string writing template, content should be an instance of axios
-  servicePath: '@/utils/services',
+  servicePath: 'import service from "@/utils/request"',
   // be true if you want to generate jsDoc for request body
   generateRequestDoc: true,
   // be true if you want to generate jsDoc for response body, not work still now
