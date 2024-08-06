@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.5.2...@cqfe/utils@0.8.0) (2024-08-06)
+
+
+### Features
+
+* modify jsdoc array ([1151b7a](https://github.com/leoDreamer/cqfe/commit/1151b7a435000d6f7c4ae7d2a454138a837bea7f))
+* utils toFirstUpper ([9697f6b](https://github.com/leoDreamer/cqfe/commit/9697f6b8655e451bfc278372554570e83afd508c))
+* **utils:** debounce throttle ([6e0cb5b](https://github.com/leoDreamer/cqfe/commit/6e0cb5b90f3b292f41cb263405b8789b047b7baa))
+
+
+
+
+
 # [0.7.0](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.5.2...@cqfe/utils@0.7.0) (2024-07-31)
 
 
