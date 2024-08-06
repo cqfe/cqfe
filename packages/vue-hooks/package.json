@@ -7,7 +7,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/leoDreamer/cqfe.git"
+    "url": "https://github.com/leoDreamer/cqfe.git"
   },
   "author": "leoDreamer <leoDreamer@qq.com>",
   "files": [
