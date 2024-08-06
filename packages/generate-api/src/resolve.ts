@@ -19,32 +19,52 @@ export interface IResolveRequest {
 
 const names = [] as string[];
 
-function parseBody(obj: Record<string, any>, parent = 'body') {
+function parseArray(obj: Record<string, any>, key?: string, description?: string): IFieldItem {
+  const retArr = [] as string[];
+  function loop(item: Record<string, any>) {
+    delete item.xml;
+    delete item.enum;
+    delete item.default;
+    switch (item.type) {
+      case 'object':
+        loop(item.properties);
+        break;
+      case 'array':
+        loop(item.items);
+        break;
+      default:
+        Object.keys(item).forEach((key) => {
+          if (typeof item[key] === 'string') {
+            retArr.push(item[key]);
+          } else {
+            retArr.push(`${key}: ${item[key].type}`);
+          }
+        });
+        break;
+    }
+  }
+  loop(obj);
+  const type = JSON.stringify(retArr).includes(':') ? `{${retArr.join(',')}}[]` : `${retArr.join(',')}[]`;
+  return { type, key: key || '', description: description || '' };
+}
+
+function parseBody(obj: Record<string, any>, parent = 'body', arrayContent?: Array<string>) {
   if (parent.split('.').length > 3) return [];
   const ret: Array<IFieldItem> = [];
-  debugger;
-  if (obj.type && typeof obj.type === 'string') {
+  if (obj?.type && typeof obj.type === 'string') {
     switch (obj.type) {
       case 'object':
         ret.push(
           {
             key: parent,
-            type: obj.type,
+            type: 'Object',
             description: '',
           },
           ...parseBody(obj.properties, parent),
         );
         break;
       case 'array':
-        debugger;
-        ret.push(
-          {
-            key: parent,
-            type: obj.type,
-            description: '',
-          },
-          ...parseBody(obj.items, `${parent}[]`),
-        );
+        ret.push(parseArray(obj, parent));
         break;
       case 'number':
       case 'boolean':
@@ -66,20 +86,13 @@ function parseBody(obj: Record<string, any>, parent = 'body') {
         ret.push(
           {
             key: (parent ? `${parent}.` : '') + key,
-            type: item.type,
+            type: 'Object',
             description: '',
           },
           ...parseBody(item.properties, `${parent}.${key}`),
         );
       } else if (item.type === 'array') {
-        ret.push(
-          {
-            key: (parent ? `${parent}.` : '') + key,
-            type: item.type,
-            description: '',
-          },
-          ...parseBody(item.items, `${parent}.${key}[]`),
-        );
+        ret.push(parseArray(item, `${parent}.${key}`, obj[key]?.description));
       } else {
         ret.push({
           key: (parent ? `${parent}.` : '') + key,
@@ -98,21 +111,21 @@ export function resolveRequest(parameters: Array<any>) {
     query: [
       {
         key: 'query',
-        type: 'object',
+        type: 'Object',
         description: '查询条件',
       },
     ],
     path: [
       {
         key: 'path',
-        type: 'object',
+        type: 'Object',
         description: '路由参数',
       },
     ],
     formData: [
       {
         key: 'formData',
-        type: 'object',
+        type: 'Object',
         description: '表单数据',
       },
     ],
@@ -130,11 +143,7 @@ export function resolveRequest(parameters: Array<any>) {
         });
         break;
       case 'query':
-        ret.query?.push({
-          key: `query.${param.name}`,
-          description: param.description,
-          type: param.type || param?.schema?.type,
-        });
+        ret.query?.push(...parseBody(param, `query.${param.name}`, param.description));
         break;
       case 'formData':
         ret.formData?.push({
