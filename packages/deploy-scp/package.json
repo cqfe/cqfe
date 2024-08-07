@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/deploy-scp",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "description": "Deploy files to remote server via scp",
   "private": false,
   "publishConfig": {
