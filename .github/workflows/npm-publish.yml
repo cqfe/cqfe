@@ -18,10 +18,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           registry-url: https://registry.npmjs.org/
-      - name: Config git metadata
-        run: |
-          git config --global user.name 'leo'
-          git config --global user.email 'leolichuan@qq.com'
+      # - name: Config git metadata
+      #   run: |
+      #     git config --global user.name 'leo'
+      #     git config --global user.email 'leolichuan@qq.com'
       - run: npm ci
       - run: npm run build
       - run: npm run publish

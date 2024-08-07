@@ -3,6 +3,9 @@
   "description": "toolkit for front end developer",
   "version": "0.8.4",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/index.js",
   "types": "index.d.ts",
   "repository": {

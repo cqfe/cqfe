@@ -3,6 +3,9 @@
   "version": "0.5.2",
   "description": "Open API toolkits for JS",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/index.js",
   "types": "index.d.ts",
   "files": [

@@ -5,6 +5,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "postinstall": "husky init",
     "test": "lerna run test",
