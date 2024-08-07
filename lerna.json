@@ -6,6 +6,7 @@
   "command": {
     "version": {
       "conventionalCommits": true,
+      "noGitTagVersion": true,
       "message": "chore(release): release packages"
     }
   }
