@@ -22,7 +22,6 @@
   "homepage": "",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
     "prebuild": "tsc --build --clean",
     "build": "tsc --build",
     "publish": "npm publish --access=public"
