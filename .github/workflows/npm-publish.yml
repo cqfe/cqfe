@@ -22,7 +22,7 @@ jobs:
       #   run: |
       #     git config --global user.name 'leo'
       #     git config --global user.email 'leolichuan@qq.com'
-      - run: git checkout --.
+      - run: git checkout --
       - run: npm ci
       - run: npm run build
       - run: npm run publish
