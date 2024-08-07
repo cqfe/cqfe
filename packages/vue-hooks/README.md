@@ -2,7 +2,7 @@
 
 > Some useful vue hooks
 
-[Detail Document](http://cqfe.leoli.site)
+# [Detail Document](http://cqfe.leoli.site)
 
 ## Usage
 
