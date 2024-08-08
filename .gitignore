@@ -150,3 +150,4 @@ apis-**.js
 lib
 local-**.json
 coverage
+es

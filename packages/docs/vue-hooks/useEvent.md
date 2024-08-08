@@ -14,7 +14,7 @@ email: <leolichuan@qq.com>
 
 ## Description
 
-Simple event bus,by vue3 reactive,used when you need to communicate between components
+简单的事件总线，使用vue3的`reactive`实现，可以用来做跨组件通信
 
 ## Example
 

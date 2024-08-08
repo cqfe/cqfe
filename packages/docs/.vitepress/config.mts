@@ -14,6 +14,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'VueHooks', link: '/vue-hooks' },
+      { text: 'VueComponents', link: '/vue-components' },
       { text: 'Utils', link: '/utils' },
     ],
 
@@ -31,7 +32,12 @@ export default defineConfig({
       '/utils/': [
         {
           text: 'Utils',
-          items: [{ text: 'xx', link: '/vue-hooks/useEvent' }],
+          items: [
+            { text: 'String', link: '/utils/string' },
+            { text: 'Request', link: '/utils/request' },
+            { text: 'Timeout', link: '/utils/timeout' },
+            { text: 'Url', link: '/utils/url' },
+          ],
         },
       ],
     },

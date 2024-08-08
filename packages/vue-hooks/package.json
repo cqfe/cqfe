@@ -7,6 +7,7 @@
     "access": "public"
   },
   "main": "lib/index.js",
+  "module": "es/index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   "author": "leoDreamer <leolichuan@qq.com>",
   "files": [
     "lib",
+    "es",
     "README.md"
   ],
   "keywords": [
@@ -27,7 +29,9 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "tsc --build --clean",
-    "build": "tsc --build",
+    "build:es": "tsc --module esnext --outDir es",
+    "build:cjs": "tsc --module commonjs --outDir lib",
+    "build": "npm run build:cjs && npm run build:es",
     "publish": "npm publish --access=public"
   },
   "dependencies": {

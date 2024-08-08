@@ -7,7 +7,7 @@
 
 ## Description
 
-simple event bus,by vue3 reactive,used when you need to communicate between components
+单页面的rem适配方案，支持动态修改根元素字体大小
 
 ## Example
 

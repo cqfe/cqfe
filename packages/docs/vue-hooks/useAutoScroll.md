@@ -7,7 +7,7 @@
 
 ## Description
 
-Auto scroll and paused when mouse move,used when you need to auto scroll a list.
+元素重复自动滚动，可控制暂停，开始。hover时会暂停滚动。
 
 ## Example
 
