@@ -22,7 +22,8 @@
     "type": "git",
     "url": "git+https://github.com/leoDreamer/cqfe.git"
   },
-  "author": "leoDreamer <leoDreamer@qq.com>",
+  "bugs": "https://github.com/leoDreamer/cqfe/issues",
+  "author": "leoDreamer <leolichuan@qq.com>",
   "types": "index.d.ts",
   "dependencies": {
     "commander": "^12.1.0",

@@ -4,10 +4,14 @@
 </template>
 
 <script setup>
-import * as xx from '@cqfe/vue-hooks';
+import { useEvent } from '@cqfe/vue-hooks';
 import { ref } from 'vue';
-debugger
-const { useEvent } = xx;
+// function useEvent() {
+//     return {
+//         onEvent: () => { },
+//         emitEvent: () => { },
+//     }
+// }
 const { emitEvent, onEvent } = useEvent();
 const eventMsgRef = ref(0);
 onEvent('clicked', (val) => {

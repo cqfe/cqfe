@@ -8,6 +8,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "scripts": {
     "postinstall": "husky init",
     "test": "lerna run test",
@@ -15,7 +16,7 @@
     "build": "lerna run build",
     "release": "lerna publish --conventional-commits",
     "prepare": "husky",
-    "dev:doc": "lerna run docs:dev --scope=@cqfe/docs",
+    "dev:docs": "lerna run docs:dev --scope=@cqfe/docs",
     "publish": "lerna run publish"
   },
   "development": {},
@@ -34,7 +35,7 @@
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "vitepress": "^1.3.1"
+    "vitepress": "^1.3.2"
   },
   "keywords": [
     "util",

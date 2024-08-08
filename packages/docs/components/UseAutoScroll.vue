@@ -18,7 +18,7 @@ import { ref } from 'vue';
 const refList = ref(null)
 const { scrollStart, scrollStop } = useAutoScroll(refList)
 </script>
-<style scoped>
+<style>
 .list {
     height: 100px;
     width: 50px;

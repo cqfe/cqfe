@@ -17,7 +17,8 @@
     "type": "git",
     "url": "git+https://github.com/leoDreamer/cqfe.git"
   },
-  "author": "leoDreamer <leoDreamer@qq.com>",
+  "bugs": "https://github.com/leoDreamer/cqfe/issues",
+  "author": "leoDreamer <leolichuan@qq.com>",
   "keywords": [
     "generate",
     "swagger",
