@@ -10,7 +10,6 @@
   },
   "type": "module",
   "scripts": {
-    "postinstall": "husky init",
     "test": "lerna run test",
     "build": "lerna run build",
     "release": "lerna publish --conventional-commits",
