@@ -1,12 +1,13 @@
 {
   "name": "@cqfe/utils",
   "description": "toolkit for front end developer",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "main": "lib/index.js",
+  "module": "es/index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
@@ -17,13 +18,16 @@
   "homepage": "https://leodreamer.github.io/cqfe/",
   "files": [
     "lib",
+    "es",
     "README.md"
   ],
   "license": "MIT",
   "scripts": {
     "test": "jest",
     "prebuild": "tsc --build --clean",
-    "build": "tsc --build",
+    "build:es": "tsc --module esnext --outDir es",
+    "build:cjs": "tsc --module commonjs --outDir lib",
+    "build": "npm run build:cjs && npm run build:es",
     "publish": "npm publish --access=public"
   },
   "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"

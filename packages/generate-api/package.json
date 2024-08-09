@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/generate-api",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Open API toolkits for JS",
   "private": false,
   "publishConfig": {
