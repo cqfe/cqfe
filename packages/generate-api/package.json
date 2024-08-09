@@ -25,7 +25,7 @@
     "openapi",
     "api"
   ],
-  "homepage": "https://github.com/leoDreamer/cqfe",
+  "homepage": "https://leodreamer.github.io/cqfe/",
   "license": "MIT",
   "scripts": {
     "test": "jest",

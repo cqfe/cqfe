@@ -14,11 +14,11 @@
   },
   "bugs": "https://github.com/leoDreamer/cqfe/issues",
   "author": "leoDreamer <leolichuan@qq.com>",
+  "homepage": "https://leodreamer.github.io/cqfe/",
   "files": [
     "lib",
     "README.md"
   ],
-  "homepage": "",
   "license": "MIT",
   "scripts": {
     "test": "jest",

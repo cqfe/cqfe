@@ -23,6 +23,7 @@
     "url": "git+https://github.com/leoDreamer/cqfe.git"
   },
   "bugs": "https://github.com/leoDreamer/cqfe/issues",
+  "homepage": "https://leodreamer.github.io/cqfe/",
   "author": "leoDreamer <leolichuan@qq.com>",
   "types": "index.d.ts",
   "dependencies": {
@@ -30,7 +31,6 @@
     "lodash": "^4.17.21",
     "signale": "^1.4.0"
   },
-  "homepage": "",
   "license": "MIT",
   "scripts": {
     "test": "jest",
