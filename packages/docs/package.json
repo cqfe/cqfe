@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview",
-    "link:hooks": "ln -s /Users/leo/Documents/projects/self/cqfe/packages/vue-hooks /Users/leo/Documents/projects/self/cqfe/packages/docs/node_modules/@cqfe/"
+    "preview": "vitepress preview"
   },
   "dependencies": {
     "@cqfe/vue-hooks": "^0.11.0"

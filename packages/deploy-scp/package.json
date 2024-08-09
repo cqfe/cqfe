@@ -36,7 +36,7 @@
     "test": "jest",
     "prebuild": "tsc --build --clean",
     "build": "tsc --build",
-    "publish": "npm publish --access=public"
+    "publish": "npm publish --access public"
   },
   "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
 }

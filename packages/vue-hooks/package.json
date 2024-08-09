@@ -32,7 +32,7 @@
     "build:es": "tsc --module esnext --outDir es",
     "build:cjs": "tsc --module commonjs --outDir lib",
     "build": "npm run build:cjs && npm run build:es",
-    "publish": "npm publish --access=public"
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "vue": "^3.0.5"

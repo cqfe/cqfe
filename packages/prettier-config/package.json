@@ -1,0 +1,32 @@
+{
+  "name": "@cqfe/prettier-config",
+  "version": "1.0.0",
+  "description": "prettier config used by cqfe team",
+  "author": "leoDreamer <leolichuan@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoDreamer/cqfe.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "preversion": "npm run build",
+    "publish": "npm publish --access public"
+  },
+  "dependencies": {
+    "prettier": "^3.0.0"
+  },
+  "devDependencies": {}
+}

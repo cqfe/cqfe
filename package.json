@@ -17,7 +17,8 @@
     "dev:docs": "lerna run dev --scope=@cqfe/docs",
     "publish": "lerna run publish",
     "version": "lerna version --no-git-tag-version",
-    "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix"
+    "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
+    "prepare": "husky"
   },
   "development": {},
   "devDependencies": {
