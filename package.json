@@ -17,6 +17,7 @@
     "release": "lerna publish --conventional-commits",
     "prepare": "husky",
     "dev:docs": "lerna run docs:dev --scope=@cqfe/docs",
+    "build:docs": "lerna run docs:build --scope=@cqfe/docs",
     "publish": "lerna run publish"
   },
   "development": {},

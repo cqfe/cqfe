@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref, onBeforeMount } from 'vue';
 
 /**
  * 将像素值转换为 rem 值
@@ -40,7 +40,10 @@ export function useRem(baseFontSize = 16, baseWidth = 1920, baseHeight = 1080) {
     };
     document.documentElement.style.fontSize = scaleInfo.value.fontSize + 'px';
   }
-  setRootFontSize();
+
+  onBeforeMount(() => {
+    setRootFontSize();
+  });
 
   // resize后重新设置rem
   onMounted(() => {
