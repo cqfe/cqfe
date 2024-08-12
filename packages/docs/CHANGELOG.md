@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2024-08-12)
+
+### Features
+
+- lint packages ([8e8615d](https://github.com/leoDreamer/llleo/commit/8e8615da178357d9bde09d6ccdf02b4387b3d538))
+
+## 0.0.1 (2024-08-07)
+
+### Bug Fixes
+
+- pkg scripts modify ([e71d242](https://github.com/leoDreamer/llleo/commit/e71d242779e2d4211e6d88377533523b83338563))
+
+### Features
+
+- vitepress docs ([99d4fac](https://github.com/leoDreamer/llleo/commit/99d4fac7c0485563292a41abbc00c598acec9c61))
+
 # 0.6.0 (2024-08-12)
 
 ### Features
