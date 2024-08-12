@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2024-08-12)
+
+### Features
+
+- lint packages ([8e8615d](https://github.com/leoDreamer/cqfe/commit/8e8615da178357d9bde09d6ccdf02b4387b3d538))
+
+## 0.0.1 (2024-08-07)
+
+### Bug Fixes
+
+- pkg scripts modify ([e71d242](https://github.com/leoDreamer/cqfe/commit/e71d242779e2d4211e6d88377533523b83338563))
+
+### Features
+
+- hooks useRem ([72da0c8](https://github.com/leoDreamer/cqfe/commit/72da0c860f47f427fd3b27a3e397d450b10ade1f))
+- init ([d2d41a9](https://github.com/leoDreamer/cqfe/commit/d2d41a966d92444e3f0267f2686bc845e78317d5))
+- modify jsdoc array ([1151b7a](https://github.com/leoDreamer/cqfe/commit/1151b7a435000d6f7c4ae7d2a454138a837bea7f))
+- some git change ([2aefd12](https://github.com/leoDreamer/cqfe/commit/2aefd1214b954adbc26ede4323ac4f7b45a3451e))
+- vue hooks ([fe13204](https://github.com/leoDreamer/cqfe/commit/fe13204857ae8910efa920dbc4cbcc47321068ae))
+
 # 0.9.0 (2024-08-12)
 
 ### Features
