@@ -15,7 +15,7 @@
     "release": "lerna publish --conventional-commits",
     "dev:docs": "lerna run dev --scope=@cqfe/docs",
     "publish": "lerna publish from-package --yes",
-    "version": "lerna version --no-git-tag-version",
+    "version": "lerna version patch",
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
     "prepare": "husky"
   },
