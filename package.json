@@ -14,7 +14,7 @@
     "build": "lerna run build",
     "release": "lerna publish --conventional-commits",
     "dev:docs": "lerna run dev --scope=@cqfe/docs",
-    "publish": "lerna run publish",
+    "publish": "lerna run publish --parallel=1",
     "version": "lerna version --no-git-tag-version",
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
     "prepare": "husky"
