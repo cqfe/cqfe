@@ -1,0 +1,7 @@
+es
+lib
+bin
+*.d.ts
+coverage
+packages/**/test/*.js
+packages/docs/componentsCode

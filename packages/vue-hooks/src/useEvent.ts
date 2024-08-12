@@ -19,7 +19,7 @@ export function useEvent() {
       // 使用 watchEffect 监听事件总线中的事件变化
       const data = state.get(eventCode);
       if (data !== undefined) {
-        callback.call(null, data);
+        callback(data);
         // 清除事件，避免重复处理
         state.delete(eventCode);
       }

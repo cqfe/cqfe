@@ -22,7 +22,10 @@ export function loadScript(url: string) {
     const script = document.createElement('script');
     script.src = url;
     script.onload = () => resolve(true);
-    script.onerror = (err) => reject(new Error(`Script load error: ${url}`));
+    script.onerror = (err) => {
+      console.error(err);
+      reject(new Error(`Script load error: ${url}`));
+    };
     document.head.appendChild(script);
   });
 }

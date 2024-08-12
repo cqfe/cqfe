@@ -10,7 +10,7 @@ describe('request test', () => {
           if (times === 3) {
             resolve('success');
           } else {
-            reject('error');
+            reject(new Error('error'));
           }
         }, 0);
       });
@@ -25,7 +25,7 @@ describe('request test', () => {
       return new Promise((resolve, reject) => {
         times++;
         setTimeout(() => {
-          reject('error');
+          reject(new Error('error'));
         }, 0);
       });
     };

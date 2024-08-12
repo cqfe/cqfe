@@ -48,7 +48,7 @@ function parseArray(obj: Record<string, any>, key?: string, description?: string
   return { type, key: key || '', description: description || '' };
 }
 
-function parseBody(obj: Record<string, any>, parent = 'body', arrayContent?: Array<string>) {
+function parseBody(obj: Record<string, any>, parent = 'body') {
   if (parent.split('.').length > 3) return [];
   const ret: Array<IFieldItem> = [];
   if (obj?.type && typeof obj.type === 'string') {
@@ -143,7 +143,7 @@ export function resolveRequest(parameters: Array<any>) {
         });
         break;
       case 'query':
-        ret.query?.push(...parseBody(param, `query.${param.name}`, param.description));
+        ret.query?.push(...parseBody(param, `query.${param.name}`));
         break;
       case 'formData':
         ret.formData?.push({

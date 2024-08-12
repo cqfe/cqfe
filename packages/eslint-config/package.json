@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prebuild": "tsc --build --clean",
     "preversion": "npm run build",
     "publish": "npm publish --access public"
   },

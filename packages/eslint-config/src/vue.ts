@@ -76,7 +76,7 @@ module.exports = {
         'unicorn/filename-case': [
           'error',
           {
-            case: 'kebabCase',
+            case: 'camelCase',
           },
         ],
         quotes: 'off',
@@ -110,7 +110,7 @@ module.exports = {
         'unicorn/filename-case': [
           'error',
           {
-            case: 'kebabCase',
+            case: 'pascalCase',
           },
         ],
         // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
@@ -170,7 +170,7 @@ module.exports = {
     'unicorn/filename-case': [
       'error',
       {
-        case: 'kebabCase',
+        case: 'camelCase',
       },
     ],
     quotes: [

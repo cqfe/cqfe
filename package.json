@@ -44,7 +44,13 @@
   "author": "leo",
   "license": "MIT",
   "homepage": "https://leodreamer.github.io/cqfe/",
-  "prettier": "@pixas/prettier-config",
+  "prettier": "@cqfe/prettier-config",
+  "stylelint": {
+    "extends": "@cqfe/stylelint-config"
+  },
+  "eslintConfig": {
+    "extends": "@cqfe/eslint-config"
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"

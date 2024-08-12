@@ -10,7 +10,7 @@ export interface AccuracyTimerRes {
  * @returns 返回一个 AccuracyTimerRes 对象，包含取消定时器的 cancel 方法
  */
 export function setAccuracyTimeout(callback: () => void, delay: number): AccuracyTimerRes {
-  let startTime = performance.now();
+  const startTime = performance.now();
   let timer: number;
 
   function loop() {
@@ -41,7 +41,7 @@ export function setAccuracyInterval(callback: () => void, delay: number): Accura
   let timer: number;
 
   function loop() {
-    let currentTime = performance.now();
+    const currentTime = performance.now();
     if (currentTime - startTime >= delay) {
       callback();
       startTime = currentTime;
@@ -65,20 +65,20 @@ export function setAccuracyInterval(callback: () => void, delay: number): Accura
  * @param delay 节流时间间隔，单位毫秒
  * @returns 返回节流后的函数
  */
-export function throttle(fn: () => void, delay: number) {
+export function throttle<T>(fn: (...args: T[]) => void, delay: number) {
   let timer: NodeJS.Timeout | null;
   let lastCallTime = 0;
 
-  return function () {
+  return function <K extends T>(...args: K[]) {
     const now = Date.now();
     const remaining = delay - (now - lastCallTime);
 
     if (remaining <= 0) {
-      fn.apply(null, arguments as unknown as any);
+      fn(...args);
       lastCallTime = now;
     } else if (!timer) {
       timer = setTimeout(() => {
-        fn.apply(null, arguments as unknown as any);
+        fn(...args);
         lastCallTime = Date.now();
         timer = null;
       }, remaining);
@@ -93,16 +93,16 @@ export function throttle(fn: () => void, delay: number) {
  * @param delay 延迟时间（毫秒）
  * @returns 返回防抖后的函数
  */
-export function debounce(fn: () => void, delay: number) {
+export function debounce<T>(fn: (...args: T[]) => void, delay: number) {
   let timer: NodeJS.Timeout | null;
 
-  return function () {
+  return function <K extends T>(...args: K[]) {
     // 清除之前设置的定时器
     if (timer) clearTimeout(timer);
 
     timer = setTimeout(() => {
       // 延迟结束后执行函数
-      fn.apply(null, arguments as unknown as any);
+      fn(...args);
     }, delay);
   };
 }
