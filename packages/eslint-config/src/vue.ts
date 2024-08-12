@@ -7,6 +7,7 @@ module.exports = {
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
+    requireConfigFile: false,
     ecmaFeatures: {
       jsx: true,
     },
@@ -101,6 +102,8 @@ module.exports = {
         'standard',
         'prettier',
         'plugin:vue/vue3-essential',
+        'plugin:vue/vue3-strongly-recommended',
+        'plugin:vue/vue3-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
       ],
