@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.14.1 (2024-08-12)
+
+### Features
+
+- lint packages ([8e8615d](https://github.com/leoDreamer/cqfe/commit/8e8615da178357d9bde09d6ccdf02b4387b3d538))
+
+## 0.0.1 (2024-08-07)
+
+### Bug Fixes
+
+- pkg scripts modify ([e71d242](https://github.com/leoDreamer/cqfe/commit/e71d242779e2d4211e6d88377533523b83338563))
+
+### Features
+
+- init ([d2d41a9](https://github.com/leoDreamer/cqfe/commit/d2d41a966d92444e3f0267f2686bc845e78317d5))
+- modify jsdoc array ([1151b7a](https://github.com/leoDreamer/cqfe/commit/1151b7a435000d6f7c4ae7d2a454138a837bea7f))
+- retry util ([4631bd3](https://github.com/leoDreamer/cqfe/commit/4631bd344d5372624f437c106fa66f93cfa5bb8f))
+- some git change ([2aefd12](https://github.com/leoDreamer/cqfe/commit/2aefd1214b954adbc26ede4323ac4f7b45a3451e))
+- utils toFirstUpper ([9697f6b](https://github.com/leoDreamer/cqfe/commit/9697f6b8655e451bfc278372554570e83afd508c))
+- **utils:** debounce throttle ([6e0cb5b](https://github.com/leoDreamer/cqfe/commit/6e0cb5b90f3b292f41cb263405b8789b047b7baa))
+- vue hooks ([fe13204](https://github.com/leoDreamer/cqfe/commit/fe13204857ae8910efa920dbc4cbcc47321068ae))
+
 # 0.14.0 (2024-08-12)
 
 ### Features
