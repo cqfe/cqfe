@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.2...@cqfe/docs@0.7.3) (2024-08-13)
+
+### Bug Fixes
+
+- doc ([2c7580d](https://github.com/leoDreamer/llleo/commit/2c7580d9fbb170008ae50e9915baf7884319eb19))
+
 ## [0.7.2](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.1...@cqfe/docs@0.7.2) (2024-08-13)
 
 ### Features
