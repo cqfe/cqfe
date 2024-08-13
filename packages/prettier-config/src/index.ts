@@ -8,6 +8,7 @@ module.exports = {
   jsxSingleQuote: false,
   trailingComma: 'all',
   bracketSpacing: true,
+  eslintIntegration: false,
   // jsxBracketSameLine: false, // [Deprecated v2.4.0](https://prettier.io/docs/en/options.html#deprecated-jsx-brackets)
   bracketSameLine: false,
   arrowParens: 'always',
