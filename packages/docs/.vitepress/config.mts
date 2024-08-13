@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'CQFE Docs',
   description: 'cqfe docs',
-  base: '/cqfe/',
+  // base: '/cqfe/',
   // vite: {
   //   ssr: {
   //     noExternal: ['@cqfe/vue-hooks'],
