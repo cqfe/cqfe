@@ -10,6 +10,7 @@
   "types": "index.d.ts",
   "files": [
     "lib",
+    "es",
     "templates",
     "README.md"
   ],
@@ -31,7 +32,9 @@
     "test": "jest",
     "lint": "eslint . --ext=.ts,.tsx,.js,.jsx --fix",
     "prebuild": "tsc --build --clean",
-    "build": "tsc --build",
+    "build:es": "tsc --module esnext --outDir es",
+    "build:cjs": "tsc --module commonjs --outDir lib",
+    "build": "npm run build:cjs && npm run build:es",
     "publish": "npm publish --access public"
   },
   "dependencies": {

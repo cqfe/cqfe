@@ -17,6 +17,7 @@ export default defineConfig({
       { text: 'VueHooks', link: '/vue-hooks' },
       { text: 'VueComponents', link: '/vue-components' },
       { text: 'Utils', link: '/utils' },
+      { text: 'Toolkit', link: '/toolkit' },
     ],
 
     sidebar: {
@@ -38,6 +39,15 @@ export default defineConfig({
             { text: 'Request', link: '/utils/request' },
             { text: 'Timeout', link: '/utils/timeout' },
             { text: 'Url', link: '/utils/url' },
+          ],
+        },
+      ],
+      '/toolkit/': [
+        {
+          text: 'Toolkit',
+          items: [
+            { text: 'GenerateApi', link: '/toolkit/generateApi' },
+            { text: 'ScpDeploy', link: '/toolkit/scpDeploy' },
           ],
         },
       ],
