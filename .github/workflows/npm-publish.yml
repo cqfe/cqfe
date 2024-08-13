@@ -30,10 +30,10 @@ jobs:
           node-version: 20
           cache: npm # 或 pnpm / yarn
           registry-url: https://registry.npmjs.org/
-      # - name: Config git metadata
-      #   run: |
-      #     git config --global user.name 'leo'
-      #     git config --global user.email 'leolichuan@qq.com'
+      - name: Set git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
       - run: git checkout --
       - run: npm ci
       - run: npm run build

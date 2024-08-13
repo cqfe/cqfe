@@ -14,8 +14,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  extends: ['standard', 'prettier', 'plugin:prettier/recommended', 'plugin:vue/vue3-essential'],
-  plugins: ['prettier', 'unicorn'],
+  extends: ['standard', 'plugin:vue/vue3-essential', 'prettier', 'plugin:prettier/recommended'],
+  plugins: ['unicorn', 'prettier'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -97,14 +97,14 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
       },
-      plugins: ['vue', 'prettier', 'unicorn', '@typescript-eslint'],
+      plugins: ['vue', 'unicorn', '@typescript-eslint', 'prettier'],
       extends: [
         'standard',
-        'prettier',
         'plugin:vue/vue3-essential',
         'plugin:vue/vue3-strongly-recommended',
         'plugin:vue/vue3-recommended',
         'plugin:@typescript-eslint/recommended',
+        'prettier',
         'plugin:prettier/recommended',
       ],
       rules: {
