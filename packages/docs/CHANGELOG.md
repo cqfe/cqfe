@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.1...@cqfe/docs@0.7.2) (2024-08-13)
+
+### Features
+
+- generate-api es module ([0dc662f](https://github.com/leoDreamer/llleo/commit/0dc662f7baf0558e97be2cbfbc6311f90d721ee1))
+
 ## 0.7.1 (2024-08-12)
 
 ### Features
