@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@1.3.2...@cqfe/eslint-config@1.3.3) (2024-08-14)
+
+### Bug Fixes
+
+- eslint config vue ([e4fd94a](https://github.com/leoDreamer/cqfe/commit/e4fd94a377c70f539cf8247bbaf8bb3eac4b7a3c))
+- eslint config vue update ([cbc7294](https://github.com/leoDreamer/cqfe/commit/cbc7294389c8515dbff0da4d473896f9b0cd1445))
+
 ## [1.3.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@1.3.2...@cqfe/eslint-config@1.3.2) (2024-08-13)
 
 ### Bug Fixes

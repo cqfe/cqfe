@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.3...@cqfe/prettier-config@1.3.4) (2024-08-14)
+
+### Bug Fixes
+
+- eslint config vue ([e4fd94a](https://github.com/leoDreamer/cqfe/commit/e4fd94a377c70f539cf8247bbaf8bb3eac4b7a3c))
+
 ## [1.3.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.1...@cqfe/prettier-config@1.3.3) (2024-08-13)
 
 ### Bug Fixes

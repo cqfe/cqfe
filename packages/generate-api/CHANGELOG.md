@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.2...@cqfe/generate-api@0.11.3) (2024-08-14)
+
+### Bug Fixes
+
+- **generate-api:** generate function name error [#3](https://github.com/leoDreamer/cqfe/issues/3) ([77cb3ac](https://github.com/leoDreamer/cqfe/commit/77cb3acc1ffaac829d17bad54c68f56ebdc80c80))
+
 ## [0.11.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.1...@cqfe/generate-api@0.11.2) (2024-08-13)
 
 ### Features
