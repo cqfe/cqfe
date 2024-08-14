@@ -12,7 +12,7 @@ Generate api for axios, based on swagger json.support `Swagger2.0`&`OpenAPI3.0`.
 
 ```js
 // scripts/gen-api.mjs
-import generateApi from 'generate-swagger-api';
+import generateApi from '@cqfe/generate-api';
 import path from 'path';
 
 generateApi.default({
