@@ -94,16 +94,17 @@ module.exports = {
     {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-      },
-      plugins: ['vue', 'unicorn', '@typescript-eslint', 'prettier'],
+      // parserOptions: {
+      //   parser: '@typescript-eslint/parser',
+      // },
+      // plugins-ts: '@typescript-eslint'
+      plugins: ['vue', 'unicorn', 'prettier'],
       extends: [
         'standard',
         'plugin:vue/vue3-essential',
         'plugin:vue/vue3-strongly-recommended',
         'plugin:vue/vue3-recommended',
-        'plugin:@typescript-eslint/recommended',
+        // 'plugin:@typescript-eslint/recommended',
         'prettier',
         'plugin:prettier/recommended',
       ],
@@ -125,45 +126,45 @@ module.exports = {
         'no-undef': 'off',
 
         // Add TypeScript specific rules (and turn off ESLint equivalents)
-        '@typescript-eslint/consistent-type-assertions': 'warn',
+        // '@typescript-eslint/consistent-type-assertions': 'warn',
         'no-array-constructor': 'off',
-        '@typescript-eslint/no-array-constructor': 'warn',
-        '@typescript-eslint/no-namespace': 'error',
+        // '@typescript-eslint/no-array-constructor': 'warn',
+        // '@typescript-eslint/no-namespace': 'error',
         'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': [
-          'error',
-          {
-            functions: false,
-            classes: false,
-            variables: false,
-            typedefs: false,
-          },
-        ],
+        // '@typescript-eslint/no-use-before-define': [
+        //   'error',
+        //   {
+        //     functions: false,
+        //     classes: false,
+        //     variables: false,
+        //     typedefs: false,
+        //   },
+        // ],
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          {
-            // args: 'none',
-            // ignoreRestSiblings: true,
-          },
-        ],
+        // '@typescript-eslint/no-unused-vars': [
+        //   'error',
+        //   {
+        //     // args: 'none',
+        //     // ignoreRestSiblings: true,
+        //   },
+        // ],
         'no-useless-constructor': 'off',
-        '@typescript-eslint/no-useless-constructor': 'warn',
+        // '@typescript-eslint/no-useless-constructor': 'warn',
         'prettier/prettier': 'error',
         'standard/no-callback-literal': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-        '@typescript-eslint/member-delimiter-style': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
+        // '@typescript-eslint/explicit-function-return-type': 'off',
+        // '@typescript-eslint/explicit-module-boundary-types': 'off',
+        // '@typescript-eslint/member-delimiter-style': 'off',
+        // '@typescript-eslint/no-explicit-any': 'off',
         quotes: 'off',
-        '@typescript-eslint/quotes': [
-          'error',
-          'single',
-          {
-            avoidEscape: true,
-            allowTemplateLiterals: false,
-          },
-        ],
+        // '@typescript-eslint/quotes': [
+        //   'error',
+        //   'single',
+        //   {
+        //     avoidEscape: true,
+        //     allowTemplateLiterals: false,
+        //   },
+        // ],
       },
     },
   ],
