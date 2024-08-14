@@ -1,6 +1,6 @@
-import { reactive, watchEffect } from 'vue';
+import { reactive, watchEffect } from 'vue'
 // 创建一个响应式对象作为事件存储
-const state = reactive(new Map());
+const state = reactive(new Map())
 
 /**
  * 跨组件事件通信
@@ -10,21 +10,21 @@ const state = reactive(new Map());
 export function useEvent() {
   // 触发事件
   function emitEvent<T>(eventCode: string, param: T) {
-    state.set(eventCode, param);
+    state.set(eventCode, param)
   }
 
   // 监听事件
   function onEvent(eventCode: string, callback: (data: any) => void) {
     watchEffect(() => {
       // 使用 watchEffect 监听事件总线中的事件变化
-      const data = state.get(eventCode);
+      const data = state.get(eventCode)
       if (data !== undefined) {
-        callback(data);
+        callback(data)
         // 清除事件，避免重复处理
-        state.delete(eventCode);
+        state.delete(eventCode)
       }
-    });
+    })
   }
 
-  return { emitEvent, onEvent };
+  return { emitEvent, onEvent }
 }

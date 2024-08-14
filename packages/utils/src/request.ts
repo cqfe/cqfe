@@ -8,16 +8,16 @@
  */
 export function retry<T>(fn: () => Promise<T>, interval: number, max: number) {
   return new Promise((resolve, reject) => {
-    let count = 0;
+    let count = 0
     const loop = () => {
       fn()
         .then((res: T) => resolve(res))
         .catch((err) => {
-          count++;
-          if (count >= max) return reject(err);
-          setTimeout(loop, interval);
-        });
-    };
-    loop();
-  });
+          count++
+          if (count >= max) return reject(err)
+          setTimeout(loop, interval)
+        })
+    }
+    loop()
+  })
 }

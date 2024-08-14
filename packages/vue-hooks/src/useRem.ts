@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, ref, onBeforeMount } from 'vue';
+import { onMounted, onUnmounted, ref, onBeforeMount } from 'vue'
 
 /**
  * 将像素值转换为 rem 值
@@ -7,7 +7,7 @@ import { onMounted, onUnmounted, ref, onBeforeMount } from 'vue';
  * @returns 转换后的 rem 值，保留四位小数
  */
 export function px2rem(px: number) {
-  return `${(px / 16).toFixed(4)}rem`;
+  return `${(px / 16).toFixed(4)}rem`
 }
 
 /**
@@ -25,35 +25,35 @@ export function useRem(baseFontSize = 16, baseWidth = 1920, baseHeight = 1080) {
     width: 1,
     scale: 1,
     fontSize: baseFontSize,
-  });
+  })
 
   // 设置根元素字体大小
   function setRootFontSize() {
-    const scaleHeight = Number((document.documentElement.clientHeight / baseHeight).toFixed(4));
-    const scaleWidth = Number((document.documentElement.clientWidth / baseWidth).toFixed(4));
-    const scale = Math.min(scaleHeight, scaleWidth);
+    const scaleHeight = Number((document.documentElement.clientHeight / baseHeight).toFixed(4))
+    const scaleWidth = Number((document.documentElement.clientWidth / baseWidth).toFixed(4))
+    const scale = Math.min(scaleHeight, scaleWidth)
     scaleInfo.value = {
       height: scaleHeight,
       width: scaleWidth,
       scale,
       fontSize: scale * baseFontSize,
-    };
-    document.documentElement.style.fontSize = scaleInfo.value.fontSize + 'px';
+    }
+    document.documentElement.style.fontSize = scaleInfo.value.fontSize + 'px'
   }
 
   onBeforeMount(() => {
-    setRootFontSize();
-  });
+    setRootFontSize()
+  })
 
   // resize后重新设置rem
   onMounted(() => {
-    window.addEventListener('resize', setRootFontSize);
-  });
+    window.addEventListener('resize', setRootFontSize)
+  })
   onUnmounted(() => {
-    window.removeEventListener('resize', setRootFontSize);
-  });
+    window.removeEventListener('resize', setRootFontSize)
+  })
 
   return {
     scaleInfo,
-  };
+  }
 }

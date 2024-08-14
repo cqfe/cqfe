@@ -7,8 +7,8 @@
  * @returns 返回查询字符串中对应键的值，若不存在则返回null
  */
 export function getQueryByKey(key: string, query = location.search) {
-  const queryObj = new URLSearchParams(query);
-  return queryObj.get(key);
+  const queryObj = new URLSearchParams(query)
+  return queryObj.get(key)
 }
 
 /**
@@ -19,13 +19,13 @@ export function getQueryByKey(key: string, query = location.search) {
  */
 export function loadScript(url: string) {
   return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = url;
-    script.onload = () => resolve(true);
+    const script = document.createElement('script')
+    script.src = url
+    script.onload = () => resolve(true)
     script.onerror = (err) => {
-      console.error(err);
-      reject(new Error(`Script load error: ${url}`));
-    };
-    document.head.appendChild(script);
-  });
+      console.error(err)
+      reject(new Error(`Script load error: ${url}`))
+    }
+    document.head.appendChild(script)
+  })
 }

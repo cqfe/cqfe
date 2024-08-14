@@ -1,15 +1,15 @@
-import { isReact, isVue } from './env';
+import { isReact, isVue } from './env'
 
-const eslintExtends = [];
+const eslintExtends = []
 
 if (isReact) {
-  eslintExtends.push('./react');
+  eslintExtends.push('./react')
 } else if (isVue) {
-  eslintExtends.push('./vue');
+  eslintExtends.push('./vue')
 } else {
-  eslintExtends.push('./typescript');
+  eslintExtends.push('./typescript')
 }
 
 module.exports = {
   extends: eslintExtends,
-};
+}

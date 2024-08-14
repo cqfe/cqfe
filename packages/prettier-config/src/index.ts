@@ -20,4 +20,4 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   endOfLine: 'lf',
   embeddedLanguageFormatting: 'auto',
-};
+}

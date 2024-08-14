@@ -1,5 +1,5 @@
 export interface AccuracyTimerRes {
-  cancel: () => void;
+  cancel: () => void
 }
 
 /**
@@ -10,23 +10,23 @@ export interface AccuracyTimerRes {
  * @returns 返回一个 AccuracyTimerRes 对象，包含取消定时器的 cancel 方法
  */
 export function setAccuracyTimeout(callback: () => void, delay: number): AccuracyTimerRes {
-  const startTime = performance.now();
-  let timer: number;
+  const startTime = performance.now()
+  let timer: number
 
   function loop() {
     if (performance.now() - startTime >= delay) {
-      callback();
-      return;
+      callback()
+      return
     }
-    timer = requestAnimationFrame(loop);
+    timer = requestAnimationFrame(loop)
   }
 
-  timer = requestAnimationFrame(loop);
+  timer = requestAnimationFrame(loop)
   return {
     cancel: function () {
-      cancelAnimationFrame(timer);
+      cancelAnimationFrame(timer)
     },
-  };
+  }
 }
 
 /**
@@ -37,25 +37,25 @@ export function setAccuracyTimeout(callback: () => void, delay: number): Accurac
  * @returns 返回AccuracyTimerRes对象，包含取消计时器的方法
  */
 export function setAccuracyInterval(callback: () => void, delay: number): AccuracyTimerRes {
-  let startTime = performance.now();
-  let timer: number;
+  let startTime = performance.now()
+  let timer: number
 
   function loop() {
-    const currentTime = performance.now();
+    const currentTime = performance.now()
     if (currentTime - startTime >= delay) {
-      callback();
-      startTime = currentTime;
+      callback()
+      startTime = currentTime
     }
-    timer = requestAnimationFrame(loop);
+    timer = requestAnimationFrame(loop)
   }
 
-  timer = requestAnimationFrame(loop);
+  timer = requestAnimationFrame(loop)
 
   return {
     cancel: function () {
-      cancelAnimationFrame(timer);
+      cancelAnimationFrame(timer)
     },
-  };
+  }
 }
 
 /**
@@ -66,24 +66,24 @@ export function setAccuracyInterval(callback: () => void, delay: number): Accura
  * @returns 返回节流后的函数
  */
 export function throttle<T>(fn: (...args: T[]) => void, delay: number) {
-  let timer: NodeJS.Timeout | null;
-  let lastCallTime = 0;
+  let timer: NodeJS.Timeout | null
+  let lastCallTime = 0
 
   return function <K extends T>(...args: K[]) {
-    const now = Date.now();
-    const remaining = delay - (now - lastCallTime);
+    const now = Date.now()
+    const remaining = delay - (now - lastCallTime)
 
     if (remaining <= 0) {
-      fn(...args);
-      lastCallTime = now;
+      fn(...args)
+      lastCallTime = now
     } else if (!timer) {
       timer = setTimeout(() => {
-        fn(...args);
-        lastCallTime = Date.now();
-        timer = null;
-      }, remaining);
+        fn(...args)
+        lastCallTime = Date.now()
+        timer = null
+      }, remaining)
     }
-  };
+  }
 }
 
 /**
@@ -94,15 +94,15 @@ export function throttle<T>(fn: (...args: T[]) => void, delay: number) {
  * @returns 返回防抖后的函数
  */
 export function debounce<T>(fn: (...args: T[]) => void, delay: number) {
-  let timer: NodeJS.Timeout | null;
+  let timer: NodeJS.Timeout | null
 
   return function <K extends T>(...args: K[]) {
     // 清除之前设置的定时器
-    if (timer) clearTimeout(timer);
+    if (timer) clearTimeout(timer)
 
     timer = setTimeout(() => {
       // 延迟结束后执行函数
-      fn(...args);
-    }, delay);
-  };
+      fn(...args)
+    }, delay)
+  }
 }

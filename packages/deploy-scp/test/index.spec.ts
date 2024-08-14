@@ -1,32 +1,32 @@
-import { execSync } from 'child_process';
-import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
-import { resolve } from 'path';
-import { CONFIG_PATH } from '../src/constants';
+import { execSync } from 'child_process'
+import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs'
+import { resolve } from 'path'
+import { CONFIG_PATH } from '../src/constants'
 
-const pkg = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf-8'));
+const pkg = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf-8'))
 
 describe('scp-deploy', () => {
   beforeAll(() => {
-    execSync('npm run build');
-  });
+    execSync('npm run build')
+  })
   beforeEach(() => {
     if (existsSync(CONFIG_PATH)) {
-      unlinkSync(CONFIG_PATH);
+      unlinkSync(CONFIG_PATH)
     }
-  });
+  })
   afterAll(() => {
     if (existsSync(CONFIG_PATH)) {
-      unlinkSync(CONFIG_PATH);
+      unlinkSync(CONFIG_PATH)
     }
-  });
+  })
   it('should command version', async () => {
-    const subprocess = execSync('node ./bin/index.js -v');
-    expect(subprocess.toString()).toContain(pkg.version);
-  });
+    const subprocess = execSync('node ./bin/index.js -v')
+    expect(subprocess.toString()).toContain(pkg.version)
+  })
   it('should command init', async () => {
-    const subprocess = execSync('node ./bin/index.js init');
-    expect(subprocess.toString()).toContain('config file .deploy.config.cjs created');
-  });
+    const subprocess = execSync('node ./bin/index.js init')
+    expect(subprocess.toString()).toContain('config file .deploy.config.cjs created')
+  })
   xit('should command deploy', async () => {
     writeFileSync(
       CONFIG_PATH,
@@ -39,13 +39,13 @@ describe('scp-deploy', () => {
     targetPath: '/var/tmp/dist2',
   }]
 }`,
-    );
-    const subprocess = execSync('node ./bin/index.js deploy -n test');
-    expect(subprocess.toString()).toContain('Deploy success');
-  });
+    )
+    const subprocess = execSync('node ./bin/index.js deploy -n test')
+    expect(subprocess.toString()).toContain('Deploy success')
+  })
   it('should config exists', async () => {
-    writeFileSync(CONFIG_PATH, 'module.exports = {}');
-    const subprocess = execSync('node ./bin/index.js init');
-    expect(subprocess.toString()).toContain('config file already exists');
-  });
-});
+    writeFileSync(CONFIG_PATH, 'module.exports = {}')
+    const subprocess = execSync('node ./bin/index.js init')
+    expect(subprocess.toString()).toContain('config file already exists')
+  })
+})

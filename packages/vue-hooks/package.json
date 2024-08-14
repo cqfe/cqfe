@@ -35,7 +35,9 @@
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "@cqfe/utils": "^0.14.1",
+    "@amap/amap-jsapi-loader": "^1.0.1"
   },
   "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
 }

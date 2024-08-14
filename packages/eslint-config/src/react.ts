@@ -6,7 +6,7 @@ const reactRules = {
   'react/jsx-indent': 'off',
   'react/jsx-handler-names': 'off',
   'react/react-in-jsx-scope': 'off',
-};
+}
 
 module.exports = {
   env: {
@@ -131,4 +131,4 @@ module.exports = {
       },
     },
   ],
-};
+}

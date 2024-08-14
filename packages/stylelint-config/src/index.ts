@@ -1,4 +1,4 @@
-import { Config } from 'stylelint';
+import { Config } from 'stylelint'
 
 const stylelintConfig: Config = {
   extends: [require.resolve('stylelint-config-standard'), require.resolve('stylelint-prettier/recommended')],
@@ -45,6 +45,6 @@ const stylelintConfig: Config = {
     //   customSyntax: 'postcss-jsx',
     // },
   ],
-};
+}
 
-module.exports = stylelintConfig;
+module.exports = stylelintConfig

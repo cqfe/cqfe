@@ -12,15 +12,21 @@ email: <leolichuan@qq.com>
 
 # useEvent
 
-## Description
+## 简介
 
 简单的事件总线，使用vue3的`reactive`实现，可以用来做跨组件通信
 
-## Example
+## 参数
+
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| ------ | ---- | ---- | ------ | ---- |
+| 无     |
+
+## 示例
 
 <UseEvent />
 
-## Useage
+## 使用代码
 
 ```js-vue
 {{ code.content }}
