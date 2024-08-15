@@ -3,18 +3,19 @@
  * @author: 李川
  * @update: 2024-08-15 09:03:52
  */
-import '../jessibuca-pro'
 import { onBeforeMount, shallowRef } from 'vue'
+import { loadScript } from '@cqfe/utils'
 
 /**
  * 初始化并管理播放器
  *
  * @param elementId 播放器的容器元素ID
- * @param decoderUrl 解码器URL
+ * @param playerUrl 播放器js URL
+ * @param decoderUrl 解码器js URL
  *
  * @returns 返回一个包含播放器相关方法和属性的对象
  */
-export function usePlayer(elementId: string, decoderUrl: string) {
+export function usePlayer(elementId: string, jsUrl: string, decoderUrl: string) {
   const controller = shallowRef()
   const player = shallowRef()
   const videoInfo = shallowRef({
@@ -33,47 +34,49 @@ export function usePlayer(elementId: string, decoderUrl: string) {
 
   // 初始化播放器
   function initPlayer(options: Record<string, any> = {}) {
-    controller.value = new AbortController()
-    player.value = new (window as any).JessibucaPro({
-      container: document.getElementById(elementId),
-      videoBuffer: 0.1,
-      videoBufferDelay: 0.2,
-      useSIMD: true,
-      isFlv: true,
-      isResize: false,
-      text: '',
-      loadingText: '加载中',
-      debug: false,
-      decoder: decoderUrl,
-      showBandwidth: true, // 显示网速
-      operateBtns: {
-        fullscreen: true,
-        screenshot: true,
-        play: true,
-        audio: true,
-        record: true,
-      },
-      forceNoOffscreen: true,
-      isNotMute: false,
-      hasAudio: false,
-      heartTimeout: 100,
-      ...options,
-    })
-    player.value?.on('videoInfo', (data: { height: number; width: number }) => {
-      videoInfo.value = data
-      console.debug('videoInfo', data)
-      setMarkContainer()
-    })
-    player.value?.on('fullscreen', function (flag: boolean) {
-      const dom = document.getElementById('people-num')
-      if (flag && dom) {
-        dom.style.transform = 'scale(2)'
-      } else if (!flag && dom) {
-        dom.style.transform = 'scale(1)'
-      }
-      setTimeout(() => {
+    return loadScript(jsUrl).then(() => {
+      controller.value = new AbortController()
+      player.value = new (window as any).JessibucaPro({
+        container: document.getElementById(elementId),
+        videoBuffer: 0.1,
+        videoBufferDelay: 0.2,
+        useSIMD: true,
+        isFlv: true,
+        isResize: false,
+        text: '',
+        loadingText: '加载中',
+        debug: false,
+        decoder: decoderUrl,
+        showBandwidth: true, // 显示网速
+        operateBtns: {
+          fullscreen: true,
+          screenshot: true,
+          play: true,
+          audio: true,
+          record: true,
+        },
+        forceNoOffscreen: true,
+        isNotMute: false,
+        hasAudio: false,
+        heartTimeout: 100,
+        ...options,
+      })
+      player.value?.on('videoInfo', (data: { height: number; width: number }) => {
+        videoInfo.value = data
+        console.debug('videoInfo', data)
         setMarkContainer()
-      }, 1000)
+      })
+      player.value?.on('fullscreen', function (flag: boolean) {
+        const dom = document.getElementById('people-num')
+        if (flag && dom) {
+          dom.style.transform = 'scale(2)'
+        } else if (!flag && dom) {
+          dom.style.transform = 'scale(1)'
+        }
+        setTimeout(() => {
+          setMarkContainer()
+        }, 1000)
+      })
     })
   }
 

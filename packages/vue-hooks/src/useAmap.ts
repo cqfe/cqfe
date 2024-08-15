@@ -5,7 +5,6 @@
  */
 import { loadScript } from '@cqfe/utils'
 import { onMounted, Ref, shallowRef } from 'vue'
-import AMapLoader from '@amap/amap-jsapi-loader'
 
 /**
  * 使用 AMap 高德地图库，并返回 mapInstance 地图实例对象和 AMapObj 高德地图对象。
@@ -61,16 +60,23 @@ export function useAmap(
       securityJsCode: code,
     }
     return new Promise((resolve, reject) => {
-      AMapLoader.load({
-        key,
-        version: '2.0',
-      })
-        .then((AMap: any) => {
-          AMapObj.value = AMap
-          mapInstance.value = new AMap.Map(mapRef.value, config)
-          resolve()
+      import('@amap/amap-jsapi-loader')
+        .then((AMapLoader) => {
+          AMapLoader.load({
+            key,
+            version: '2.0',
+          })
+            .then((AMap: any) => {
+              AMapObj.value = AMap
+              mapInstance.value = new AMap.Map(mapRef.value, config)
+              resolve()
+            })
+            .catch((err: Error) => {
+              console.error(err)
+              reject(err)
+            })
         })
-        .catch((err: Error) => {
+        .catch((err) => {
           console.error(err)
           reject(err)
         })

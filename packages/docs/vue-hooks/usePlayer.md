@@ -10,7 +10,7 @@ email: <leolichuan@qq.com>
     import code from '../componentsCode/UsePlayer.js'
 </script>
 
-# useEvent
+# usePlayer
 
 ## 简介
 
@@ -18,14 +18,17 @@ email: <leolichuan@qq.com>
 
 ## 参数
 
-| 参数名    | 类型   | 必填 | 默认值 | 说明           |
-| --------- | ------ | ---- | ------ | -------------- |
-| elementId | String | 是   |        | 播放器组件的id |
-| decodeUrl | String | 是   |        | 解码器的url    |
+| 参数名    | 类型   | 必填 | 默认值 | 说明                            |
+| --------- | ------ | ---- | ------ | ------------------------------- |
+| elementId | String | 是   |        | 播放器组件的id                  |
+| jsUrl     | String | 是   |        | 播放器js的url(jessibuca-pro.js) |
+| decodeUrl | String | 是   |        | 解码器js的url(decoder-pro.js)   |
 
 ## 示例
 
+<client-only>
 <UsePlayer />
+</client-only>
 
 ## 使用代码
 

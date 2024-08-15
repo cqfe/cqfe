@@ -30,7 +30,9 @@ email: <leolichuan@qq.com>
 
 ## 示例
 
-<useAmap />
+<client-only>
+    <UseAmap />
+</client-only>
 
 ## 使用代码
 
