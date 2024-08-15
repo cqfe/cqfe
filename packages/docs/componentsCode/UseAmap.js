@@ -39,7 +39,7 @@ const { initMap: initMap2 } = useAmap(
   mapRef2,
   true,
   location.origin + '/normal',
-  location.origin + '/amap/AMap3.js'
+  location.origin + '/amap/AMap3.js',
 )
 
 onMounted(() => {
