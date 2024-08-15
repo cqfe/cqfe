@@ -1,3 +1,8 @@
+/*
+ * @description: 单页面Rem适配
+ * @author: 李川
+ * @update: 2024-08-15 09:05:39
+ */
 import { onMounted, onUnmounted, ref, onBeforeMount } from 'vue'
 
 /**

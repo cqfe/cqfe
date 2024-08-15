@@ -1,5 +1,6 @@
 /**
  * 根据给定的键从查询字符串中获取对应的值
+ * @author <李川>
  *
  * @param key 查询字符串中的键
  * @param query 查询字符串，默认为当前页面的查询字符串（location.search）
@@ -13,6 +14,7 @@ export function getQueryByKey(key: string, query = location.search) {
 
 /**
  * 加载并执行JavaScript脚本
+ * @author <李川>
  *
  * @param url JavaScript脚本的URL
  * @returns 返回一个Promise，加载成功时resolve为true，加载失败时reject为Error对象

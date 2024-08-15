@@ -12,5 +12,8 @@ mkdirSync(codeDir)
 
 readdirSync(componentDir).forEach((fileName) => {
   const content = readFileSync(resolve(componentDir, fileName), 'utf-8')
-  writeFileSync(resolve(codeDir, fileName.split('.')[0] + '.js'), `export default { content: \`${content}\` }`)
+  writeFileSync(
+    resolve(codeDir, fileName.split('.')[0] + '.js'),
+    `export default { content: \`${content.replace(/`/g, '\\`')}\` }`,
+  )
 })

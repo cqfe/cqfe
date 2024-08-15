@@ -29,6 +29,7 @@ export default defineConfig({
             { text: 'useAutoScroll', link: '/vue-hooks/useAutoScroll' },
             { text: 'useRem', link: '/vue-hooks/useRem' },
             { text: 'useAmap', link: '/vue-hooks/useAmap' },
+            { text: 'usePlayer', link: '/vue-hooks/usePlayer' },
           ],
         },
       ],

@@ -4,3 +4,4 @@
 - [useAutoScroll](./useAutoScroll.md): 自动滚动
 - [useRem](./useRem.md): 单页面Rem适配
 - [useAmap](./useAmap.md): 高德地图在线 & 离线
+- [usePlayer](./usePlayer.md): Jessibuca 视频播放器

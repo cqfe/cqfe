@@ -1,3 +1,8 @@
+/*
+ * @description: prettier配置文件
+ * @author: 李川
+ * @update: 2024-08-15 10:31:07
+ */
 module.exports = {
   printWidth: 120,
   tabWidth: 2,

@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "./lib"
   },
-  "include": ["./src/**/*", "test/uri.spec.ts", "test/case.spec.ts"],
+  "include": ["./src/**/*", "test/uri.spec.ts", "test/case.spec.ts", "jessibuca-pro.js"],
   "exclude": ["./**/*.spec.ts"]
 }

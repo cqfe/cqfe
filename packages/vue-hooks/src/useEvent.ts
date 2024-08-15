@@ -1,3 +1,8 @@
+/*
+ * @description: 跨组件事件通信
+ * @author: 李川
+ * @update: 2024-08-15 09:05:26
+ */
 import { reactive, watchEffect } from 'vue'
 // 创建一个响应式对象作为事件存储
 const state = reactive(new Map())

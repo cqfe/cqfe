@@ -5,3 +5,5 @@ bin
 coverage
 packages/**/test/*.js
 packages/docs/componentsCode
+packages/docs/public
+packages/vue-hooks/jessibuca-pro.js

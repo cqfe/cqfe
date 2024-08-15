@@ -1,3 +1,8 @@
+/*
+ * @description: stylelint 配置
+ * @author: 李川
+ * @update: 2024-08-15 10:30:50
+ */
 import { Config } from 'stylelint'
 
 const stylelintConfig: Config = {

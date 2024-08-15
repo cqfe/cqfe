@@ -1,3 +1,8 @@
+/*
+ * @description: 元素自动滚动
+ * @author: 李川
+ * @update: 2024-08-15 09:05:07
+ */
 import { Ref, ref } from 'vue'
 /**
  * 使用自动滚动函数

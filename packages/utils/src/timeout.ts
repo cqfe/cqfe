@@ -4,6 +4,7 @@ export interface AccuracyTimerRes {
 
 /**
  * 设置精度定时器
+ * @author <李川>
  *
  * @param callback 回调函数，在定时器到达指定延迟后执行
  * @param delay 延迟时间，单位毫秒
@@ -31,6 +32,7 @@ export function setAccuracyTimeout(callback: () => void, delay: number): Accurac
 
 /**
  * 设置精度计时器间隔
+ * @author <李川>
  *
  * @param callback 回调函数
  * @param delay 延迟时间（毫秒）
@@ -60,6 +62,7 @@ export function setAccuracyInterval(callback: () => void, delay: number): Accura
 
 /**
  * 节流函数，限制函数在一定时间内只执行一次
+ * @author <李川>
  *
  * @param fn 需要节流的函数
  * @param delay 节流时间间隔，单位毫秒
@@ -88,6 +91,7 @@ export function throttle<T>(fn: (...args: T[]) => void, delay: number) {
 
 /**
  * 防抖函数，用于延迟执行函数，避免高频触发
+ * @author <李川>
  *
  * @param fn 要执行的函数
  * @param delay 延迟时间（毫秒）
