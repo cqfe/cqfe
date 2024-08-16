@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@1.3.3...@cqfe/eslint-config@1.3.4) (2024-08-16)
+
+### Bug Fixes
+
+- **eslint-config:** add vue ts config ([47c2887](https://github.com/leoDreamer/cqfe/commit/47c2887ec527ee993e98fc3ff6c57ef6adce1066))
+
+### Features
+
+- **vue-hooks:** useAmap usePlayer ([2165671](https://github.com/leoDreamer/cqfe/commit/2165671b9da03b13f23f8eab173f8829c169bed1))
+
 ## [1.3.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@1.3.2...@cqfe/eslint-config@1.3.3) (2024-08-14)
 
 ### Bug Fixes

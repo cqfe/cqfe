@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.4...@cqfe/prettier-config@1.3.5) (2024-08-16)
+
+### Features
+
+- **vue-hooks:** useAmap usePlayer ([2165671](https://github.com/leoDreamer/cqfe/commit/2165671b9da03b13f23f8eab173f8829c169bed1))
+
 ## [1.3.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.3...@cqfe/prettier-config@1.3.4) (2024-08-14)
 
 ### Bug Fixes

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.1...@cqfe/vue-hooks@0.14.2) (2024-08-16)
+
+### Bug Fixes
+
+- **docs:** vitepress doc build error ([ef85820](https://github.com/leoDreamer/cqfe/commit/ef85820eae63d41f83741be70c2091ab610506c3))
+
+### Features
+
+- **vue-hooks:** useAmap usePlayer ([2165671](https://github.com/leoDreamer/cqfe/commit/2165671b9da03b13f23f8eab173f8829c169bed1))
+
 ## 0.14.1 (2024-08-12)
 
 ### Features

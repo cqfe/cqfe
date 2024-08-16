@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.5](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.4...@cqfe/docs@0.7.5) (2024-08-16)
+
+### Bug Fixes
+
+- **docs:** vitepress doc build error ([ef85820](https://github.com/leoDreamer/llleo/commit/ef85820eae63d41f83741be70c2091ab610506c3))
+
+### Features
+
+- **vue-hooks:** useAmap usePlayer ([2165671](https://github.com/leoDreamer/llleo/commit/2165671b9da03b13f23f8eab173f8829c169bed1))
+
 ## [0.7.4](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.2...@cqfe/docs@0.7.4) (2024-08-13)
 
 ### Bug Fixes
