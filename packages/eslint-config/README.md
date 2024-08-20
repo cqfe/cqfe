@@ -14,10 +14,10 @@
 }
 ```
 
-- 配置文件
+- 配置文件`.eslintrc.js`
 
 ```js
 module.exports = {
   extends: '@cqfe/eslint-config',
-};
+}
 ```

@@ -1,11 +1,29 @@
 # `@cqfe/stylelint-config`
 
-> TODO: description
+> stylelint config used by `cqfe` team
 
 ## Usage
 
-```
-import stylelintConfigWii from '@cqfe/stylelint-config';
+- `package.json`
 
-// TODO: DEMONSTRATE API
+```json
+{
+  "stylelint": "@cqfe/stylelint-config"
+}
+```
+
+- `.stylelintrc`
+
+```json
+{
+  "extends": "@cqfe/stylelint-config"
+}
+```
+
+- `stylelint.config.js`
+
+```js
+module.exports = {
+  extends: '@cqfe/stylelint-config',
+}
 ```
