@@ -8,6 +8,20 @@ on:
     types: [published]
 
   workflow_dispatch:
+    inputs:
+      pks:
+        description: 'The packages should be publish to npm'
+        required: false
+        type: choice
+        options:
+          - '@cqfe/utils'
+          - '@cqfe/vue-hooks'
+          - '@cqfe/vue-components'
+          - '@cqfe/dploy-scp'
+          - '@cqfe/generate-api'
+          - '@cqfe/eslint-config'
+          - '@cqfe/prettier-config'
+          - '@cqfe/stylelint-config'
 
 jobs:
   publish:
