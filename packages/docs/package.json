@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/docs",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "@cqfe/vue-hooks": "^0.14.2",
-    "@cqfe/vue-components": "^0.0.0"
+    "@cqfe/vue-components": "^0.0.1",
+    "@cqfe/vue-hooks": "^0.14.2"
   }
 }

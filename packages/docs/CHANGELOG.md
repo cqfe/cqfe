@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.6](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.5...@cqfe/docs@0.7.6) (2024-08-20)
+
+### Features
+
+- vue components demo ([d4d5a9b](https://github.com/leoDreamer/llleo/commit/d4d5a9b848bf6636bdd957ecbf1eba41b39057d1))
+
 ## [0.7.5](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.4...@cqfe/docs@0.7.5) (2024-08-16)
 
 ### Bug Fixes
