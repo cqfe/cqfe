@@ -53,7 +53,7 @@
     "extends": "@cqfe/eslint-config"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,vue,jsx,ts,tsx}": [
       "eslint --fix"
     ],
     "*.{json,md}": [

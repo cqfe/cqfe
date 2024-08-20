@@ -1,0 +1,46 @@
+{
+  "name": "@cqfe/vue-components",
+  "description": "vue3 components",
+  "version": "0.0.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "es/index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoDreamer/cqfe.git"
+  },
+  "bugs": "https://github.com/leoDreamer/cqfe/issues",
+  "homepage": "https://leodreamer.github.io/cqfe/",
+  "author": "leoDreamer <leolichuan@qq.com>",
+  "files": [
+    "es",
+    "README.md"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "components"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "tsc --build --clean",
+    "build": "rollup -c rollup.config.js",
+    "publish": "npm publish --access public"
+  },
+  "dependencies": {
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "glob": "^11.0.0",
+    "rollup": "^4.21.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.77.8"
+  }
+}

@@ -9,6 +9,7 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "@cqfe/vue-hooks": "^0.14.2"
+    "@cqfe/vue-hooks": "^0.14.2",
+    "@cqfe/vue-components": "^0.0.0"
   }
 }

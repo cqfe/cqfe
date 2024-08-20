@@ -1,4 +1,4 @@
-# Vue-hooks
+# VueHooks
 
 - [useEvent](./useEvent.md): 跨组件事件通信
 - [useAutoScroll](./useAutoScroll.md): 自动滚动

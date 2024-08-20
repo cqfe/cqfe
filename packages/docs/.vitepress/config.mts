@@ -21,15 +21,23 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/vue-components/': [
+        {
+          text: 'VueComponents',
+          items: [
+            { text: 'Table', link: '/vue-components/table' },
+          ],
+        },
+      ],
       '/vue-hooks/': [
         {
           text: 'VueHooks',
           items: [
-            { text: 'useEvent', link: '/vue-hooks/useEvent' },
-            { text: 'useAutoScroll', link: '/vue-hooks/useAutoScroll' },
-            { text: 'useRem', link: '/vue-hooks/useRem' },
-            { text: 'useAmap', link: '/vue-hooks/useAmap' },
-            { text: 'usePlayer', link: '/vue-hooks/usePlayer' },
+            { text: 'UseEvent', link: '/vue-hooks/useEvent' },
+            { text: 'UseAutoScroll', link: '/vue-hooks/useAutoScroll' },
+            { text: 'UseRem', link: '/vue-hooks/useRem' },
+            { text: 'UseAmap', link: '/vue-hooks/useAmap' },
+            { text: 'UsePlayer', link: '/vue-hooks/usePlayer' },
           ],
         },
       ],

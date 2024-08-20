@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "module": "ESNext",
+    "target": "ESNext",
+    "noImplicitAny": false
+  },
+  "include": ["./src/**/*", "vue.d.ts"],
+  "exclude": ["./**/*.spec.ts", "node_modules"]
+}
