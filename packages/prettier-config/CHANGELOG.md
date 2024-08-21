@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.5...@cqfe/prettier-config@1.3.6) (2024-08-21)
+
+### Features
+
+- update eslint & prettier config ([40e9076](https://github.com/leoDreamer/cqfe/commit/40e9076907af873637eb1b8327bcf093a9e79219))
+
 ## [1.3.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.4...@cqfe/prettier-config@1.3.5) (2024-08-16)
 
 ### Features
