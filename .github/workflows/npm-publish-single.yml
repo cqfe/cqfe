@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: npm-publish-multi
+name: npm-publish-single
 
 on:
   workflow_dispatch:
@@ -53,27 +53,35 @@ jobs:
         run: |
           for option in "${{ github.event.inputs.pkgs }}"; do
             if [ "$option" = "@cqfe/utils" ]; then
+              echo "publishing @cqfe/utils"
               lerna run build --scope=@cqfe/utils
               lerna run publish --scope=@cqfe/utils
             elif [ "$option" = "@cqfe/generate-api" ]; then
+              echo "publishing @cqfe/generate-api"
               lerna run build --scope=@cqfe/generate-api
               lerna run publish --scope=@cqfe/generate-api
             elif [ "$option" = "@cqfe/deploy-scp" ]; then
+              echo "publishing @cqfe/deploy-scp"
               lerna run build --scope=@cqfe/deploy-scp
               lerna run publish --scope=@cqfe/deploy-scp
             elif [ "$option" = "@cqfe/eslint-config" ]; then
+              echo "publishing @cqfe/eslint-config"
               lerna run build --scope=@cqfe/eslint-config
               lerna run publish --scope=@cqfe/eslint-config
             elif [ "$option" = "@cqfe/prettier-config" ]; then
+              echo "publishing @cqfe/prettier-config"
               lerna run build --scope=@cqfe/prettier-config
               lerna run publish --scope=@cqfe/prettier-config
             elif [ "$option" = "@cqfe/stylelint-config" ]; then
+              echo "publishing @cqfe/stylelint-config"
               lerna run build --scope=@cqfe/stylelint-config
               lerna run publish --scope=@cqfe/stylelint-config
             elif [ "$option" = "@cqfe/vue-hooks" ]; then
+              echo "publishing @cqfe/vue-hooks"
               lerna run build --scope=@cqfe/vue-hooks
               lerna run publish --scope=@cqfe/vue-hooks
             elif [ "$option" = "@cqfe/vue-components" ]; then
+              echo "publishing @cqfe/vue-components"
               lerna run build --scope=@cqfe/vue-components
               lerna run publish --scope=@cqfe/vue-components
             fi
