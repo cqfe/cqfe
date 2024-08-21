@@ -151,3 +151,4 @@ lib
 local-**.json
 coverage
 es
+.DS_Store
