@@ -1,0 +1,84 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: npm-publish-multi
+
+on:
+  workflow_dispatch:
+    inputs:
+      pkgs:
+        description: 'The packages should be publish to npm'
+        required: true
+        type: choice
+        options:
+          - '@cqfe/utils'
+          - '@cqfe/vue-hooks'
+          - '@cqfe/vue-components'
+          - '@cqfe/dploy-scp'
+          - '@cqfe/generate-api'
+          - '@cqfe/eslint-config'
+          - '@cqfe/prettier-config'
+          - '@cqfe/stylelint-config'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm # 或 pnpm / yarn
+          registry-url: https://registry.npmjs.org/
+      - name: Set git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      - name: Install dependencies
+        run: |
+          git checkout --
+          npm ci
+      - name: Build & Publish
+        run: |
+          for option in "${{ github.event.inputs.pkgs }}"; do
+            if [ "$option" = "@cqfe/utils" ]; then
+              lerna run build --scope=@cqfe/utils
+              lerna run publish --scope=@cqfe/utils
+            elif [ "$option" = "@cqfe/generate-api" ]; then
+              lerna run build --scope=@cqfe/generate-api
+              lerna run publish --scope=@cqfe/generate-api
+            elif [ "$option" = "@cqfe/deploy-scp" ]; then
+              lerna run build --scope=@cqfe/deploy-scp
+              lerna run publish --scope=@cqfe/deploy-scp
+            elif [ "$option" = "@cqfe/eslint-config" ]; then
+              lerna run build --scope=@cqfe/eslint-config
+              lerna run publish --scope=@cqfe/eslint-config
+            elif [ "$option" = "@cqfe/prettier-config" ]; then
+              lerna run build --scope=@cqfe/prettier-config
+              lerna run publish --scope=@cqfe/prettier-config
+            elif [ "$option" = "@cqfe/stylelint-config" ]; then
+              lerna run build --scope=@cqfe/stylelint-config
+              lerna run publish --scope=@cqfe/stylelint-config
+            elif [ "$option" = "@cqfe/vue-hooks" ]; then
+              lerna run build --scope=@cqfe/vue-hooks
+              lerna run publish --scope=@cqfe/vue-hooks
+            elif [ "$option" = "@cqfe/vue-components" ]; then
+              lerna run build --scope=@cqfe/vue-components
+              lerna run publish --scope=@cqfe/vue-components
+            fi
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
