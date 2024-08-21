@@ -164,6 +164,18 @@ module.exports = {
             allowTemplateLiterals: false,
           },
         ],
+        'vue/max-attributes-per-line': [
+          'error',
+          {
+            singleline: {
+              max: 1,
+            },
+            multiline: {
+              max: 1,
+            },
+          },
+        ],
+        'vue/attributes-order': 2,
       },
     },
   ],
