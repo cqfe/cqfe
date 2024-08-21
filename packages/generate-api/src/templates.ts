@@ -39,9 +39,6 @@ export function ${name}(${requestParamsStr}) {
   return ret
 }
 
-export function tmpImportFn(servicePath: string) {
-  return `${servicePath}\n\n`
-}
 export function tmpRequestDocFn(description: string, requestParams: IResolveRequest, requestDoc?: boolean) {
   let doc = `\n/**
  * ${description || ''}`
