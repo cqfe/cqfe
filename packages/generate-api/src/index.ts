@@ -14,7 +14,7 @@ export interface GenerateApiConfig {
    */
   outPut: string
   /**
-   * The request function path with string.
+   * The request function full path with string.
    */
   servicePath: string
   /**

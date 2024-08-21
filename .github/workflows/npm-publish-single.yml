@@ -54,36 +54,44 @@ jobs:
           for option in "${{ github.event.inputs.pkgs }}"; do
             if [ "$option" = "@cqfe/utils" ]; then
               echo "publishing @cqfe/utils"
-              lerna run build --scope=@cqfe/utils
-              lerna run publish --scope=@cqfe/utils
+              cd packages/utils
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/generate-api" ]; then
               echo "publishing @cqfe/generate-api"
-              lerna run build --scope=@cqfe/generate-api
-              lerna run publish --scope=@cqfe/generate-api
+              cd packages/generate-api
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/deploy-scp" ]; then
               echo "publishing @cqfe/deploy-scp"
-              lerna run build --scope=@cqfe/deploy-scp
-              lerna run publish --scope=@cqfe/deploy-scp
+              cd packages/deploy-scp
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/eslint-config" ]; then
               echo "publishing @cqfe/eslint-config"
-              lerna run build --scope=@cqfe/eslint-config
-              lerna run publish --scope=@cqfe/eslint-config
+              cd packages/eslint-config
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/prettier-config" ]; then
               echo "publishing @cqfe/prettier-config"
-              lerna run build --scope=@cqfe/prettier-config
-              lerna run publish --scope=@cqfe/prettier-config
+              cd packages/prettier-config
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/stylelint-config" ]; then
               echo "publishing @cqfe/stylelint-config"
-              lerna run build --scope=@cqfe/stylelint-config
-              lerna run publish --scope=@cqfe/stylelint-config
+              cd packages/stylelint-config
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/vue-hooks" ]; then
               echo "publishing @cqfe/vue-hooks"
-              lerna run build --scope=@cqfe/vue-hooks
-              lerna run publish --scope=@cqfe/vue-hooks
+              cd packages/vue-hooks
+              npm run build
+              npm publish --access public
             elif [ "$option" = "@cqfe/vue-components" ]; then
               echo "publishing @cqfe/vue-components"
-              lerna run build --scope=@cqfe/vue-components
-              lerna run publish --scope=@cqfe/vue-components
+              cd packages/vue-components
+              npm run build
+              npm publish --access public
             fi
           done
         env:
