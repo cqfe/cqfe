@@ -157,7 +157,7 @@ export function resolveRequest(parameters: Array<any>) {
     }
   })
   ;(Object.keys(ret) as [keyof IResolveRequest]).forEach((key: keyof IResolveRequest) => {
-    if ((ret[key]?.length || 0) <= 1) delete ret[key]
+    if (key !== 'body' && (ret[key]?.length || 0) <= 1) delete ret[key]
   })
 
   return ret
