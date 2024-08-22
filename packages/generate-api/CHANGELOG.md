@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.8...@cqfe/generate-api@0.11.9) (2024-08-22)
+
+### Bug Fixes
+
+- **generate-api:** empty body ([63046f4](https://github.com/leoDreamer/cqfe/commit/63046f489a05b331eb70e88417419d3d584e5182))
+
 ## [0.11.8](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.7...@cqfe/generate-api@0.11.8) (2024-08-22)
 
 ### Bug Fixes
