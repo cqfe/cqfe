@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.8](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.7...@cqfe/generate-api@0.11.8) (2024-08-22)
+
+### Bug Fixes
+
+- **generate-api:** body is string array ([d63c480](https://github.com/leoDreamer/cqfe/commit/d63c4807f09f79f4423d2f45b37ed0ce1283d977))
+
 ## [0.11.7](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.6...@cqfe/generate-api@0.11.7) (2024-08-21)
 
 **Note:** Version bump only for package @cqfe/generate-api
