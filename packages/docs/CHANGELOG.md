@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.8](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.7...@cqfe/docs@0.7.8) (2024-08-26)
+
+### Bug Fixes
+
+- remove .vitepress files ([283eefe](https://github.com/leoDreamer/llleo/commit/283eefe92af7ca20f08f723e3dc45543e52ce775))
+
 ## [0.7.7](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.6...@cqfe/docs@0.7.7) (2024-08-21)
 
 **Note:** Version bump only for package @cqfe/docs

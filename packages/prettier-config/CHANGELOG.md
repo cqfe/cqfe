@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.7](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.6...@cqfe/prettier-config@1.3.7) (2024-08-26)
+
+### Bug Fixes
+
+- **prettier-config:** modify endOfLine ([8f0f3e3](https://github.com/leoDreamer/cqfe/commit/8f0f3e3a4ade22a0b63d298dbcd06bfde7439c66))
+
 ## [1.3.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.5...@cqfe/prettier-config@1.3.6) (2024-08-21)
 
 ### Features
