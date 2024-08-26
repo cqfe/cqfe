@@ -152,3 +152,4 @@ local-**.json
 coverage
 es
 .DS_Store
+packages/docs/.vitepress/cache
