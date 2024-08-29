@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.2...@cqfe/utils@0.14.3) (2024-08-29)
+
+### Features
+
+- **utils:** readable utils ([8687de2](https://github.com/leoDreamer/cqfe/commit/8687de2ec2d9abe53cdfa38a3552e16d3901fecd))
+
 ## [0.14.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.1...@cqfe/utils@0.14.2) (2024-08-16)
 
 ### Features
