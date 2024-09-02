@@ -1,7 +1,6 @@
 import { readableDuration, readableNumber, addSeparatorsInNumber } from '../src/index'
 
-describe('readable', () => {
-  // readableDuration
+describe('readableDuration function', () => {
   test('should return "Invalid unit" for invalid unit', () => {
     expect(readableDuration(1000, 1, 'sm' as unknown as any)).toBe('Invalid unit')
   })
@@ -12,7 +11,7 @@ describe('readable', () => {
   })
 
   test('should handle seconds correctly in English', () => {
-    expect(readableDuration(60, 1, 's', 'en')).toBe('1.0m')
+    expect(readableDuration(60, undefined, undefined, 'en')).toBe('1.0m')
     expect(readableDuration(120, 2, 's', 'en')).toBe('2.00m')
   })
 
@@ -51,9 +50,17 @@ describe('readable', () => {
     expect(readableDuration(120, 2, 'm', 'zh')).toBe('2.00小时')
   })
 
+  test('should handle days correctly in En', () => {
+    expect(readableDuration(1, 1, 'd')).toBe('1.0d')
+  })
+
   test('should handle days correctly in Chinese', () => {
     expect(readableDuration(1, 1, 'd', 'zh')).toBe('1.0天')
     expect(readableDuration(2, 2, 'd', 'zh')).toBe('2.00天')
+  })
+
+  test('should handle months correctly in En', () => {
+    expect(readableDuration(1, 1, 'M')).toBe('1.0M')
   })
 
   test('should handle months correctly in Chinese', () => {
@@ -70,8 +77,9 @@ describe('readable', () => {
     expect(readableDuration(500, 1, 'ms', 'en')).toBe('500ms')
     expect(readableDuration(500, 1, 'ms', 'zh')).toBe('500毫秒')
   })
+})
 
-  // readableNumber
+describe('readableNumber function', () => {
   test('readableNumber should return the number itself if less than 1000', () => {
     expect(readableNumber(500)).toBe('500')
     expect(readableNumber(999)).toBe('999')
@@ -100,8 +108,9 @@ describe('readable', () => {
     expect(readableNumber(1234567890, 2)).toBe('12.35gw+')
     expect(readableNumber(9876543210, 0, 'zh')).toBe('99亿+')
   })
+})
 
-  // addSeparatorsInNumber
+describe('addSeparatorsInNumber function', () => {
   test('should add separators to a whole number', () => {
     expect(addSeparatorsInNumber(1234567)).toBe('1,234,567')
   })
