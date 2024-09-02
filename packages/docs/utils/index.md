@@ -12,3 +12,11 @@
 - Url相关
   - [getQueryByKey](./url.md#getQueryByKey) 根据key获取url中的query
   - [loadScript](./url.md#loadScript) 加载js
+- Readable相关
+  - [readableDuration](./readable.md#readableDuration) 将时间值转换为可读性更高的字符串表示形式
+  - [readableNumber](./readable.md#readableNumber) 将数字转换为可读性更好的字符串形式载js
+  - [addSeparatorsInNumber](./readable.md#addSeparatorsInNumber) 给数字添加分隔符
+- Toolkit相关
+  - [pick](./toolkit.md#pick) 从对象中挑选指定键的值并返回新对象
+  - [compact](./toolkit.md#compact) 去除数组中的假值元素
+  - [omit](./toolkit.md#omit) 忽略对象中指定键的属性，返回一个新的对象
