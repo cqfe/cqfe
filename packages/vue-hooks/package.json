@@ -1,7 +1,7 @@
 {
   "name": "@cqfe/vue-hooks",
   "description": "vue3 hooks",
-  "version": "0.14.3",
+  "version": "0.14.4",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -35,7 +35,7 @@
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@cqfe/utils": "^0.14.3",
+    "@cqfe/utils": "^0.14.4",
     "vue": "^3.0.5"
   },
   "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
