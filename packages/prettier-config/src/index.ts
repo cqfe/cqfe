@@ -23,5 +23,5 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   endOfLine: 'auto',
   embeddedLanguageFormatting: 'auto',
-  singleAttributePerLine: true,
+  singleAttributePerLine: false,
 }
