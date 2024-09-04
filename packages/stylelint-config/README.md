@@ -8,7 +8,9 @@
 
 ```json
 {
-  "stylelint": "@cqfe/stylelint-config"
+  "stylelint": {
+    "extends": "@cqfe/stylelint-config"
+  }
 }
 ```
 
