@@ -31,8 +31,7 @@
     "prebuild": "tsc --build --clean",
     "build:es": "tsc --module esnext --outDir es",
     "build:cjs": "tsc --module commonjs --outDir lib",
-    "build": "npm run build:cjs && npm run build:es",
-    "publish": "npm publish --access public"
+    "build": "npm run build:cjs && npm run build:es"
   },
   "dependencies": {
     "@cqfe/utils": "^0.14.4",

@@ -27,8 +27,7 @@
     "prebuild": "tsc --build --clean",
     "build:es": "tsc --module esnext --outDir es",
     "build:cjs": "tsc --module commonjs --outDir lib",
-    "build": "npm run build:cjs && npm run build:es",
-    "publish": "npm publish --access public"
+    "build": "npm run build:cjs && npm run build:es"
   },
   "gitHead": "547a82f15b14523514d0aae72374e91c665096b6"
 }

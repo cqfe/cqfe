@@ -28,8 +28,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "tsc --build --clean",
-    "build": "rollup -c rollup.config.js",
-    "publish": "npm publish --access public"
+    "build": "rollup -c rollup.config.js"
   },
   "dependencies": {
     "vue": "^3.4.38"

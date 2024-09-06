@@ -27,8 +27,7 @@
   "scripts": {
     "build": "tsc",
     "prebuild": "tsc --build --clean",
-    "preversion": "npm run build",
-    "publish": "npm publish --access public"
+    "preversion": "npm run build"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.13.14",

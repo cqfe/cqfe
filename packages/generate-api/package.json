@@ -7,6 +7,7 @@
     "access": "public"
   },
   "main": "lib/index.js",
+  "module": "es/index.js",
   "types": "es/index.d.ts",
   "files": [
     "lib",
@@ -34,8 +35,7 @@
     "prebuild": "tsc --build --clean",
     "build:es": "tsc --module esnext --outDir es",
     "build:cjs": "tsc --module commonjs --outDir lib",
-    "build": "npm run build:cjs && npm run build:es",
-    "publish": "npm publish --access public"
+    "build": "npm run build:cjs && npm run build:es"
   },
   "dependencies": {
     "@readme/openapi-parser": "^2.6.0",

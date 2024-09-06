@@ -22,8 +22,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "preversion": "npm run build",
-    "publish": "npm publish --access public"
+    "preversion": "npm run build"
   },
   "dependencies": {
     "prettier": "^3.0.0"
