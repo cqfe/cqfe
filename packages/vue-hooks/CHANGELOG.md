@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.5...@cqfe/vue-hooks@0.14.6) (2024-09-06)
+
+### Features
+
+- **vue-hooks:** add usePaginationReq ([f172236](https://github.com/leoDreamer/cqfe/commit/f172236c76b9602dbd77e2ec1fd172aca74fd768))
+
 ## [0.14.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.4...@cqfe/vue-hooks@0.14.5) (2024-09-06)
 
 **Note:** Version bump only for package @cqfe/vue-hooks

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.13](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.12...@cqfe/docs@0.7.13) (2024-09-06)
+
+**Note:** Version bump only for package @cqfe/docs
+
 ## [0.7.12](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.11...@cqfe/docs@0.7.12) (2024-09-06)
 
 **Note:** Version bump only for package @cqfe/docs
