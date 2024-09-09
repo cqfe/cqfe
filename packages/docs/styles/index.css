@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 2px 4px;
+}
+
+button:hover {
+  opacity: 0.3;
+}
+
+.space {
+  display: flex;
+  gap: 8px;
+}

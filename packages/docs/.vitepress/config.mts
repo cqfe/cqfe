@@ -11,7 +11,6 @@ export default defineConfig({
   //   },
   // },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'VueHooks', link: '/vue-hooks' },
@@ -38,6 +37,7 @@ export default defineConfig({
             { text: 'UseRem', link: '/vue-hooks/useRem' },
             { text: 'UseAmap', link: '/vue-hooks/useAmap' },
             { text: 'UsePlayer', link: '/vue-hooks/usePlayer' },
+            { text: 'UsePaginationReq', link: '/vue-hooks/usePaginationReq' },
           ],
         },
       ],
