@@ -27,7 +27,11 @@ export interface GenerateApiConfig {
   generateResponseDoc?: boolean
 }
 
+export const names = [] as string[]
+
 async function generateApi(config: GenerateApiConfig) {
+  // 重置names
+  names.length = 0
   // init output file
   initOutPutFile(config.outPut, config.servicePath)
   // resolve paths from swagger

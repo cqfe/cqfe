@@ -2,6 +2,7 @@ import { pick } from 'lodash'
 import { toCamelCase } from './utils'
 import { tmpRequestDocFn, tmpRequestFn } from './templates'
 import { appendFileSync } from 'fs'
+import { names } from './'
 
 export interface IFieldItem {
   key: string
@@ -16,8 +17,6 @@ export interface IResolveRequest {
   path?: Array<IFieldItem>
   formData?: Array<IFieldItem>
 }
-
-const names = [] as string[]
 
 function parseArray(obj: Record<string, any>, key?: string, description?: string): IFieldItem {
   const retArr = [] as string[]

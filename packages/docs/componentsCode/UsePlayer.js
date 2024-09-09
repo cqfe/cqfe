@@ -1,7 +1,9 @@
 export default { content: `<template>
   <div id="player1" style="width: 500px; height: 400px"></div>
-  <button @click="onAddRect">添加方框标注</button>
-  <button @click="clearRects()">移除方框标注</button>
+  <div class="space">
+    <button @click="onAddRect">添加方框标注</button>
+    <button @click="clearRects()">移除方框标注</button>
+  </div>
 </template>
 
 <script setup>
