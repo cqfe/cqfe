@@ -48,4 +48,6 @@ async function generateApi(config: GenerateApiConfig) {
   appendFileSync(config.outPut, '\n')
 }
 
+export { generateApi }
+
 export default generateApi
