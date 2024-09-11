@@ -1,6 +1,6 @@
 {
   "name": "cqfe",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "some personal front end develop utils",
   "workspaces": [
     "packages/*"
