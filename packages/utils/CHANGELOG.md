@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.5...@cqfe/utils@0.14.6) (2024-09-11)
+
+### Features
+
+- **utils:** phone regexp ([692b2bf](https://github.com/leoDreamer/cqfe/commit/692b2bf2937d9961c9c89a4523e9d47f6aa0aa0c))
+
 ## [0.14.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.4...@cqfe/utils@0.14.5) (2024-09-06)
 
 **Note:** Version bump only for package @cqfe/utils
