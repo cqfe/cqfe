@@ -10,6 +10,15 @@ export default defineConfig({
   //     noExternal: ['@cqfe/vue-hooks'],
   //   },
   // },
+  head: [
+    ['script', {}, `var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?301419e0e70831d2762cfecfa98da4ac";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();`]
+  ],
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
