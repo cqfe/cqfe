@@ -26,6 +26,7 @@ export default defineConfig({
       { text: 'VueComponents', link: '/vue-components' },
       { text: 'Utils', link: '/utils' },
       { text: 'Toolkit', link: '/toolkit' },
+      { text: 'Animate', link: '/animate' },
     ],
 
     sidebar: {
@@ -69,6 +70,15 @@ export default defineConfig({
           items: [
             { text: 'GenerateApi', link: '/toolkit/generateApi' },
             { text: 'ScpDeploy', link: '/toolkit/scpDeploy' },
+          ],
+        },
+      ],
+      '/animate/': [
+        {
+          text: 'Animate',
+          items: [
+            { text: 'Canvas', link: '/animate/canvas' },
+            { text: '按轨迹移动', link: '/animate/offsetPath' },
           ],
         },
       ],

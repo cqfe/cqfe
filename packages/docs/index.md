@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: Toolkit
       link: /toolkit
+    - theme: alt
+      text: Animate
+      link: /animate
 
 features:
   - title: VueHooks
@@ -29,4 +32,6 @@ features:
     details: Some useful front end develop utils
   - title: Toolkit
     details: Some useful front end develop toolkit
+  - title: Animate
+    details: Some animate
 ---
