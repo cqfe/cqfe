@@ -27,3 +27,14 @@ import { omit } from '@cqfe/utils'
 
 console.log(omit({ a: 1, b: 2, c: 3 },['c'])) // {a: 1, b: 2}
 ```
+
+## tryIt(#tryIt)
+
+> 尝试执行一个函数，返回其返回值或错误信息
+
+```js-vue
+import { tryIt } from '@cqfe/utils'
+
+const [res, err] = await tryIt(() => Promise.resolve('hello'))()
+console.log(res, err) // hello, undefined
+```

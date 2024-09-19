@@ -1,4 +1,4 @@
-import { pick, compact, omit } from '../src/index'
+import { pick, compact, omit, tryIt } from '../src/index'
 
 describe('pick function', () => {
   test('should return a new object with picked keys', () => {
@@ -187,5 +187,37 @@ describe('omit function', () => {
     // Note: This test checks the behavior when attempting to omit nested keys,
     // which the current implementation doesn't support. Expected behavior is to not omit nested keys.
     expect(result).toEqual({ a: 1, b: { c: 2, d: 3 } })
+  })
+})
+
+describe('tryId function', () => {
+  test('tryIt with sync function that returns a value', async () => {
+    const syncFn = () => 'Hello, World!'
+    const wrappedFn = tryIt(syncFn)
+    const result = wrappedFn()
+    expect(result).toEqual(['Hello, World!', undefined])
+  })
+
+  test('tryIt with sync function that throws an error', async () => {
+    const syncFn = () => {
+      throw new Error('Sync Error')
+    }
+    const wrappedFn = tryIt(syncFn)
+    const result = wrappedFn()
+    expect(result).toEqual([undefined, new Error('Sync Error')])
+  })
+
+  test('tryIt with async function that resolves', async () => {
+    const asyncFn = () => Promise.resolve('Async Hello, World!')
+    const wrappedFn = tryIt(asyncFn)
+    const result = await wrappedFn()
+    expect(result).toEqual(['Async Hello, World!', undefined])
+  })
+
+  test('tryIt with async function that rejects', async () => {
+    const asyncFn = () => Promise.reject(new Error('Async Error'))
+    const wrappedFn = tryIt(asyncFn)
+    const result = await wrappedFn()
+    expect(result).toEqual([undefined, new Error('Async Error')])
   })
 })

@@ -45,3 +45,38 @@ export function omit(obj: Record<string, unknown>, keysToOmit: string[]) {
   })
   return result
 }
+
+/**
+ * 尝试执行一个函数，返回其返回值或错误信息。
+ *
+ * @param fn 需要执行的函数。
+ * @returns 返回一个元组，包含执行结果或错误信息。
+ * 如果函数返回值为 Promise，则返回一个 Promise，解析为包含执行结果或错误信息的元组。
+ * 如果函数返回值为非 Promise 类型，则直接返回包含执行结果或错误信息的元组。
+ *
+ * @template Args 函数参数类型。
+ * @template Return 函数返回类型。
+ */
+export function tryIt<Args extends any[], Return>(fn: (...args: Args) => Return) {
+  return (
+    ...args: Args
+  ): Return extends Promise<any>
+    ? Promise<[undefined, Error] | [Awaited<Return>, undefined]>
+    : [undefined, Error] | [Return, undefined] => {
+    try {
+      const res = fn(...args)
+      if (res instanceof Promise) {
+        return res.then((r) => [r, undefined]).catch((err) => [undefined, err]) as Return extends Promise<any>
+          ? Promise<[undefined, Error] | [Awaited<Return>, undefined]>
+          : [undefined, Error] | [Return, undefined]
+      }
+      return [res, undefined] as Return extends Promise<any>
+        ? Promise<[undefined, Error] | [Awaited<Return>, undefined]>
+        : [undefined, Error] | [Return, undefined]
+    } catch (err) {
+      return [undefined, err] as Return extends Promise<any>
+        ? Promise<[undefined, Error] | [Awaited<Return>, undefined]>
+        : [undefined, Error] | [Return, undefined]
+    }
+  }
+}
