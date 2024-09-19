@@ -28,7 +28,7 @@ import { omit } from '@cqfe/utils'
 console.log(omit({ a: 1, b: 2, c: 3 },['c'])) // {a: 1, b: 2}
 ```
 
-## tryIt(#tryIt)
+## tryIt{#tryIt}
 
 > 尝试执行一个函数，返回其返回值或错误信息
 

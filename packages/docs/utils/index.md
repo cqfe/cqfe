@@ -20,3 +20,4 @@
   - [pick](./toolkit.md#pick) 从对象中挑选指定键的值并返回新对象
   - [compact](./toolkit.md#compact) 去除数组中的假值元素
   - [omit](./toolkit.md#omit) 忽略对象中指定键的属性，返回一个新的对象
+  - [tryIt](./toolkit.md#tryId) 尝试执行一个函数，返回其返回值或错误信息
