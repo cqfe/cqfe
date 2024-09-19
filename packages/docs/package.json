@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/docs",
-  "version": "0.7.15",
+  "version": "0.7.16",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "@cqfe/vue-components": "^0.0.2",
-    "@cqfe/vue-hooks": "^0.14.8"
+    "@cqfe/vue-hooks": "^0.14.9"
   }
 }

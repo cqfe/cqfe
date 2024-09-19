@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.16](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.15...@cqfe/docs@0.7.16) (2024-09-19)
+
+### Features
+
+- 动画 ([de9317b](https://github.com/leoDreamer/llleo/commit/de9317b93f5124e8d463a1abb5fb9a243e5fbb53))
+- **utils:** tryId function ([a90fe24](https://github.com/leoDreamer/llleo/commit/a90fe248bef90326729fdb31bf67b8e1aea7a316))
+
 ## [0.7.15](https://github.com/leoDreamer/llleo/compare/@cqfe/docs@0.7.14...@cqfe/docs@0.7.15) (2024-09-11)
 
 **Note:** Version bump only for package @cqfe/docs
