@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.10](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.9...@cqfe/vue-hooks@0.14.10) (2024-10-14)
+
+### Bug Fixes
+
+- **vue-hooks:** usePaginationReq fetchList return response ([15c7108](https://github.com/leoDreamer/cqfe/commit/15c7108128eca25f6e8d59c84663848e29630f8f))
+
 ## [0.14.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.8...@cqfe/vue-hooks@0.14.9) (2024-09-19)
 
 **Note:** Version bump only for package @cqfe/vue-hooks
