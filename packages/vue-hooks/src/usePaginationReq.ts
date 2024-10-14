@@ -17,7 +17,7 @@ export function usePaginationReq(
   function fetchList(query = {}) {
     lastQuery = query
     loading.value = true
-    req({
+    return req({
       size: pagination.pageSize,
       current: pagination.current,
       query,
@@ -27,6 +27,7 @@ export function usePaginationReq(
         dataSource.value = formatRes.data.records
         pagination.total = formatRes.data.total
         pagination.current = formatRes.data.current
+        return res
       })
       .finally(() => {
         loading.value = false
