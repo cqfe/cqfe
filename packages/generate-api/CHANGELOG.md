@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.13](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.12...@cqfe/generate-api@0.11.13) (2024-10-31)
+
+### Bug Fixes
+
+- **generate-api:** name not end with chart ([30d94db](https://github.com/leoDreamer/cqfe/commit/30d94db7235c5b83e0a5ed1b8b8b605c556f01e2)), closes [#4](https://github.com/leoDreamer/cqfe/issues/4)
+
 ## [0.11.12](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.11...@cqfe/generate-api@0.11.12) (2024-09-10)
 
 **Note:** Version bump only for package @cqfe/generate-api
