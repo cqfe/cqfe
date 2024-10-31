@@ -167,6 +167,9 @@ export function resolveRequest(parameters: Array<any>) {
 export function resolveName(method: string, path: string) {
   // handle when function name is repeated
   let name = `${method}${toCamelCase(path)}`
+  while (!/^.+[a-z|A-Z|0-9]$/.test(name)) {
+    name = name.slice(0, -1)
+  }
   names.push(name)
   const nameIndex = names.filter((each) => each === name).length - 1
   if (nameIndex > 0) {
