@@ -113,7 +113,7 @@ export function readableNumber(num: number, fixed = 1, lang = 'en') {
  * @returns 带有分隔符的字符串形式数字
  */
 export function addSeparatorsInNumber(num: number) {
-  const parts = num.toString().split('.')
+  const parts = String(num).split('.')
   const integerPart = parts[0]
   const decimalPart = parts[1] ? `.${parts[1]}` : ''
 
