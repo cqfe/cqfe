@@ -17,6 +17,7 @@ program
   })
   .description('deploy to remote server')
   .option('-n, --namespace <namespace...>', 'server namespace to deploy')
+  .option('-c, --clear', 'clear local files after deploy')
   .action(deploy)
 
 program.parse(process.argv)

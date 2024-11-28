@@ -26,7 +26,8 @@ function clear(buildDir: string, targetDirName: string) {
   }
 }
 
-export default function (option: { namespace: string[] }) {
+export default function (option: { namespace: string[]; clear: boolean }) {
+  const shouldClear = option.clear
   const namespace = option.namespace?.[0]
   if (!namespace) {
     throw new Error('namespace is required')
@@ -52,7 +53,7 @@ export default function (option: { namespace: string[] }) {
   logger.info(`[Upload] ${cmd}`)
   execCmd(cmd)
   logger.success('Deploy success')
-  clear(buildDir, targetDirName)
+  if (shouldClear) clear(buildDir, targetDirName)
   logger.success(`[ServerCmd] cd ${targetPath}`)
   execCmd(`echo ${pwd} | pbcopy && ssh -p ${port} ${username}@${host}`)
 }
