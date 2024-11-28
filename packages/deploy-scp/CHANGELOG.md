@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.4...@cqfe/deploy-scp@0.10.5) (2024-11-28)
+
+### Bug Fixes
+
+- deploy add server cmd ([7a4c79a](https://github.com/leoDreamer/cqfe/commit/7a4c79a7c2c8ff222b4d91886c4b2fcffc3bdb97))
+
 ## [0.10.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.3...@cqfe/deploy-scp@0.10.4) (2024-11-28)
 
 ### Features
