@@ -34,9 +34,10 @@ describe('scp-deploy', () => {
   buildDir: 'dist',
   servers: [{
     namespace: 'test',
-    host: '206.237.19.221',
+    host: '206.237.17.153',
     username: 'root',
     targetPath: '/var/tmp/dist2',
+    buildCmd: 'mkdir dist'
   }]
 }`,
     )
