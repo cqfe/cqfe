@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.3...@cqfe/deploy-scp@0.10.4) (2024-11-28)
+
+### Features
+
+- deploy-scp改为压缩包上传 ([38506e4](https://github.com/leoDreamer/cqfe/commit/38506e4e9e331c8bbf57e347566de4665e59d9df))
+
 ## [0.10.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.2...@cqfe/deploy-scp@0.10.3) (2024-09-06)
 
 **Note:** Version bump only for package @cqfe/deploy-scp
