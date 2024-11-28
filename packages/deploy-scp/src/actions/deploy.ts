@@ -53,5 +53,6 @@ export default function (option: { namespace: string[] }) {
   execCmd(cmd)
   logger.success('Deploy success')
   clear(buildDir, targetDirName)
+  logger.success(`[ServerCmd] cd ${targetPath}`)
   execCmd(`echo ${pwd} | pbcopy && ssh -p ${port} ${username}@${host}`)
 }
