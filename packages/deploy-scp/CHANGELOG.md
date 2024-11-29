@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.7](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.6...@cqfe/deploy-scp@0.10.7) (2024-11-29)
+
+### Bug Fixes
+
+- **deploy-scp:** same name buildDir targetDir ([05be5b7](https://github.com/leoDreamer/cqfe/commit/05be5b7d0908b6c55535623c4643dc88aefd983e))
+
 ## [0.10.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.5...@cqfe/deploy-scp@0.10.6) (2024-11-28)
 
 ### Bug Fixes
