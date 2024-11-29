@@ -41,7 +41,9 @@ export default function (option: { namespace: string[]; clear: boolean }) {
   logger.info(`[Build] ${buildCmd}`)
   execCmd(buildCmd)
   // rename and zip
-  execCmd(`mv ${resolve(process.cwd(), buildDir)} ${resolve(process.cwd(), targetDirName)}`)
+  if (buildDir !== targetDirName) {
+    execCmd(`mv ${resolve(process.cwd(), buildDir)} ${resolve(process.cwd(), targetDirName)}`)
+  }
   execCmd(`zip -q -r ${targetDirName}.zip ${targetDirName}/`)
   // upload code to server by scp
   const cmd = `scp -P ${port} ${outputRenameDir}.zip ${username}@${host}:${targetPath}.zip`
