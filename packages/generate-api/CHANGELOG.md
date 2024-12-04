@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.15](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.14...@cqfe/generate-api@0.11.15) (2024-12-04)
+
+### Bug Fixes
+
+- **generate-api:** 函数名格式化 ([2ae903c](https://github.com/leoDreamer/cqfe/commit/2ae903c36b449ec289814d314473e383504e35e0))
+
 ## [0.11.14](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.13...@cqfe/generate-api@0.11.14) (2024-11-19)
 
 ### Bug Fixes

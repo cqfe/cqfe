@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.8](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.7...@cqfe/deploy-scp@0.10.8) (2024-12-04)
+
+### Bug Fixes
+
+- **generate-api:** 函数名格式化 ([2ae903c](https://github.com/leoDreamer/cqfe/commit/2ae903c36b449ec289814d314473e383504e35e0))
+
 ## [0.10.7](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.6...@cqfe/deploy-scp@0.10.7) (2024-11-29)
 
 ### Bug Fixes
