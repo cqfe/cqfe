@@ -1,5 +1,5 @@
 import { pick } from 'lodash'
-import { toCamelCase } from './utils'
+import { formatVarName, toCamelCase } from './utils'
 import { tmpRequestDocFn, tmpRequestFn } from './templates'
 import { appendFileSync } from 'fs'
 import { names } from './'
@@ -170,6 +170,7 @@ export function resolveName(method: string, path: string) {
   while (!/^.+[a-z|A-Z|0-9]$/.test(name)) {
     name = name.slice(0, -1)
   }
+  name = formatVarName(name)
   names.push(name)
   const nameIndex = names.filter((each) => each === name).length - 1
   if (nameIndex > 0) {

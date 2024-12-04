@@ -10,11 +10,11 @@ function execCmd(command: string) {
   })
 }
 
-function clear(buildDir: string, targetDirName: string) {
+function clear(buildDir: string, targetFolderName: string) {
   // clear build dir
   logger.info('[Clear] buildDir and targetDir and zip')
   const buildPath = resolve(process.cwd(), buildDir)
-  const targetPath = resolve(process.cwd(), targetDirName)
+  const targetPath = resolve(process.cwd(), targetFolderName)
   if (existsSync(buildPath)) {
     execCmd(`rm -rf ${buildPath}`)
   }
@@ -34,17 +34,17 @@ export default function (option: { namespace: string[]; clear: boolean }) {
   }
   const config = getConfig(namespace)
   const { host, username, targetPath, buildCmd, buildDir, port } = config
-  const targetDirName = targetPath.split('/').pop() || buildDir
-  const outputRenameDir = resolve(process.cwd(), targetDirName)
-  clear(buildDir, targetDirName)
+  const targetFolderName = targetPath.split('/').pop() || buildDir
+  const outputRenameDir = resolve(process.cwd(), targetFolderName)
+  clear(buildDir, targetFolderName)
   // build front end code
   logger.info(`[Build] ${buildCmd}`)
   execCmd(buildCmd)
   // rename and zip
-  if (buildDir !== targetDirName) {
-    execCmd(`mv ${resolve(process.cwd(), buildDir)} ${resolve(process.cwd(), targetDirName)}`)
+  if (buildDir !== targetFolderName) {
+    execCmd(`mv ${resolve(process.cwd(), buildDir)} ${resolve(process.cwd(), targetFolderName)}`)
   }
-  execCmd(`zip -q -r ${targetDirName}.zip ${targetDirName}/`)
+  execCmd(`zip -q -r ${targetFolderName}.zip ${targetFolderName}/`)
   // upload code to server by scp
   const cmd = `scp -P ${port} ${outputRenameDir}.zip ${username}@${host}:${targetPath}.zip`
   // 填充密码
@@ -55,7 +55,7 @@ export default function (option: { namespace: string[]; clear: boolean }) {
   logger.info(`[Upload] ${cmd}`)
   execCmd(cmd)
   logger.success('Deploy success')
-  if (shouldClear) clear(buildDir, targetDirName)
+  if (shouldClear) clear(buildDir, targetFolderName)
   logger.success(`[ServerCmd] cd ${targetPath}`)
   execCmd(`echo ${pwd} | pbcopy && ssh -p ${port} ${username}@${host}`)
 }

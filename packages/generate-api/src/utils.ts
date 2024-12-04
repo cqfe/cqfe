@@ -14,3 +14,15 @@ export function initOutPutFile(outPut: string, servicePath: string) {
   if (isExits) rmSync(outPut, { recursive: true })
   writeFileSync(outPut, `${servicePath}\n`)
 }
+
+export function formatVarName(str: string) {
+  // 去除字符串两端的空白字符
+  let validStr = str.trim()
+  // 将非字母、数字、下划线、美元符号的字符替换为下划线
+  validStr = validStr.replace(/[^\w$]/g, '_')
+  // 如果是以数字开头，在前面添加下划线
+  if (/^\d/.test(validStr)) {
+    validStr = '_' + validStr
+  }
+  return validStr
+}
