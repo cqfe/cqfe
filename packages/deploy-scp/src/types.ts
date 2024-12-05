@@ -11,6 +11,8 @@ export interface ServerOption {
   port: string
   // local build command, default is `npm run build`
   buildCmd: string
+  // login remote server exec cmd
+  postCmd: string
 }
 
 export interface ScpDeployOption {

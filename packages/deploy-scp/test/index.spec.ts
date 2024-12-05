@@ -37,11 +37,12 @@ describe('scp-deploy', () => {
     host: '206.237.17.153',
     username: 'root',
     targetPath: '/var/tmp/dist2',
-    buildCmd: 'mkdir dist'
+    buildCmd: 'mkdir dist',
+    postCmd: 'cd /var/tmp && ls -alh'
   }]
 }`,
     )
-    const subprocess = execSync('node ./bin/index.js deploy -n test')
+    const subprocess = execSync('node ./bin/index.js deploy -n test -c')
     expect(subprocess.toString()).toContain('Deploy success')
   })
   it('should config exists', async () => {

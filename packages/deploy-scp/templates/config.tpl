@@ -8,6 +8,7 @@ module.exports = {
       username: 'root', // write your remote server username
       port: '22', // write your remote server port, default is 22
       buildCmd: 'npm run build', // write your local build command, default is npm run build
+      postCmd: 'ls && cd ..' // login remote server exec cmd
     },
   ]
 }
