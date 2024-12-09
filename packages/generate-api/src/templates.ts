@@ -20,6 +20,7 @@ export function tmpRequestFn(
   if (query) requestParamsStr += (requestParamsStr ? ', ' : '') + 'query'
   if (body) requestParamsStr += (requestParamsStr ? ', ' : '') + 'body'
   if (formData) requestParamsStr += (requestParamsStr ? ', ' : '') + 'formData'
+  requestParamsStr += (requestParamsStr ? ', ' : '') + 'options = {}'
   // 修改path参数的url
   const patchedUrl = url.includes('{')
     ? `\`${url.replace(/{([^}]+)}/g, (_, key) => '${path.' + key + '}')}\``
@@ -34,6 +35,7 @@ export function ${name}(${requestParamsStr}) {
   if (query) ret += '    params: query,\n'
   if (formData) ret += '    data: formData,\n'
   if (body) ret += '    data: body,\n'
+  ret += '    ...options,\n'
   ret += `  })
 }`
   return ret
@@ -50,6 +52,7 @@ export function tmpRequestDocFn(description: string, requestParams: IResolveRequ
     })
   }
 
+  doc += '\n * @param {{[key]: any}} options - axios request options'
   doc += '\n */'
   return doc
 }
