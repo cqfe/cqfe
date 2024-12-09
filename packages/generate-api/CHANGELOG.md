@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.17](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.16...@cqfe/generate-api@0.11.17) (2024-12-09)
+
+### Features
+
+- **generate-api:** add options feature ([d091d3e](https://github.com/leoDreamer/cqfe/commit/d091d3eb772fe758be83b4463cc6dda49e0afa7f))
+
 ## [0.11.16](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.15...@cqfe/generate-api@0.11.16) (2024-12-04)
 
 ### Bug Fixes
