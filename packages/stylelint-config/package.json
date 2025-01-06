@@ -3,7 +3,7 @@
   "version": "1.3.3",
   "description": "stylelint config used by cqfe team",
   "author": "leoDreamer <leolichuan@qq.com>",
-  "homepage": "",
+  "homepage": "https://cqfe.leoli.site/",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {

@@ -46,7 +46,7 @@
   ],
   "author": "leo",
   "license": "MIT",
-  "homepage": "https://leodreamer.github.io/cqfe/",
+  "homepage": "https://cqfe.leoli.site/",
   "prettier": "@cqfe/prettier-config",
   "stylelint": {
     "extends": "@cqfe/stylelint-config"
