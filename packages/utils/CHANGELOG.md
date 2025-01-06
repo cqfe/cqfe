@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.8...@cqfe/utils@0.14.9) (2025-01-06)
+
+**Note:** Version bump only for package @cqfe/utils
+
 ## [0.14.8](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.7...@cqfe/utils@0.14.8) (2024-10-31)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.10](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.9...@cqfe/prettier-config@1.3.10) (2025-01-06)
+
+**Note:** Version bump only for package @cqfe/prettier-config
+
 ## [1.3.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/prettier-config@1.3.8...@cqfe/prettier-config@1.3.9) (2024-09-06)
 
 **Note:** Version bump only for package @cqfe/prettier-config
