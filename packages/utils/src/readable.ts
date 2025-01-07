@@ -1,5 +1,6 @@
 /**
  * 将时间值转换为可读性更高的字符串表示形式
+ * @author <李川>
  *
  * @param value 时间值
  * @param fixed 保留的小数位数，默认为 1
@@ -86,6 +87,7 @@ export function readableDuration(
 
 /**
  * 将数字转换为可读性更好的字符串形式
+ * @author <李川>
  *
  * @param num 待转换的数字
  * @param fixed 保留的小数位数，默认为1
@@ -108,6 +110,7 @@ export function readableNumber(num: number, fixed = 1, lang = 'en') {
 
 /**
  * 给数字添加分隔符
+ * @author <李川>
  *
  * @param num 需要添加分隔符的数字
  * @returns 带有分隔符的字符串形式数字

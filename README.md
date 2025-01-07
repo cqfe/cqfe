@@ -25,6 +25,6 @@ packages
 ## Todo
 
 - Feature
-  - [ ] @cqfe/utils: 添加通用正则表达式
+  - [x] @cqfe/utils: 添加通用正则表达式
 - Bug
   - [x] chore: lerna 在action中npm实际发布成功，但显示发布失败(似乎npm publish会执行两次)

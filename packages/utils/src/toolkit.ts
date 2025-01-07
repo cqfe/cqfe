@@ -1,5 +1,6 @@
 /**
  * 从对象中挑选指定键的值并返回新对象
+ * @author <李川>
  *
  * @param obj 原始对象
  * @param keys 需要挑选的键名数组
@@ -20,6 +21,7 @@ export function pick(obj: Record<string, unknown>, keys: string[]) {
 
 /**
  * 去除数组中的假值元素
+ * @author <李川>
  *
  * @param arr 待处理的数组
  * @returns 返回去除假值元素后的新数组
@@ -30,6 +32,7 @@ export function compact(arr: Array<unknown>) {
 
 /**
  * 忽略对象中指定键的属性，返回一个新的对象
+ * @author <李川>
  *
  * @param obj 需要忽略属性的对象
  * @param keysToOmit 需要忽略的键的数组
@@ -48,6 +51,7 @@ export function omit(obj: Record<string, unknown>, keysToOmit: string[]) {
 
 /**
  * 尝试执行一个函数，返回其返回值或错误信息。
+ * @author <李川>
  *
  * @param fn 需要执行的函数。
  * @returns 返回一个元组，包含执行结果或错误信息。

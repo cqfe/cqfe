@@ -2,6 +2,8 @@
 
 - String相关
   - [toFirstUpper](./string.md#toFirstUpper) 将字符串首字母转为大写
+- Array相关
+  - [options2map](./array.md#options2map) options数组对象转换成map对象
 - Timeout相关
   - [setAccuracyTimeout](./timeout.md#setAccuracyTimeout) 精确的setTimeout
   - [setAccuracyInterval](./timeout.md#setAccuracyInterval) 精确的setInterval

@@ -56,6 +56,7 @@ export default defineConfig({
           text: 'Utils',
           items: [
             { text: 'String', link: '/utils/string' },
+            { text: 'Array', link: '/utils/array' },
             { text: 'Request', link: '/utils/request' },
             { text: 'Timeout', link: '/utils/timeout' },
             { text: 'Url', link: '/utils/url' },
