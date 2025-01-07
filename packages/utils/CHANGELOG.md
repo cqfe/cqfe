@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.10](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.9...@cqfe/utils@0.14.10) (2025-01-07)
+
+### Features
+
+- **@cqfe/utils:** 正则表达式、options2map函数、svg动画 ([f2fb88b](https://github.com/leoDreamer/cqfe/commit/f2fb88b633d489004f9207f2a966fcfa91d7215a))
+
 ## [0.14.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/utils@0.14.8...@cqfe/utils@0.14.9) (2025-01-06)
 
 **Note:** Version bump only for package @cqfe/utils
