@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.19](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.18...@cqfe/generate-api@0.11.19) (2025-02-11)
+
+### Bug Fixes
+
+- **generate-api:** illegal path key ([a2500e1](https://github.com/leoDreamer/cqfe/commit/a2500e104fe7b0c15fcadc20e446a61264dc9402))
+
 ## [0.11.18](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.17...@cqfe/generate-api@0.11.18) (2025-01-06)
 
 **Note:** Version bump only for package @cqfe/generate-api
