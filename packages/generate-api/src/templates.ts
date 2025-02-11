@@ -1,4 +1,5 @@
 import { IFieldItem, IResolveRequest } from './resolve'
+import { formatVarName } from './utils'
 
 interface ITmpRequestFn {
   name: string
@@ -23,7 +24,7 @@ export function tmpRequestFn(
   requestParamsStr += (requestParamsStr ? ', ' : '') + 'options = {}'
   // 修改path参数的url
   const patchedUrl = url.includes('{')
-    ? `\`${url.replace(/{([^}]+)}/g, (_, key) => '${path.' + key + '}')}\``
+    ? `\`${url.replace(/{([^}]+)}/g, (_, key) => '${path.' + formatVarName(key) + '}')}\``
     : `'${url}'`
 
   // 生成函数
