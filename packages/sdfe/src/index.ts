@@ -40,8 +40,8 @@ program
 program
   .command('genApi')
   .description('generate api file from swagger or openapi spec')
-  .option('-u, --url', 'swagger or openapi spec url')
-  .option('-o, --output', 'output file path')
+  .option('-u, --url <url>', 'swagger or openapi spec url')
+  .option('-o, --output <output>', 'output file path')
   .option('-a, --app <app>', 'application to build')
   .action(generateApi)
 

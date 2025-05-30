@@ -6,13 +6,13 @@ import { resolve } from 'path'
 import { PROCESS_CWD } from '../constants'
 import { existsSync, mkdirSync } from 'fs'
 
-function buildApp(path: string, options: BuildOptions, extra: string[] = []) {
+async function buildApp(path: string, options: BuildOptions, extra: string[] = []) {
   spawnSync('npm', ['run', 'build', ...extra], {
     cwd: path,
     stdio: 'inherit', // 将子进程的标准输入输出绑定到父进程
   })
   const appName = path.split('/').pop()
-  const output = getAppOutput(path)
+  const output = await getAppOutput(path)
   if (options.zip) {
     execSync(`cd ${path} && zip -r ${output}.zip ${output}`)
     logger.success(`zip success: ${resolve(path, output)}.zip`)

@@ -1,6 +1,6 @@
 module.exports = {
   // your app name
-  app: ''
+  app: '',
   deploy: [{
     // server namespace
     namespace: '',
@@ -27,6 +27,6 @@ module.exports = {
     // copy sub application output folder to root path
     copy: 'iot-os',
     // should zip output folder
-    zip: true
+    zip: false
   }
 }
