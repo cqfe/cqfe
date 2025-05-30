@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.3...@cqfe/sdfe@0.0.4) (2025-05-30)
+
+### Features
+
+- 支持es module配置和vite.config ([0aab92d](https://github.com/leoDreamer/cqfe/commit/0aab92d8d6aaad16ce1dd39c21719d1df481776f))
+
 ## [0.0.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.2...@cqfe/sdfe@0.0.3) (2025-05-30)
 
 ### Bug Fixes
