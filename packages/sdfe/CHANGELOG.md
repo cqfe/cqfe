@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.2...@cqfe/sdfe@0.0.3) (2025-05-30)
+
+### Bug Fixes
+
+- types dependencies ([25e52fa](https://github.com/leoDreamer/cqfe/commit/25e52fa40537168c13b4684ebe826cb0172fa494))
+
+### Features
+
+- 初步完成sdfe ([80d181d](https://github.com/leoDreamer/cqfe/commit/80d181d7d8ffe3da810991e84cc6231c87d30855))
+
 ## 0.0.2 (2025-05-30)
 
 ### Features
