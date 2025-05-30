@@ -6,13 +6,12 @@ import { difference, isEmpty } from 'lodash'
 import { logger } from './utils'
 
 export default async function (options: Record<string, any>): Promise<string[]> {
-  console.warn('GetApps Options', options)
   // 单应用直接返回当前工作目录
   if (!IS_MONOREPO) {
     logger.info('[SDFE] 当前项目为单应用模式')
     return [PROCESS_CWD]
   }
-  logger.info('[SDFE] 当前项目为Monorepo模式')
+  logger.info('当前项目为Monorepo模式')
   const microAppsDir = resolve(PROCESS_CWD, MONOREPO_DIR)
   const apps = readdirSync(microAppsDir)
   apps.unshift('All') // 添加一个选项用于选择所有应用
@@ -26,7 +25,9 @@ export default async function (options: Record<string, any>): Promise<string[]> 
     if (invalidApps.length) {
       throw new Error(`指定的应用${invalidApps.join(',')}不存在`)
     }
-    return options.app.map((app: string) => resolve(PROCESS_CWD, MONOREPO_DIR, app))
+    const appsPath = options.app.map((app: string) => resolve(PROCESS_CWD, MONOREPO_DIR, app))
+    logger.info('HandleApps', appsPath)
+    return appsPath
   } else {
     // 如果没有指定app，则返回所有应用目录
     const res = await prompts([
@@ -50,6 +51,8 @@ export default async function (options: Record<string, any>): Promise<string[]> 
     if (appsPath.length === 0) {
       throw new Error('未选择任何子应用，请重新运行命令')
     }
+
+    logger.info('HandleApps', appsPath)
     return appsPath
   }
 }

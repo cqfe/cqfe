@@ -15,22 +15,23 @@ export interface GenerateApiOptions {
   app: string
   url: string
   output: string
-  server: string
-}
-
-export interface BuildOptions {
-  copy: string
-  zip: boolean
+  service: string
 }
 
 export interface SdfeOptions {
   app: string
   deploy: Array<ServerOption>
-  genApi: GenerateApiOptions
+  genApi: Array<GenerateApiOptions>
   build: BuildOptions
 }
 
 export interface DeployCmdInterface {
   app: string[]
   namespace: string
+}
+
+export interface BuildOptions {
+  app: string[]
+  copy?: string
+  zip?: boolean
 }

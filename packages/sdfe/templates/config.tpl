@@ -6,12 +6,14 @@ module.exports = {
     namespace: '',
     // server deployment path
     path: '',
+    // ssh login user
+    user: '',
     // server host
     host: '',
     // server ssh port
     port: ''
   }],
-  genApi: {
+  genApi: [{
     // name of api file
     app: '',
     // swagger document url
@@ -20,10 +22,10 @@ module.exports = {
     output: 'apis/',
     // be imported service path
     service: "import service from '@/services/appName'"
-  },
+  }],
   build: {
     // copy sub application output folder to root path
-    copy: '',
+    copy: 'iot-os',
     // should zip output folder
     zip: true
   }

@@ -4,6 +4,9 @@ import { readFileSync } from 'fs'
 import { resolve } from 'path'
 import init from './actions/init'
 import deploy from './actions/deploy'
+import build from './actions/build'
+import dev from './actions/dev'
+import generateApi from './actions/generateApi'
 
 const pkg = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf-8'))
 
@@ -20,22 +23,26 @@ program
   .option('-n, --namespace <namespace>', 'server namespace to deploy')
   .action(deploy)
 
-// TODO
 program
   .command('build')
   .description('build an application')
   .option('-z, --zip', 'should zip the build output')
-  .option('-a, --app', 'application to build')
-  .option('-c, --copy', 'copy the build output to root directory')
-  .action(deploy)
+  .option('-a, --app <app...>', 'application to build')
+  .option('-c, --copy <copy>', 'copy the build output to root directory')
+  .action(build)
 
-// TODO
+program
+  .command('dev')
+  .description('dev an application')
+  .option('-a, --app <app...>', 'application to develop')
+  .action(dev)
+
 program
   .command('genApi')
   .description('generate api file from swagger or openapi spec')
   .option('-u, --url', 'swagger or openapi spec url')
   .option('-o, --output', 'output file path')
-  .option('-a, --app', 'application to build')
-  .action(deploy)
+  .option('-a, --app <app>', 'application to build')
+  .action(generateApi)
 
 program.parse(process.argv)

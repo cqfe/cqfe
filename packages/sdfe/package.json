@@ -31,8 +31,10 @@
   "dependencies": {
     "commander": "^12.1.0",
     "lodash": "^4.17.21",
+    "signale": "^1.4.0",
     "prompts": "^2.4.2",
-    "signale": "^1.4.0"
+    "node-ssh": "^13.2.1",
+    "@cqfe/generate-api": "0.11.19"
   },
   "license": "MIT",
   "scripts": {
