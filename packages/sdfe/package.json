@@ -36,6 +36,10 @@
     "node-ssh": "^13.2.1",
     "@cqfe/generate-api": "0.11.19"
   },
+  "devDependencies": {
+    "@types/node-ssh": "^11.0.0",
+    "@types/prompts": "^2.4.9"
+  },
   "license": "MIT",
   "scripts": {
     "test": "jest",
