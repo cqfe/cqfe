@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.2 (2025-05-30)
+
+### Features
+
+- sdfe init ([38ffb5f](https://github.com/leoDreamer/cqfe/commit/38ffb5f04a094d409a8e22056e76501f98202223))
+
 ## [0.10.10](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.9...@cqfe/deploy-scp@0.10.10) (2025-01-06)
 
 **Note:** Version bump only for package @cqfe/deploy-scp
