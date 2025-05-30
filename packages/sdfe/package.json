@@ -1,0 +1,43 @@
+{
+  "name": "@cqfe/sdfe",
+  "version": "0.0.1",
+  "description": "Frontend develop tools for SDFE",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "sdfe": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "README.md"
+  ],
+  "keywords": [
+    "frontend",
+    "deploy",
+    "build",
+    "generate api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoDreamer/cqfe.git"
+  },
+  "bugs": "https://github.com/leoDreamer/cqfe/issues",
+  "homepage": "https://cqfe.leoli.site/",
+  "author": "leoDreamer <leolichuan@qq.com>",
+  "types": "index.d.ts",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "lodash": "^4.17.21",
+    "signale": "^1.4.0",
+    "prompts": "^2.4.2"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build"
+  }
+}
