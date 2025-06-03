@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.6...@cqfe/sdfe@0.0.7) (2025-06-03)
+
+### Features
+
+- 正则获取output ([f22c8ae](https://github.com/leoDreamer/cqfe/commit/f22c8ae066c65f8b08ce3150ed742cf136192ef4))
+
 ## [0.0.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.5...@cqfe/sdfe@0.0.6) (2025-06-03)
 
 ### Features
