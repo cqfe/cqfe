@@ -1,7 +1,7 @@
 import signale from 'signale'
 import { SdfeOptions } from './types'
 import { resolve, dirname } from 'path'
-import { existsSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { PROCESS_CWD } from './constants'
 
 export const logger = signale.scope('SDFE')
@@ -35,21 +35,17 @@ export function getConfig(): SdfeOptions {
 }
 
 // 获取app输出目录
-export async function getAppOutput(path: string) {
+export function getAppOutput(path: string) {
   let outputDir = 'dist'
   try {
-    let viteConf
-    try {
-      viteConf = require(resolve(path, 'vite.config.js'))
-    } catch (e: any) {
-      viteConf = (await import(resolve(path, 'vite.config.js'))).default
+    const regexp = /outDir\s*:\s*['"]([^'"]+)['"]/
+    const str = readFileSync(resolve(path, 'vite.config.js'), 'utf-8')
+    const match = str.match(regexp)
+    if (match?.[1]) {
+      outputDir = match[1]
     }
-
-    if (viteConf && viteConf.build && viteConf.build.output) {
-      outputDir = viteConf.build.output
-    }
-  } catch (e: any) {
-    logger.warn(`无法读取 ${path}/vite.config.js 文件，将使用默认输出目录 'dist'。错误信息: ${e.message}`)
+  } catch (_) {
+    logger.warn('未找到vite.config.js文件,使用默认输出目录: dist')
   }
   return outputDir
 }

@@ -16,7 +16,7 @@ function mockMonorepo() {
   const APP_PATH = resolve(BASE_PATH, 'microApps/app')
   writeFileSync(resolve(BASE_PATH, 'pnpm-workspace.yaml'), '')
   mkdirSync(resolve(APP_PATH, 'app_dist'), { recursive: true })
-  writeFileSync(resolve(APP_PATH, 'vite.config.js'), "module.exports = {build:{output:'app_dist'}}")
+  writeFileSync(resolve(APP_PATH, 'vite.config.js'), "module.exports = {build:{outDir:'app_dist'}}")
   writeFileSync(resolve(APP_PATH, 'app_dist', 'index.html'), '<html><body>Hello world</body></html>')
   writeFileSync(
     resolve(APP_PATH, 'package.json'),

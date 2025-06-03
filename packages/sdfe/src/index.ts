@@ -15,9 +15,7 @@ program.name('sdfe').description('front end development tools').version(pkg.vers
 program.command('init').description('init config files in current working directory').action(init)
 
 program
-  .command('deploy', {
-    isDefault: true,
-  })
+  .command('deploy')
   .description('deploy to remote server')
   .option('-a, --app <app...>', 'application should be deployed, can be multiple, separated by en comma')
   .option('-n, --namespace <namespace>', 'server namespace to deploy')
