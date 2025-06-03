@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.4...@cqfe/sdfe@0.0.5) (2025-06-03)
+
+### Bug Fixes
+
+- 使用require处理esm ([8e13292](https://github.com/leoDreamer/cqfe/commit/8e13292af5d768a1cce7e4d6ba124b0f1fb22631))
+
 ## [0.0.4](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.3...@cqfe/sdfe@0.0.4) (2025-05-30)
 
 ### Features
