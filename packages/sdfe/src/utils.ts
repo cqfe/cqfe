@@ -2,26 +2,17 @@ import signale from 'signale'
 import { SdfeOptions } from './types'
 import { resolve, dirname } from 'path'
 import { existsSync } from 'fs'
-import { CONFIG_NAME, CONFIG_SUFFIX, PROCESS_CWD } from './constants'
+import { PROCESS_CWD } from './constants'
 
 export const logger = signale.scope('SDFE')
-
-export function existsConfigFile(dir: string = PROCESS_CWD): string | null {
-  let ret: string | null = null
-  CONFIG_SUFFIX.forEach((suffix) => {
-    const fileName = CONFIG_NAME + suffix
-    const filePath = resolve(dir, fileName)
-    if (existsSync(filePath) && !ret) ret = filePath
-  })
-  return ret
-}
 
 // 查找配置文件，支持 .cdfe.js 和 .cdfe.cjs，从当前目录递归向上查找
 export function findConfigFile(startDir: string = PROCESS_CWD): string | null {
   let dir = startDir
   let filePath: string | null = null
   while (!filePath) {
-    filePath = existsConfigFile(dir)
+    const configPath = resolve(dir, '.sdfe.cjs')
+    filePath = existsSync(configPath) ? configPath : null
     const parent = dirname(dir)
     if (parent === dir) break // 已到根目录
     dir = parent
@@ -33,7 +24,7 @@ export function findConfigFile(startDir: string = PROCESS_CWD): string | null {
 export function getConfig(): SdfeOptions {
   const configPath = findConfigFile()
   if (!configPath) {
-    logger.warn('未找到配置文件 .sdfe.js 或 .sdfe.cjs')
+    logger.warn('未找到配置文件 .sdfe.cjs')
     return {} as SdfeOptions
   }
 
@@ -44,15 +35,15 @@ export function getConfig(): SdfeOptions {
 }
 
 // 获取app输出目录
-export function getAppOutput(path: string) {
+export async function getAppOutput(path: string) {
   let outputDir = 'dist'
   try {
-    logger.info('viteConf', resolve(path, 'vite.config.js'))
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    let viteConfModule = require(resolve(path, 'vite.config.js'))
-    viteConfModule = viteConfModule.default || viteConfModule // 获取默认导出或整个模块
-
-    const viteConf = viteConfModule.default || viteConfModule // 获取默认导出或整个模块
+    let viteConf
+    try {
+      viteConf = require(resolve(path, 'vite.config.js'))
+    } catch (e: any) {
+      viteConf = (await import(resolve(path, 'vite.config.js'))).default
+    }
 
     if (viteConf && viteConf.build && viteConf.build.output) {
       outputDir = viteConf.build.output

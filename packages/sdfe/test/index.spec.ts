@@ -3,7 +3,6 @@ import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
 import { resolve } from 'path'
 
 const BASE_PATH = process.cwd()
-const CONFIG_PATH = resolve(BASE_PATH, '.sdfe.js')
 const CONFIG_CJS_PATH = resolve(BASE_PATH, '.sdfe.cjs')
 
 function rmFile(filePath: string) {
@@ -43,7 +42,6 @@ genApi: [{app: 'pet', url:'https://petstore.swagger.io/v2/swagger.json',output: 
 }
 // 清除配置文件
 function clearConfig() {
-  rmFile(CONFIG_PATH)
   rmFile(CONFIG_CJS_PATH)
 }
 
