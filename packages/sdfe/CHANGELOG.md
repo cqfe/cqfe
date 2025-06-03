@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.5...@cqfe/sdfe@0.0.6) (2025-06-03)
+
+### Features
+
+- 仅使用cjs配置文件 ([c7dcbce](https://github.com/leoDreamer/cqfe/commit/c7dcbceb86a7bee69fe13b5778f9c83a5289cb7c))
+
 ## [0.0.5](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.4...@cqfe/sdfe@0.0.5) (2025-06-03)
 
 ### Bug Fixes
