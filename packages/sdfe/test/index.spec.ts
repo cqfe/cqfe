@@ -6,7 +6,7 @@ const BASE_PATH = process.cwd()
 const CONFIG_PATH = resolve(BASE_PATH, '.sdfe.js')
 const CONFIG_CJS_PATH = resolve(BASE_PATH, '.sdfe.cjs')
 
-function rmFile(filePath) {
+function rmFile(filePath: string) {
   if (existsSync(filePath)) {
     rmSync(filePath, { recursive: true, force: true })
   }
@@ -33,7 +33,7 @@ function clearMonorepo() {
 // 模拟配置
 function mockConfig() {
   writeFileSync(
-    CONFIG_PATH,
+    CONFIG_CJS_PATH,
     `module.exports = {
 name: 'app',
 deploy: [{namespace:'dev',host:'206.237.26.101',user:'root',path:'/tmp'}],
@@ -80,7 +80,7 @@ describe('SDFE', () => {
     mockConfig()
     try {
       execSync('node ./bin/index.js deploy -a app app2')
-    } catch (e) {
+    } catch (e: any) {
       expect(e.message).toContain('指定的应用app2不存在')
     }
   })

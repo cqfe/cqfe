@@ -46,7 +46,7 @@ async function sshConnect(server: ServerOption) {
 async function deployApp(path: string, server: ServerOption) {
   const appName = path.split('/').pop()
   logger.info(`[Deploy] 开始部署应用: ${appName} 到服务器: ${server.host}${server.path}`)
-  const outputDir = await getAppOutput(path)
+  const outputDir = getAppOutput(path)
   if (!existsSync(resolve(path, outputDir))) {
     logger.error(`应用 ${appName} 的输出目录 ${outputDir} 不存在，请先执行构建命令`)
     return
@@ -66,7 +66,7 @@ export default async function (options: Partial<DeployCmdInterface> = {}) {
   // 需要发布的应用
   const apps = await getApp(options)
   // 配置
-  const conf = await getConfig()
+  const conf = getConfig()
   logger.info('DeployConfig', conf)
   const serverInfo = {} as ServerOption
   if (!conf.deploy?.length) {

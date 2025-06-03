@@ -6,7 +6,7 @@ export default async function (options: GenerateApiOptions) {
   if (!options.app) {
     throw new Error('app is required, input -a or --app option')
   }
-  const config = await getConfig()
+  const config = getConfig()
   if (!config.genApi) {
     throw new Error('genApi is required in sdfe.config.js')
   }

@@ -12,7 +12,7 @@ async function buildApp(path: string, options: BuildOptions, extra: string[] = [
     stdio: 'inherit', // 将子进程的标准输入输出绑定到父进程
   })
   const appName = path.split('/').pop()
-  const output = await getAppOutput(path)
+  const output = getAppOutput(path)
   if (options.zip) {
     execSync(`cd ${path} && zip -r ${output}.zip ${output}`)
     logger.success(`zip success: ${resolve(path, output)}.zip`)
