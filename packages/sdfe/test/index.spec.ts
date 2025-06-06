@@ -64,13 +64,13 @@ describe('SDFE', () => {
     expect(subprocess.toString()).toContain(pkg.version)
   })
   it('初始化配置文件', async () => {
-    const subprocess = execSync('node ./bin/index.js init')
+    const subprocess = execSync('node ./bin/index.js initConfig')
     expect(subprocess.toString()).toContain('config file .sdfe.cjs created')
     rmFile(CONFIG_CJS_PATH)
   })
   it('配置存在', async () => {
     writeFileSync(CONFIG_CJS_PATH, 'module.exports = {}')
-    const subprocess = execSync('node ./bin/index.js init')
+    const subprocess = execSync('node ./bin/index.js initConfig')
     expect(subprocess.toString()).toContain('config file already exists')
   })
   it('操作不存在应用', async () => {

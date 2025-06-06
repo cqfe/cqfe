@@ -7,12 +7,13 @@ import deploy from './actions/deploy'
 import build from './actions/build'
 import dev from './actions/dev'
 import generateApi from './actions/generateApi'
+import initConfig from './actions/initConfig'
 
 const pkg = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf-8'))
 
 program.name('sdfe').description('front end development tools').version(pkg.version, '-v, --version')
-
-program.command('init').description('init config files in current working directory').action(init)
+program.command('init').description('init app').action(init)
+program.command('initConfig').description('init config files in current working directory').action(initConfig)
 
 program
   .command('deploy')

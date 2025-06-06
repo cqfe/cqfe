@@ -5,29 +5,26 @@ import { getAppOutput, getConfig, logger } from '../utils'
 import { existsSync } from 'fs'
 import { NodeSSH } from 'node-ssh'
 import { execSync } from 'child_process'
-import { createInterface, Interface } from 'readline'
+import prompts from 'prompts'
 
 const ssh = new NodeSSH()
-// 普通问题输入
-function question(rl: Interface, prompt: string) {
-  return new Promise((resolve) => {
-    rl.question(prompt, resolve)
-  })
-}
 
 async function sshConnect(server: ServerOption) {
   // 填充密码
   let pwd = process.env[`PWD_${server.user}_${server.host.replace(/\./g, '_')}`]
   if (pwd) {
     execSync(`echo ${pwd} | pbcopy`)
-    logger.success('copy password to clipboard')
+    logger.success('环境变量读取密码成功')
   } else {
-    logger.warn('password not found, please set PWD_{user}_{host}(replace . to _) env var')
-    const rl = createInterface({
-      input: process.stdin,
-      output: process.stdout,
-    })
-    pwd = (await question(rl, '请输入密码:')) as unknown as string
+    logger.warn(`未读取到环境变量(PWD_${server.user}_${server.host.replace(/\./g, '_')})密码`)
+    const pwdRl = await prompts([
+      {
+        type: 'text',
+        name: 'value',
+        message: '请输入密码',
+      },
+    ])
+    pwd = pwdRl.value
   }
   await ssh
     .connect({
@@ -49,7 +46,7 @@ async function deployApp(path: string, server: ServerOption) {
   const outputDir = getAppOutput(path)
   if (!existsSync(resolve(path, outputDir))) {
     logger.error(`应用 ${appName} 的输出目录 ${outputDir} 不存在，请先执行构建命令`)
-    return
+    return Promise.resolve()
   }
   const status = await ssh.putDirectory(resolve(path, outputDir), `${server.path}/${appName}`, {
     recursive: true,
@@ -67,7 +64,6 @@ export default async function (options: Partial<DeployCmdInterface> = {}) {
   const apps = await getApp(options)
   // 配置
   const conf = getConfig()
-  logger.info('DeployConfig', conf)
   const serverInfo = {} as ServerOption
   if (!conf.deploy?.length) {
     throw new Error('未找到部署配置,请检查[deploy]配置项')
