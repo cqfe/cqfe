@@ -1,10 +1,12 @@
-# deploy-scp
+# sdfe
 
 ## Description
 
-SD前端研发工具，支持`deploy`,`build`,`dev`,`generateApi`,支持pnpm管理的多应用，和单应用
+SD前端研发工具，支持`init`,`dev`,`build`,`deploy`,`generateApi`,支持pnpm管理的多应用，和单应用（多应用默认在`microApps`目录下）
 
 ## Usage
+
+`npm i @cqfe/sdfe -g`
 
 ## Example
 
@@ -31,6 +33,7 @@ SD前端研发工具，支持`deploy`,`build`,`dev`,`generateApi`,支持pnpm管�
     app: 'pet',
     url: 'https://petstore.swagger.io/v2/swagger.json',
     output: './apis/pet.js',
+    // service引用地址，原样写入pet.js文件
     service: "import service from '@/services/pet.js'"
   }],
   build: {
