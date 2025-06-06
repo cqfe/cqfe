@@ -8,10 +8,12 @@ SD前端研发工具，支持`deploy`,`build`,`dev`,`generateApi`,支持pnpm管�
 
 ## Example
 
+- 初始化应用: `sdfe init`选择相应模板，填写应用名称
+- 生成API：`sdfe generateApi -a app1 -u https://xxx -o ./apis/pet.js`
 - 开发应用：`sdfe dev -a app1 app2`或者`sdfe dev`选择需要开发的应用
 - 构建应用：`sdfe build -a app1 app2`或者`sdfe build`选择需要构建的应用
 - 发布应用：`sdfe deploy -a app1 app2 -n dev`或者`sdfe deploy -n dev`选择需要发布的应用,如果不输入-n配置，默认发布到`deploy`数组第一个环境
-- 生成API：`sdfe generateApi -a app1 -u https://xxx -o ./apis/pet.js`
+- 初始化配置文件：`sdfe initConfig`，然后修改对应字段
 
 ## Config Field
 
