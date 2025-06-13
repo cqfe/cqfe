@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.8...@cqfe/sdfe@0.0.9) (2025-06-13)
+
+### Features
+
+- dev multi bug ([2ba7b14](https://github.com/leoDreamer/cqfe/commit/2ba7b14c97331e7fe6c9200a8d529cb6b343cd92))
+
 ## [0.0.8](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.7...@cqfe/sdfe@0.0.8) (2025-06-06)
 
 ### Features
