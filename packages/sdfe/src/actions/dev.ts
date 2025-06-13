@@ -3,7 +3,7 @@ import getApp from '../getApp'
 import { BuildOptions } from '../types'
 import { logger } from '../utils'
 
-function devApp(path: string, options: BuildOptions, extra: string[] = []) {
+async function devApp(path: string, extra: string[] = []) {
   spawnSync('npm', ['run', 'dev', ...extra], {
     cwd: path,
     stdio: 'inherit', // 将子进程的标准输入输出绑定到父进程
@@ -15,5 +15,5 @@ function devApp(path: string, options: BuildOptions, extra: string[] = []) {
 export default async function (options: BuildOptions, cmd: Record<string, any>) {
   // 需要构建的应用
   const apps = await getApp(options)
-  await Promise.all(apps.map((app) => devApp(app, options, cmd.args)))
+  await Promise.all(apps.map((app) => devApp(app, cmd.args)))
 }
