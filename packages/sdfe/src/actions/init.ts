@@ -1,4 +1,4 @@
-import { APP_TEMPLATE_MAP, IS_MONOREPO, MONOREPO_DIR, PROCESS_CWD } from '../constants'
+import { APP_TEMPLATE_MAP, IS_MULTI_REPO, MULTI_REPO_DIR, PROCESS_CWD } from '../constants'
 import prompts from 'prompts'
 import { spawnSync } from 'child_process'
 import { resolve } from 'path'
@@ -23,10 +23,10 @@ export default async function () {
       message: '请输入项目名称',
     },
   ])
-  if (IS_MONOREPO && resTemplate.template === 'subDesktop') {
+  if (IS_MULTI_REPO && resTemplate.template === 'subDesktop') {
     // clone 子应用
     spawnSync('git', ['clone', APP_TEMPLATE_MAP[resTemplate.template].url, resName.name], {
-      cwd: resolve(PROCESS_CWD, MONOREPO_DIR),
+      cwd: resolve(PROCESS_CWD, MULTI_REPO_DIR),
       stdio: 'inherit',
     })
     // 安装依赖
@@ -35,10 +35,10 @@ export default async function () {
     })
     // 删除 .git
     spawnSync('rm', ['-rf', '.git'], {
-      cwd: resolve(PROCESS_CWD, MONOREPO_DIR, resName.name),
+      cwd: resolve(PROCESS_CWD, MULTI_REPO_DIR, resName.name),
       stdio: 'inherit',
     })
-    logger.success(`初始化子应用 ${MONOREPO_DIR}/${resName.name} 成功`)
+    logger.success(`初始化子应用 ${MULTI_REPO_DIR}/${resName.name} 成功`)
   } else {
     // clone 项目
     spawnSync('git', ['clone', APP_TEMPLATE_MAP[resTemplate.template].url, resName.name], {

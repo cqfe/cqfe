@@ -78,6 +78,7 @@ export default async function (options: Partial<DeployCmdInterface> = {}) {
     // 如果没有指定命名空间，则使用第一个配置
     Object.assign(serverInfo, conf.deploy[0])
   }
+  logger.info('deploy args', JSON.stringify({ ...serverInfo }, undefined, 2))
   await sshConnect(serverInfo)
   for (const app of apps) {
     await deployApp(app, serverInfo)

@@ -16,11 +16,13 @@ export default async function (options: GenerateApiOptions) {
   }
   const output = options.output || apiConfig.output
   const url = options.url || apiConfig.url
-  await generateApi({
+  const conf = {
     ...apiConfig,
     url,
     outPut: output,
     servicePath: apiConfig.service,
-  })
+  }
+  logger.info('genApi args', JSON.stringify({ ...conf }, undefined, 2))
+  await generateApi(conf)
   logger.success('Generate api success')
 }
