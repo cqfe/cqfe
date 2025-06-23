@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.9...@cqfe/sdfe@0.0.10) (2025-06-23)
+
+### Features
+
+- rename monorepo and dev multi bug ([cfc7e94](https://github.com/leoDreamer/cqfe/commit/cfc7e940191f686b60fcff74244407bafc3853a9))
+
 ## [0.0.9](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.8...@cqfe/sdfe@0.0.9) (2025-06-13)
 
 ### Features
