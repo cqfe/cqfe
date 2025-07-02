@@ -21,7 +21,7 @@ SD前端研发工具，支持`init`,`dev`,`build`,`deploy`,`generateApi`,支持p
 
 ```js
 {
-  app: 'appName'
+  app: 'appName',
   deploy: [{
     namespace: 'dev',
     path: '/nginx/html',

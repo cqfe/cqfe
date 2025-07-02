@@ -48,6 +48,7 @@ export default defineConfig({
             { text: 'UseAmap', link: '/vue-hooks/useAmap' },
             { text: 'UsePlayer', link: '/vue-hooks/usePlayer' },
             { text: 'UsePaginationReq', link: '/vue-hooks/usePaginationReq' },
+            { text: 'UseState', link: '/vue-hooks/useState' },
           ],
         },
       ],
@@ -70,7 +71,7 @@ export default defineConfig({
           text: 'Toolkit',
           items: [
             { text: 'GenerateApi', link: '/toolkit/generateApi' },
-            { text: 'ScpDeploy', link: '/toolkit/scpDeploy' },
+            { text: 'Sdfe', link: '/toolkit/sdfe' },
           ],
         },
       ],
