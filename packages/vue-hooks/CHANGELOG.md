@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.14](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.13...@cqfe/vue-hooks@0.14.14) (2025-07-02)
+
+### Features
+
+- some feature ([91fd2df](https://github.com/leoDreamer/cqfe/commit/91fd2df28bfc50a85559ea416cb5196e9b56f74a))
+
 ## [0.14.13](https://github.com/leoDreamer/cqfe/compare/@cqfe/vue-hooks@0.14.12...@cqfe/vue-hooks@0.14.13) (2025-01-07)
 
 **Note:** Version bump only for package @cqfe/vue-hooks
