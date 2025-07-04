@@ -28,6 +28,7 @@ export interface SdfeOptions {
 export interface DeployCmdInterface {
   app: string[]
   namespace: string
+  build?: boolean
 }
 
 export interface BuildOptions {

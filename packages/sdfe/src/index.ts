@@ -20,6 +20,7 @@ program
   .description('deploy to remote server')
   .option('-a, --app <app...>', 'application should be deployed, can be multiple, separated by en comma')
   .option('-n, --namespace <namespace>', 'server namespace to deploy')
+  .option('-b, --build', 'build before deploy')
   .action(deploy)
 
 program

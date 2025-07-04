@@ -88,6 +88,13 @@ describe('SDFE', () => {
     const subprocess = execSync('node ./bin/index.js deploy -a app -n dev')
     expect(subprocess.toString()).toContain('应用 app 部署成功')
   })
+  it('deploy&build成功', async () => {
+    mockMonorepo()
+    mockConfig()
+    const subprocess = execSync('node ./bin/index.js deploy -a app -n dev -b')
+    expect(subprocess.toString()).toContain('start build')
+    expect(subprocess.toString()).toContain('应用 app 部署成功')
+  })
   it('build成功', async () => {
     mockMonorepo()
     const subprocess = execSync('node ./bin/index.js build -a app')

@@ -6,6 +6,8 @@ import { existsSync } from 'fs'
 import { NodeSSH } from 'node-ssh'
 import { execSync } from 'child_process'
 import prompts from 'prompts'
+import build from './build'
+import { pick } from 'lodash'
 
 const ssh = new NodeSSH()
 
@@ -59,7 +61,7 @@ async function deployApp(path: string, server: ServerOption) {
   }
 }
 
-export default async function (options: Partial<DeployCmdInterface> = {}) {
+export default async function (options: Partial<DeployCmdInterface> = {}, cmd: Record<string, any>) {
   // 需要发布的应用
   const apps = await getApp(options)
   // 配置
@@ -79,6 +81,9 @@ export default async function (options: Partial<DeployCmdInterface> = {}) {
     Object.assign(serverInfo, conf.deploy[0])
   }
   logger.info('deploy args', JSON.stringify({ ...serverInfo }, undefined, 2))
+  if (options.build) {
+    await build(pick(options, ['app']) as { app: string[] }, cmd)
+  }
   await sshConnect(serverInfo)
   for (const app of apps) {
     await deployApp(app, serverInfo)
