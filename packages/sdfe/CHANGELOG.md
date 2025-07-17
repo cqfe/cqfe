@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.11...@cqfe/sdfe@0.0.12) (2025-07-17)
+
+### Features
+
+- 大屏模板 ([8ebe2f2](https://github.com/leoDreamer/cqfe/commit/8ebe2f2ec59bfd4bc28376d4fc1b26991ddecbf0))
+- 单应用部署名字取配置内容 ([794a118](https://github.com/leoDreamer/cqfe/commit/794a118c89ebf482fed75511a48ca3811390c839))
+
 ## [0.0.11](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.10...@cqfe/sdfe@0.0.11) (2025-07-04)
 
 ### Features
