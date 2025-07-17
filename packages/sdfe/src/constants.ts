@@ -17,6 +17,10 @@ export const APP_TEMPLATE_MAP = {
     desc: 'vue：子应用模板(如果是多应用根目录，自动初始化到microApps目录下)',
     url: 'https://github.com/cqfe/template-sub-vue.git',
   },
+  bigScreen: {
+    desc: 'vue: 大屏模板',
+    url: 'https://github.com/cqfe/template-big-screen.git',
+  },
   mobile: {
     desc: 'taro：移动端模板',
     url: 'https://github.com/cqfe/template-taro.git',
