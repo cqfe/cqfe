@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.13](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.12...@cqfe/sdfe@0.0.13) (2025-07-30)
+
+### Features
+
+- init安装依赖时windows报错 ([c92c198](https://github.com/leoDreamer/cqfe/commit/c92c198f2cb3c0916bad675bf414c5514f0a92fb))
+
 ## [0.0.12](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.11...@cqfe/sdfe@0.0.12) (2025-07-17)
 
 ### Features
