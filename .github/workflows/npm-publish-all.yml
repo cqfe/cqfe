@@ -6,7 +6,7 @@ name: npm-publish-all
 on:
   push:
     tags:
-      - 'v*'
+      - '@cqfe/*'
 
   workflow_dispatch:
 

@@ -38,11 +38,23 @@ export function getConfig(): SdfeOptions {
 export function getAppOutput(path: string) {
   let outputDir = 'dist'
   try {
+    // vue3+vite
     const regexp = /outDir\s*:\s*['"]([^'"]+)['"]/
     const str = readFileSync(resolve(path, 'vite.config.js'), 'utf-8')
     const match = str.match(regexp)
     if (match?.[1]) {
       outputDir = match[1]
+      logger.success(`通过vite.config.js获取app输出目录: ${outputDir}`)
+      return outputDir
+    }
+    // vue2+webpack
+    const regexpWebpack = /outputDir\s*:\s*['"]([^'"]+)['"]/
+    const strWebpack = readFileSync(resolve(path, 'vue.config.js'), 'utf-8')
+    const matchWebpack = strWebpack.match(regexpWebpack)
+    if (matchWebpack?.[1]) {
+      outputDir = matchWebpack[1]
+      logger.success(`vue.config.js获取app输出目录: ${outputDir}`)
+      return outputDir
     }
   } catch (_) {
     logger.warn('未找到vite.config.js文件,使用默认输出目录: dist')

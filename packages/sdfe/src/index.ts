@@ -21,6 +21,7 @@ program
   .option('-a, --app <app...>', 'application should be deployed, can be multiple, separated by en comma')
   .option('-n, --namespace <namespace>', 'server namespace to deploy')
   .option('-b, --build', 'build before deploy')
+  .option('-r, --rename <rename>', 'folder name in remote server, default is appName or folderName')
   .action(deploy)
 
 program

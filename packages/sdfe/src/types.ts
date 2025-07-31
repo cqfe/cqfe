@@ -29,6 +29,7 @@ export interface DeployCmdInterface {
   app: string[]
   namespace: string
   build?: boolean
+  rename?: string
 }
 
 export interface BuildOptions {

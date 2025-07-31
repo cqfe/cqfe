@@ -88,7 +88,7 @@ export default async function (options: Partial<DeployCmdInterface> = {}, cmd: R
   }
   await sshConnect(serverInfo)
   for (const app of apps) {
-    await deployApp(app, serverInfo, conf.app)
+    await deployApp(app, serverInfo, options.rename || conf.app)
   }
   ssh.dispose()
 }
