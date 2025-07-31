@@ -14,7 +14,9 @@ const ssh = new NodeSSH()
 
 async function sshConnect(server: ServerOption) {
   // 填充密码
-  let pwd = process.env[`PWD_${server.user}_${server.host.replace(/\./g, '_')}`]
+  const pwdKey = `PWD_${server.user}_${server.host.replace(/\./g, '_')}`
+  // 先检查带端口的变量是否存在，不存在则使用默认的
+  let pwd = process.env[`${pwdKey}_${server.port || 22}`] || process.env[pwdKey]
   if (pwd) {
     execSync(`echo ${pwd} | pbcopy`)
     logger.success('环境变量读取密码成功')

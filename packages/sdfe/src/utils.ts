@@ -47,17 +47,21 @@ export function getAppOutput(path: string) {
       logger.success(`通过vite.config.js获取app输出目录: ${outputDir}`)
       return outputDir
     }
+  } catch (_) {
+    logger.warn('未找到vite.config.js文件,使用默认输出目录: dist')
+  }
+  try {
     // vue2+webpack
     const regexpWebpack = /outputDir\s*:\s*['"]([^'"]+)['"]/
     const strWebpack = readFileSync(resolve(path, 'vue.config.js'), 'utf-8')
     const matchWebpack = strWebpack.match(regexpWebpack)
     if (matchWebpack?.[1]) {
       outputDir = matchWebpack[1]
-      logger.success(`vue.config.js获取app输出目录: ${outputDir}`)
+      logger.success(`通过vue.config.js获取app输出目录: ${outputDir}`)
       return outputDir
     }
   } catch (_) {
-    logger.warn('未找到vite.config.js文件,使用默认输出目录: dist')
+    logger.warn('未找到vue.config.js文件,使用默认输出目录: dist')
   }
   return outputDir
 }
