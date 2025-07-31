@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.14](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.13...@cqfe/sdfe@0.0.14) (2025-07-31)
+
+### Features
+
+- deploy support vue.config.js fetch outputDir, rename folder when deploy ([bf4ffb2](https://github.com/leoDreamer/cqfe/commit/bf4ffb2837c0dd482316a7fd02accb9df1c92398))
+
 ## [0.0.13](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.12...@cqfe/sdfe@0.0.13) (2025-07-30)
 
 ### Features
