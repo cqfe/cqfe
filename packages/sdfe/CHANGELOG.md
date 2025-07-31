@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.15](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.14...@cqfe/sdfe@0.0.15) (2025-07-31)
+
+### Bug Fixes
+
+- get output dir by webpack config issue, get password from env check port first ([c68ecf3](https://github.com/leoDreamer/cqfe/commit/c68ecf3274e81abe093cf3f9a1973169bc70d389))
+
 ## [0.0.14](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.13...@cqfe/sdfe@0.0.14) (2025-07-31)
 
 ### Features
