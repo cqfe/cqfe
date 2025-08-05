@@ -1,5 +1,7 @@
 # deploy-scp
 
+It has been integrated into @cqfe/sdfe. Please use the new cli tool [@cqfe/sdfe](https://github.com/cqfe/cqfe/tree/main/packages/sdfe)
+
 ## Description
 
 A front end deploy tool for scp. init config file in your project root directory by command `sdeploy init`, and edit config file to your need. then you can simple deploy your project to remote server by command `sdeploy -n xxx`.

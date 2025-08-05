@@ -1,5 +1,7 @@
 # generate-api
 
+It has been integrated into @cqfe/sdfe. Please use the new cli tool [@cqfe/sdfe](https://github.com/cqfe/cqfe/tree/main/packages/sdfe)
+
 ## Description
 
 Generate api for axios, based on swagger json.support `Swagger2.0`&`OpenAPI3.0`.

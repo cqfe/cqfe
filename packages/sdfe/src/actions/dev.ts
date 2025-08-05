@@ -1,14 +1,19 @@
-import { spawn } from 'child_process'
+import { spawnSync } from 'child_process'
 import getApp from '../getApp'
 import { BuildOptions } from '../types'
 import { logger } from '../utils'
 
 function devApp(path: string, extra: string[] = []) {
-  spawn('npm', ['run', 'dev', ...extra], {
-    cwd: path,
-    stdio: 'inherit', // 将子进程的标准输入输出绑定到父进程
-  })
   const appName = path.split('/').pop()
+  const res = spawnSync('npm', ['run', 'dev', ...extra], {
+    cwd: path,
+    stdio: 'inherit',
+    shell: true,
+  })
+  if (res.status !== 0) {
+    logger.error(`dev ${appName} error`)
+    process.exit(1)
+  }
   logger.success(`dev ${appName} success`)
 }
 
