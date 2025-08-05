@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/sdfe",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Frontend develop tools for SDFE",
   "private": false,
   "publishConfig": {

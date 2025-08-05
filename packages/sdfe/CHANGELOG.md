@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.15...@cqfe/sdfe@0.0.16) (2025-08-05)
+
+### Bug Fixes
+
+- sdfe build command bug in windows ([5c3d651](https://github.com/leoDreamer/cqfe/commit/5c3d651b492645e0c366184a33892b718e89cae7))
+
 ## [0.0.15](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.14...@cqfe/sdfe@0.0.15) (2025-07-31)
 
 ### Bug Fixes
