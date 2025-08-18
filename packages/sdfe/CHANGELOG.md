@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.17](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.16...@cqfe/sdfe@0.0.17) (2025-08-18)
+
+### Features
+
+- 新增移动端monorepo多端模板 ([749a410](https://github.com/leoDreamer/cqfe/commit/749a410e87e8ff681a0f99fbdb2cc9b19e0d4cec))
+
 ## [0.0.16](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.15...@cqfe/sdfe@0.0.16) (2025-08-05)
 
 ### Bug Fixes
