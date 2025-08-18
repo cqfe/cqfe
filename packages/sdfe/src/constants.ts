@@ -22,7 +22,11 @@ export const APP_TEMPLATE_MAP = {
     url: 'https://github.com/cqfe/template-big-screen.git',
   },
   mobile: {
-    desc: 'taro：移动端模板',
+    desc: 'taro+vue：移动端模板',
     url: 'https://github.com/cqfe/template-taro.git',
+  },
+  mobileMonorepo: {
+    desc: 'taro+vue+monorepo：移动端单仓多端模板',
+    url: 'https://github.com/cqfe/template-mobile-monorepo.git',
   },
 } as Record<string, { desc: string; url: string }>
