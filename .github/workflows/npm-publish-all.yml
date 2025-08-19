@@ -30,12 +30,13 @@ jobs:
         with:
           node-version: 20
           cache: npm # 或 pnpm / yarn
-          # registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org/
       - name: Set git identity
         run: |
           git config --global user.name "lllleoli"
           git config --global user.email "leolichuan@qq.com"
       - run: git checkout --
+      - run: npm config set registry https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
       - run: npm run publish
