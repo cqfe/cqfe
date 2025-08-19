@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
           cache: npm # 或 pnpm / yarn
-          registry-url: https://registry.npmjs.org/
+          # registry-url: https://registry.npmjs.org/
       - name: Set git identity
         run: |
           git config --global user.name "lllleoli"
