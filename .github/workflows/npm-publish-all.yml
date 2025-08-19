@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
           cache: npm # 或 pnpm / yarn
-          # registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org/
       - name: Set git identity
         run: |
           git config --global user.name "lllleoli"
@@ -39,8 +39,8 @@ jobs:
         run: |
           npm config delete proxy
           npm config delete https-proxy
-      - name: Set npm registry
-        run: npm config set registry https://registry.npmmirror.com/
+      # - name: Set npm registry
+      #   run: npm config set registry https://registry.npmmirror.com/
       - name: Install dependencies
         run: |
           git checkout --
