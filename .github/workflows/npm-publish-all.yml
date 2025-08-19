@@ -31,16 +31,28 @@ jobs:
           node-version: 20
           cache: npm # 或 pnpm / yarn
           # registry-url: https://registry.npmjs.org/
-          registry-url: https://registry.npmmirror.com
       - name: Set git identity
         run: |
           git config --global user.name "lllleoli"
           git config --global user.email "leolichuan@qq.com"
-      - run: git checkout --
-      - run: npm config set proxy null
-      - run: npm ci
-      - run: npm run build
-      - run: npm run publish
+      - name: Clear npm proxy settings
+        run: |
+          npm config delete proxy
+          npm config delete https-proxy
+      - name: Set npm registry
+        run: npm config set registry https://registry.npmmirror.com/
+      - name: Install dependencies
+        run: |
+          git checkout --
+          for i in {1..3}; do
+            npm ci && break
+            sleep 2
+          done
+        shell: bash
+      - name: Build and publish
+        run: |
+          npm run build
+          npm run publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
