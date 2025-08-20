@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.18](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.17...@cqfe/sdfe@0.0.18) (2025-08-20)
+
+### Features
+
+- add init template json ([0dae35c](https://github.com/leoDreamer/cqfe/commit/0dae35c9d6a26f4e361f30d0dab0bde2e6355379))
+- init template from github json file ([cc79b34](https://github.com/leoDreamer/cqfe/commit/cc79b3456e9b5330e905644f036ba20927d0b7c5))
+
 ## [0.0.17](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.16...@cqfe/sdfe@0.0.17) (2025-08-18)
 
 ### Features
