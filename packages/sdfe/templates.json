@@ -1,0 +1,26 @@
+{
+  "desktop": {
+    "desc": "vue：桌面端模板",
+    "url": "https://github.com/cqfe/template-vue.git"
+  },
+  "subDesktop": {
+    "desc": "vue：子应用模板(如果是多应用根目录，自动初始化到microApps目录下)",
+    "url": "https://github.com/cqfe/template-sub-vue.git"
+  },
+  "bigScreen": {
+    "desc": "vue: 大屏模板",
+    "url": "https://github.com/cqfe/template-big-screen.git"
+  },
+  "mobile": {
+    "desc": "taro+vue：移动端模板",
+    "url": "https://github.com/cqfe/template-taro.git"
+  },
+  "mobileMonorepo": {
+    "desc": "taro+vue+monorepo：移动端单仓多端模板",
+    "url": "https://github.com/cqfe/template-mobile-monorepo.git"
+  },
+  "subMobile": {
+    "desc": "taro+vue：移动端子应用模板(如果是多应用根目录，自动初始化到microApps目录下)",
+    "url": "https://github.com/cqfe/template-sub-mobile.git"
+  }
+}

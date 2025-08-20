@@ -8,25 +8,10 @@ export const MULTI_REPO_DIR = 'microApps'
 export const IS_MULTI_REPO =
   existsSync(`${PROCESS_CWD}/pnpm-workspace.yaml`) && existsSync(`${PROCESS_CWD}/${MULTI_REPO_DIR}`)
 
+export const GIT_SDFE_URL = 'https://github.com/cqfe/cqfe/tree/main/packages/sdfe'
 export const APP_TEMPLATE_MAP = {
   desktop: {
     desc: 'vue：桌面端模板',
     url: 'https://github.com/cqfe/template-vue.git',
-  },
-  subDesktop: {
-    desc: 'vue：子应用模板(如果是多应用根目录，自动初始化到microApps目录下)',
-    url: 'https://github.com/cqfe/template-sub-vue.git',
-  },
-  bigScreen: {
-    desc: 'vue: 大屏模板',
-    url: 'https://github.com/cqfe/template-big-screen.git',
-  },
-  mobile: {
-    desc: 'taro+vue：移动端模板',
-    url: 'https://github.com/cqfe/template-taro.git',
-  },
-  mobileMonorepo: {
-    desc: 'taro+vue+monorepo：移动端单仓多端模板',
-    url: 'https://github.com/cqfe/template-mobile-monorepo.git',
   },
 } as Record<string, { desc: string; url: string }>
