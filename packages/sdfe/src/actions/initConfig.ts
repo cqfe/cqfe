@@ -8,6 +8,9 @@ export default function () {
     logger.warn('config file already exists')
     return
   }
-  writeFileSync(resolve(PROCESS_CWD, '.sdfe.cjs'), readFileSync(resolve(__dirname, '../../templates/config.tpl')))
+  writeFileSync(
+    resolve(PROCESS_CWD, '.sdfe.cjs'),
+    readFileSync(resolve(__dirname, '../../templates/config.tpl')) as unknown as string,
+  )
   logger.success('config file .sdfe.cjs created')
 }

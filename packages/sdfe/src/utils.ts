@@ -44,11 +44,11 @@ export function getAppOutput(path: string) {
     const match = str.match(regexp)
     if (match?.[1]) {
       outputDir = match[1]
-      logger.success(`通过vite.config.js获取app输出目录: ${outputDir}`)
+      logger.success(`通过vite.config.js获取build输出目录: ${outputDir}`)
       return outputDir
     }
   } catch (_) {
-    logger.warn('未找到vite.config.js文件,使用默认输出目录: dist')
+    logger.warn('未找到vite.config.js文件')
   }
   try {
     // vue2+webpack
@@ -57,11 +57,11 @@ export function getAppOutput(path: string) {
     const matchWebpack = strWebpack.match(regexpWebpack)
     if (matchWebpack?.[1]) {
       outputDir = matchWebpack[1]
-      logger.success(`通过vue.config.js获取app输出目录: ${outputDir}`)
+      logger.success(`通过vue.config.js获取build输出目录: ${outputDir}`)
       return outputDir
     }
   } catch (_) {
-    logger.warn('未找到vue.config.js文件,使用默认输出目录: dist')
+    logger.warn('未找到vue.config.js文件')
   }
   return outputDir
 }

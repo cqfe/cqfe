@@ -8,7 +8,7 @@ import { execSync } from 'child_process'
 import prompts from 'prompts'
 import build from './build'
 import { pick } from 'lodash'
-import { IS_MULTI_REPO } from '../constants'
+import { IS_MONO_REPO } from '../constants'
 
 const ssh = new NodeSSH()
 
@@ -47,7 +47,7 @@ async function sshConnect(server: ServerOption) {
 
 async function deployApp(path: string, server: ServerOption, name?: string) {
   const folderName = path.split('/').pop()
-  const appName = IS_MULTI_REPO ? folderName : name || folderName
+  const appName = IS_MONO_REPO ? folderName : name || folderName
   logger.info(`[Deploy] 开始部署应用: ${appName} 到服务器: ${server.host}${server.path}`)
   const outputDir = getAppOutput(path)
   if (!existsSync(resolve(path, outputDir))) {

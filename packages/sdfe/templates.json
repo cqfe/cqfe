@@ -1,26 +1,26 @@
 {
   "desktop": {
-    "desc": "vue：桌面端模板",
+    "desc": "Web应用：vue3 + vite5 + antdv",
     "url": "https://github.com/cqfe/template-vue.git"
   },
   "subDesktop": {
-    "desc": "vue：子应用模板(如果是多应用根目录，自动初始化到microApps目录下)",
+    "desc": "Web子应用：vue3 + vite5 + antdv(自动初始化到microApps目录下)",
     "url": "https://github.com/cqfe/template-sub-vue.git"
   },
-  "bigScreen": {
-    "desc": "vue: 大屏模板",
-    "url": "https://github.com/cqfe/template-big-screen.git"
-  },
   "mobile": {
-    "desc": "taro+vue：移动端模板",
+    "desc": "移动端应用：taro4 + vue3",
     "url": "https://github.com/cqfe/template-taro.git"
   },
+  "subMobile": {
+    "desc": "移动端子应用：taro4 + vue3(自动初始化到microApps目录下)",
+    "url": "https://github.com/cqfe/template-sub-mobile.git"
+  },
   "mobileMonorepo": {
-    "desc": "taro+vue+monorepo：移动端单仓多端模板",
+    "desc": "移动端单仓多应用：taro4 + vue3 + monorepo",
     "url": "https://github.com/cqfe/template-mobile-monorepo.git"
   },
-  "subMobile": {
-    "desc": "taro+vue：移动端子应用模板(如果是多应用根目录，自动初始化到microApps目录下)",
-    "url": "https://github.com/cqfe/template-sub-mobile.git"
+  "bigScreen": {
+    "desc": "大屏应用: vue3 + vite5 + antdv",
+    "url": "https://github.com/cqfe/template-big-screen.git"
   }
 }
