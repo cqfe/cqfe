@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.19](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.18...@cqfe/sdfe@0.0.19) (2025-08-21)
+
+### Bug Fixes
+
+- monorepo subMobile init error ([6ea81ec](https://github.com/leoDreamer/cqfe/commit/6ea81ec1a0e730a8e9064b6c409517712dc75e06))
+
 ## [0.0.18](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.17...@cqfe/sdfe@0.0.18) (2025-08-20)
 
 ### Features
