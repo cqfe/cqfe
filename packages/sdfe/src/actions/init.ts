@@ -31,7 +31,7 @@ export default async function () {
       message: '请输入项目名称',
     },
   ])
-  if (IS_MONO_REPO && resTemplate.template === 'subDesktop') {
+  if (IS_MONO_REPO && ['subDesktop', 'subMobile'].includes(resTemplate.template)) {
     // clone 子应用
     const resClone = spawnSync('git', ['clone', templates[resTemplate.template].url, resName.name], {
       cwd: resolve(PROCESS_CWD, MULTI_APP_DIR),
