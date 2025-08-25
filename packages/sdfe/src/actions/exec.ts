@@ -6,7 +6,7 @@ import { logger } from '../utils'
 function execCmd(path: string, options: ExecOptions, extra: string[] = []) {
   const appName = path.split('/').pop()
   const { command, namespace = '@iot-os' } = options
-  const res = spawnSync('pnpm', [`--filter=${namespace}/${appName}}`, command, ...extra], {
+  const res = spawnSync('pnpm', [`--filter=${namespace}/${appName}`, command, ...extra], {
     shell: true,
     stdio: 'inherit',
   })
