@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.21](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.20...@cqfe/sdfe@0.0.21) (2025-08-25)
+
+### Bug Fixes
+
+- exec cmd filter name ([809d33c](https://github.com/leoDreamer/cqfe/commit/809d33c3f4f14cb3ee33f7560f8bc1d4df4c77d9))
+
 ## [0.0.20](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.19...@cqfe/sdfe@0.0.20) (2025-08-25)
 
 ### Features
