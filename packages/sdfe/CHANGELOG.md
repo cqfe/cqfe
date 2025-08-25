@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.20](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.19...@cqfe/sdfe@0.0.20) (2025-08-25)
+
+### Features
+
+- exec sub package command ([4db2b8e](https://github.com/leoDreamer/cqfe/commit/4db2b8e718ac02d746e8d07a6f7016cdbd5c7315))
+
 ## [0.0.19](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.18...@cqfe/sdfe@0.0.19) (2025-08-21)
 
 ### Bug Fixes
