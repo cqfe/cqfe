@@ -14,6 +14,7 @@ SD前端研发工具，支持`init`,`dev`,`build`,`deploy`,`generateApi`,支持p
 - 生成API：`sdfe genApi -a app1 -u "https://xxx" -o "./apis/pet.js"`, -u -o 选项为可选项,默认读取配置
 - 开发应用：`sdfe dev -a app1 app2`或者`sdfe dev`选择需要开发的应用
 - 构建应用：`sdfe build -a app1 app2`或者`sdfe build`选择需要构建的应用
+- 执行应用scripts：`sdfe exec -a app1 -c dev:wx -n @iot-os`,-n 默认为`@iot-os`
 - 发布应用：`sdfe deploy -a app1 app2 -n dev`或者`sdfe deploy -n dev`选择需要发布的应用,如果不输入-n配置，默认发布到`deploy`数组第一个环境（密码可在环境变量设置PWD*${server.user}*${server.host.replace(/\./g, '\_')}，也可以手动输入）,target文件夹名字根据是否多应用区分，多应用默认为子应用目录名字，单应用为config.app名字
 - 构建并发布应用：`sdfe deploy -a app1 app2 -n dev -b`或者`sdfe deploy -n dev -b`选择需要发布的应用
 - 初始化配置文件：`sdfe initConfig`，然后修改对应字段

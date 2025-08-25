@@ -37,3 +37,9 @@ export interface BuildOptions {
   copy?: string
   zip?: boolean
 }
+
+export interface ExecOptions {
+  app: string
+  command: string
+  namespace?: string
+}

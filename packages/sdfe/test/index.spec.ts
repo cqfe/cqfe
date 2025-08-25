@@ -20,7 +20,14 @@ function mockMonorepo() {
   writeFileSync(resolve(APP_PATH, 'app_dist', 'index.html'), '<html><body>Hello world</body></html>')
   writeFileSync(
     resolve(APP_PATH, 'package.json'),
-    '{"scripts": { "build": "echo start build","dev": "echo start dev"}}',
+    JSON.stringify({
+      name: '@iot-os/app',
+      scripts: {
+        build: 'echo start build',
+        dev: 'echo start dev',
+        'dev:wx': 'echo start dev:wx',
+      },
+    }),
   )
 }
 // 清除 monorepo 模式下的应用目录和配置文件
@@ -104,6 +111,11 @@ describe('SDFE', () => {
     mockMonorepo()
     const subprocess = execSync('node ./bin/index.js dev -a app')
     expect(subprocess.toString()).toContain('start dev')
+  })
+  it('exec成功', async () => {
+    mockMonorepo()
+    const subprocess = execSync('node ./bin/index.js exec -a app -c dev:wx')
+    expect(subprocess.toString()).toContain('Exec app dev:wx success')
   })
   it('genApi成功', async () => {
     mockConfig()

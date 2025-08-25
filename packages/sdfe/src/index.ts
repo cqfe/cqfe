@@ -6,6 +6,7 @@ import init from './actions/init'
 import deploy from './actions/deploy'
 import build from './actions/build'
 import dev from './actions/dev'
+import exec from './actions/exec'
 import generateApi from './actions/generateApi'
 import initConfig from './actions/initConfig'
 
@@ -45,5 +46,13 @@ program
   .option('-o, --output <output>', 'Output file path')
   .option('-a, --app <app>', 'Application to build')
   .action(generateApi)
+
+program
+  .command('exec')
+  .description('Execute sub package command')
+  .option('-a, --app <app...>', 'Application to run command')
+  .option('-c, --command <command>', 'Command to execute')
+  .option('-n, --namespace <namespace>', 'package.json name‘s namespace, default is @iot-os')
+  .action(exec)
 
 program.parse(process.argv)
