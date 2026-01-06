@@ -3,6 +3,7 @@ import { resolvePath, resolvePathV3 } from './resolve'
 import SwaggerParse from '@readme/openapi-parser'
 import { isEmpty } from 'lodash'
 import { initOutPutFile } from './utils'
+// import { generateApi as swagger2Typescript } from 'swagger-typescript-api'
 
 export interface GenerateApiConfig {
   /**

@@ -1,0 +1,6 @@
+export function <%= name %>(
+<% if (hasPathParams) { %>  path: NonNullable<paths['<%- url %>']['<%= method.toLowerCase() %>']['parameters']['path']>,
+<% } %><% if (hasQueryParams) { %>  query: NonNullable<paths['<%- url %>']['<%= method.toLowerCase() %>']['parameters']['query']>,
+<% } %><% if (hasBody) { %>  body: NonNullable<NonNullable<paths['<%- url %>']['<%= method.toLowerCase() %>']['requestBody']>['content'][<%- hasFormData ? "'multipart/form-data'" : "'application/json'" %>]>,
+<% } %>  options?: any
+): Promise<any>

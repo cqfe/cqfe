@@ -1,0 +1,10 @@
+<%- jsdoc %>
+export function <%= api.name %>(<%- api.params %>) {
+  return service({
+    url: <%- api.url %>,
+    method: '<%= api.method.toLowerCase() %>',<% if (hasQueryParams) { %>
+    params: query,<% } %><% if (hasBody) { %>
+    data: <%= api.data || 'body' %>,<% } %>
+    ...options,
+  })
+}

@@ -4,8 +4,12 @@
  */
 
 import type { Config } from 'jest'
+import { resolve } from 'node:path'
 
 const config: Config = {
+  preset: 'ts-jest/presets/default-esm',
+  testEnvironment: 'node',
+  extensionsToTreatAsEsm: ['.ts'],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -90,7 +94,13 @@ const config: Config = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    nanoid: resolve(__dirname, '../..', './node_modules/nanoid/index.cjs'),
+    'parse-json': resolve(__dirname, '../..', './node_modules/parse-json/index.js'),
+    'supports-color': resolve(__dirname, '../..', './node_modules/supports-color/index.js'),
+    'change-case': resolve(__dirname, '../..', './node_modules/change-case/dist/index.js'),
+    'openapi-typescript': resolve(__dirname, '../..', './node_modules/openapi-typescript/dist/index.cjs'),
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -175,13 +185,18 @@ const config: Config = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  // transform: {
+  //   '^.+\\.tsx?$': [
+  //     'ts-jest',
+  //     {
+  //       useESM: true,
+  //     },
+  //   ],
+  // },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "/node_modules/",
-  //   "\\.pnp\\.[^\\/]+$"
-  // ],
+
+  // transformIgnorePatterns: [],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,

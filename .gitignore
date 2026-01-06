@@ -147,6 +147,7 @@ local-**.json
 bin/
 node_modules/
 apis-**.js
+apis-**.ts
 lib
 local-**.json
 coverage

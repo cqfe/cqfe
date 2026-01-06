@@ -2,7 +2,6 @@ import { pick } from 'lodash'
 import { formatVarName, toCamelCase } from './utils'
 import { tmpRequestDocFn, tmpRequestFn } from './templates'
 import { appendFileSync } from 'fs'
-import { names } from './'
 
 export interface IFieldItem {
   key: string
@@ -103,6 +102,8 @@ function parseBody(obj: Record<string, any>, parent = 'body') {
   return ret
 }
 
+// function genDTs() {}
+
 // resolve request parameters
 export function resolveRequest(parameters: Array<any>) {
   const ret = {
@@ -164,19 +165,24 @@ export function resolveRequest(parameters: Array<any>) {
 }
 
 // generate function name
-export function resolveName(method: string, path: string) {
+export function resolveName(method: string, path: string, existingNames?: Set<string>) {
   // handle when function name is repeated
   let name = `${method}${toCamelCase(path)}`
   while (!/^.+[a-z|A-Z|0-9]$/.test(name)) {
     name = name.slice(0, -1)
   }
   name = formatVarName(name)
-  names.push(name)
-  const nameIndex = names.filter((each) => each === name).length - 1
-  if (nameIndex > 0) {
-    name = `${name}V${nameIndex}`
+  if (!existingNames) return name
+  // 处理重名
+  let finalName = name
+  let index = 1
+  while (existingNames.has(finalName)) {
+    finalName = `${name}V${index}`
+    index++
   }
-  return name
+  existingNames.add(finalName)
+
+  return finalName
 }
 
 // swagger v2 generate request function and write to file

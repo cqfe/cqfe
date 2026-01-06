@@ -1,0 +1,18 @@
+/**
+ * @fileoverview API 函数 JSDoc 文档
+ * @module <%= moduleName %>
+ */
+
+<% apiFunctions.forEach((api) => { %>
+/**
+ * <%= api.description || api.summary || api.name %>
+ *
+ * <%= api.jsdoc.replaceAll('*/', '') %>
+ * @param {Object} [options={}] - axios 请求选项
+ * @param {{[key]: any}} options - axios request options
+ *
+ * @returns {Promise} 返回 Promise
+ * @see {@link <%= api.name %>} - 对应的 API 函数
+ */
+<% }); %>
+

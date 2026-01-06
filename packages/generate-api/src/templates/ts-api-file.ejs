@@ -1,0 +1,15 @@
+<%- jsdoc %>
+export function <%= api.name %>(
+<% if (api.hasPathParams) { %>  path: NonNullable<paths['<%= api.url %>']['<%= api.method.toLowerCase() %>']['parameters']['path']>,
+<% } %><% if (api.hasQueryParams) { %>  query: NonNullable<paths['<%= api.url %>']['<%= api.method.toLowerCase() %>']['parameters']['query']>,
+<% } %><% if (api.hasBody) { %>  body: NonNullable<paths['<%= api.url %>']['<%= api.method.toLowerCase() %>']['requestBody']>,
+<% } %>  options?: any
+): Promise<NonNullable<paths[<%- api.url %>]['<%= api.method.toLowerCase() %>']['responses']['200']['content']['application/json']>> {
+  return service({
+    url: <%- api.url %>,
+    method: '<%= api.method.toLowerCase() %>',<% if (api.hasQueryParams) { %>
+    params: query,<% } %><% if (api.hasBody) { %>
+    data: body,<% } %>
+    ...options,
+  })
+}

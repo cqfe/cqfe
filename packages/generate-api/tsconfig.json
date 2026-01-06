@@ -3,6 +3,12 @@
   "compilerOptions": {
     "outDir": "./lib"
   },
-  "include": ["./src/**/*", "test/uri.spec.ts", "test/case.spec.ts"],
-  "exclude": ["./**/*.spec.ts"]
+  "include": [
+    "./src/**/*",
+    "test/uri.spec.ts",
+    "test/case.spec.ts"
+  ],
+  "exclude": [
+    "./**/*.spec.ts"
+  ]
 }
