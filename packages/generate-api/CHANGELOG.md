@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.20](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.19...@cqfe/generate-api@0.11.20) (2026-01-07)
+
+### Bug Fixes
+
+- sdfe build command bug in windows ([5c3d651](https://github.com/leoDreamer/cqfe/commit/5c3d651b492645e0c366184a33892b718e89cae7))
+
 ## [0.11.19](https://github.com/leoDreamer/cqfe/compare/@cqfe/generate-api@0.11.18...@cqfe/generate-api@0.11.19) (2025-02-11)
 
 ### Bug Fixes
