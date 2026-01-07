@@ -8,7 +8,6 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginVue from "eslint-plugin-vue";
 import parserVue from "vue-eslint-parser";
 import eslintConfigPrettier from "eslint-config-prettier";
-import pluginImport from "eslint-plugin-import"; // 导入import插件
 
 // -------------------------- 核心规则定义 --------------------------
 // 1. 通用质量规则（无格式类规则，交给Prettier）
@@ -54,11 +53,6 @@ const vueCustomRules = {
   "vue/max-properties-per-line": "off",
 };
 
-// 4. Import插件规则（辅助校验文件导入，间接约束命名）
-const importRules = {
-  "import/no-unresolved": ["error", { commonjs: true, amd: true }],
-  "import/named": "error",
-};
 
 // -------------------------- 最终扁平配置 --------------------------
 export default [
@@ -74,14 +68,6 @@ export default [
 
   // 2. 禁用Prettier冲突规则
   eslintConfigPrettier,
-
-  // 3. 注册import插件
-  {
-    plugins: {
-      "import": pluginImport,
-    },
-    rules: importRules,
-  },
 
   // 4. JS基础规则（禁用格式类规则）
   {

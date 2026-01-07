@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/stylelint-config",
-  "version": "1.3.4",
+  "version": "2.0.0",
   "description": "stylelint config used by cqfe team",
   "author": "leoDreamer <leolichuan@qq.com>",
   "homepage": "https://cqfe.leoli.site/",
