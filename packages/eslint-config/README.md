@@ -4,34 +4,22 @@ ESLint config used by cqfe team
 
 ## Usage
 
-### 1. 在 package.json 中配置（适用于支持的编辑器）
-
-```json
-{
-  "eslintConfig": {
-    "extends": "@cqfe/eslint-config"
-  }
-}
-```
-
-### 2. 创建 .eslintrc.js 文件（适用于所有编辑器）
+### {root}/eslint.config.js
 
 ```js
-module.exports = {
-  extends: ['@cqfe/eslint-config'],
-}
+import cqfeEslintConfig from "@cqfe/eslint-config";
+
+export default [
+  ...cqfeEslintConfig.default,
+  {
+    ignores: ["xx"],
+  },
+];
 ```
 
-### 3. 在项目中直接安装和使用
+### 破坏更新
 
-```bash
-npm install -D @cqfe/eslint-config
-```
-
-然后在 .eslintrc.js 中:
-
-```js
-module.exports = {
-  extends: ['@cqfe/eslint-config'],
-}
-```
+- 不支持`.eslintignore`,需要在`eslint.config.js`中配置
+- 不支持嵌套规则，使用eslint 9.x 的扁平规则配置
+- 不支持`extends`
+- 命令不支持 -c 参数,请使用`eslint '**/*.{js,jsx,ts,tsx,vue}' --fix`

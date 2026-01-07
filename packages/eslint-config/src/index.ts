@@ -23,6 +23,7 @@ const commonQualityRules = {
 
 // 2. TS规则（允许any，仅保留合法规则）
 const tsCommonRules = {
+  ...pluginTypeScript.configs.recommended.rules,
   "@typescript-eslint/no-explicit-any": "off", // 允许any类型
   "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   "@typescript-eslint/ban-ts-comment": ["warn", { "ts-ignore": "allow-with-description" }],
@@ -32,7 +33,7 @@ const tsCommonRules = {
   "@typescript-eslint/no-unsafe-call": "off",
   "@typescript-eslint/no-unsafe-member-access": "off",
   "@typescript-eslint/no-unsafe-return": "off",
-  // 移除错误的 file 命名规则（改用工程化方案）
+  "@typescript-eslint/no-require-imports": "off"
 };
 
 // 3. Vue规则（移除所有废弃规则，仅保留新版支持的）
@@ -71,7 +72,10 @@ export default [
 
   // 4. JS基础规则（禁用格式类规则）
   {
-    ...pluginJs.configs.recommended,
+    files: ['**/*.js'],
+    languageOptions: {
+      parserOptions: { sourceType: 'commonjs' }, // 适配 JS 文件
+    },
     rules: {
       ...pluginJs.configs.recommended.rules,
       "quotes": "off",
@@ -82,7 +86,7 @@ export default [
     },
   },
 
-  // 5. 纯TS文件配置（支持any）
+  // 5. 纯TS文件配置
   {
     files: ["**/*.ts"],
     languageOptions: {
@@ -90,7 +94,6 @@ export default [
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
-        project: "./tsconfig.json",
       },
     },
     plugins: {
@@ -130,4 +133,8 @@ export default [
     },
     rules: vueCustomRules,
   },
+  {
+    // Ignore patterns from the root of the monorepo
+    ignores: ['node_modules/**/*', 'dist/**/*', '**/*.test.ts', '**/*.spec.ts'],
+  }
 ];

@@ -88,8 +88,8 @@ export function usePlayer(elementId: string, jsUrl: string, decoderUrl: string) 
 
   // 销毁播放器
   async function destroyPlayer() {
-    controller.value && controller.value.abort()
-    player.value && (await player.value.destroy())
+    controller.value?.abort()
+    await player.value?.destroy()
     controller.value = null
     player.value = null
   }
@@ -99,8 +99,9 @@ export function usePlayer(elementId: string, jsUrl: string, decoderUrl: string) 
     const playerDom = document.getElementById(elementId)
     if (!playerDom) return console.warn('playerDom is null')
     // 如果存在则移除mark层
-    playerDom.querySelector('#video-mark-container') &&
+    if (playerDom.querySelector('#video-mark-container')) {
       playerDom.removeChild(playerDom.querySelector('#video-mark-container') as Element)
+    }
     // 查找video元素获取宽高
     const videoDom = (document.getElementById(elementId) as Element).querySelector('video')
     if (!videoDom) return console.warn('videoDom is null')

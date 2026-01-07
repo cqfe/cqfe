@@ -1,17 +1,18 @@
-import cqfeEslintConfig from '@cqfe/eslint-config';
+import eslintConfig from '@cqfe/eslint-config';
 
 export default [
-  ...cqfeEslintConfig,
+  ...eslintConfig,
   {
     ignores: [
-      'es',
-      'lib',
-      'bin',
-      '*.d.ts',
-      'coverage',
+      '**/es/**/*',
+      '**/lib/**/*',
+      '**/bin/**/*',
+      '**/*.d.ts',
+      '**/coverage/**/*',
       'packages/**/test/*.js',
-      'packages/docs/componentsCode',
-      'packages/docs/public',
+      'packages/docs/.vitepress/**/*',
+      'packages/docs/componentsCode/**/*',
+      'packages/docs/public/**/*',
       'packages/vue-hooks/jessibuca-pro.js',
     ],
   },

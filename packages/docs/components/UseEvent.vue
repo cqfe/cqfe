@@ -9,8 +9,7 @@ import { ref } from 'vue'
 
 const { emitEvent, onEvent } = useEvent()
 const eventMsgRef = ref(0)
-onEvent('clicked', (val) => {
-  console.log('event params: ', val)
+onEvent('clicked', (_val) => {
   eventMsgRef.value += 1
 })
 </script>

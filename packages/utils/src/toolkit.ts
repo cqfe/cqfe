@@ -9,7 +9,7 @@
 export function pick(obj: Record<string, unknown>, keys: string[]) {
   return keys.reduce(
     (acc, key) => {
-      // eslint-disable-next-line no-prototype-builtins
+       
       if (obj.hasOwnProperty(key)) {
         acc[key] = obj[key]
       }
