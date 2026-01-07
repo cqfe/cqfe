@@ -12,7 +12,7 @@ export const getConfig = (namespace: string): DeployOption => {
     buildDir: 'dist',
     username: 'root',
   }
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+   
   const originConfig = require(CONFIG_PATH) as ScpDeployOption
   const config = { ...pick(defaultConfig, ['buildDir']), servers: [] as ServerOption[] } as ScpDeployOption
   if (isObject(config) === false) {
