@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import { appendFileSync } from 'fs'
 import { resolvePath, resolvePathV3 } from './resolve'
 import SwaggerParse from '@readme/openapi-parser'
 import { isEmpty } from 'lodash'
 import { initOutPutFile } from './utils'
 // import { generateApi as swagger2Typescript } from 'swagger-typescript-api'
+=======
+import { appendFileSync } from 'fs';
+import { resolvePath, resolvePathV3 } from './resolve';
+import SwaggerParse from '@readme/openapi-parser';
+import { isEmpty } from 'lodash';
+import { initOutPutFile } from './utils';
+>>>>>>> efc96be (refactor(eslint): 重构规则)
 
 export interface GenerateApiConfig {
   /**
@@ -28,13 +36,13 @@ export interface GenerateApiConfig {
   generateResponseDoc?: boolean
 }
 
-export const names = [] as string[]
+export const names = [] as string[];
 
 async function generateApi(config: GenerateApiConfig) {
   // 重置names
-  names.length = 0
+  names.length = 0;
   // init output file
-  initOutPutFile(config.outPut, config.servicePath)
+  initOutPutFile(config.outPut, config.servicePath);
   // resolve paths from swagger
   const { paths = {}, openapi } = (await SwaggerParse.dereference(config.url, {
     resolve: {
@@ -42,19 +50,21 @@ async function generateApi(config: GenerateApiConfig) {
         timeout: 60000,
       },
     },
-  })) as any
-  if (isEmpty(paths)) return
+  })) as any;
+  if (isEmpty(paths)) return;
   Object.keys(paths).forEach((path: string) => {
     ;(openapi?.charAt(0) === '3' ? resolvePathV3 : resolvePath)(
       path,
       paths[path] as any,
       config.outPut,
       config.generateRequestDoc,
-    )
-  })
-  appendFileSync(config.outPut, '\n')
+    );
+  });
+  appendFileSync(config.outPut, '\n');
 }
 
-export { generateApi }
+export { generateApi };
 
-export default generateApi
+export default generateApi;
+
+
