@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.11](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.10...@cqfe/deploy-scp@0.10.11) (2026-01-07)
+
+### Bug Fixes
+
+- sdfe build command bug in windows ([5c3d651](https://github.com/leoDreamer/cqfe/commit/5c3d651b492645e0c366184a33892b718e89cae7))
+
 ## [0.10.10](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.9...@cqfe/deploy-scp@0.10.10) (2025-01-06)
 
 **Note:** Version bump only for package @cqfe/deploy-scp
