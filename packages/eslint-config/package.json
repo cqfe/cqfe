@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/eslint-config",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "eslint config used by cqfe team",
   "author": "leoDreamer <leolichuan@qq.com>",
   "homepage": "https://cqfe.leoli.site/",
@@ -32,9 +32,9 @@
     "@eslint/js": "^9.39.2",
     "@typescript-eslint/eslint-plugin": "^8.52.0",
     "@typescript-eslint/parser": "^8.52.0",
-    "eslint-plugin-prettier": "^5.2.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-vue": "^10.6.2",

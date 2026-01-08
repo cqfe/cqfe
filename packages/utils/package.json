@@ -1,7 +1,7 @@
 {
   "name": "@cqfe/utils",
   "description": "toolkit for front end developer",
-  "version": "0.14.11",
+  "version": "0.14.12",
   "private": false,
   "publishConfig": {
     "access": "public"
