@@ -11,8 +11,9 @@ import cqfeEslintConfig from '@cqfe/eslint-config'
 
 export default [
   ...cqfeEslintConfig.default,
+  // 默认已忽略 ['**/node_modules/**', '**/dist/**', '**/public/**', '**/lib/**']
   {
-    ignores: ['node_modules/**/*', '**/*.d.ts'],
+    ignores: ['**/node_modules/**', '**/*a.js'],
   },
 ]
 ```
@@ -30,3 +31,4 @@ export default [
 - 配置文件使用`{root}/eslint.config.js`
 - ci脚本命令使用`eslint '**/*.{js,jsx,ts,tsx,vue}' --fix`
 - 迁移忽略配置，从`.eslintignore`文件迁移到`eslint.config.js`中
+- 升级依赖版本 `@cqfe/eslint-config@2.x` `@cqfe/prettier-config@2.0.1` `@cqfe/stylelint-config@2.0.1`
