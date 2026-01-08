@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.24](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.23...@cqfe/sdfe@0.0.24) (2026-01-08)
+
+**Note:** Version bump only for package @cqfe/sdfe
+
 ## [0.0.23](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.22...@cqfe/sdfe@0.0.23) (2026-01-07)
 
 **Note:** Version bump only for package @cqfe/sdfe

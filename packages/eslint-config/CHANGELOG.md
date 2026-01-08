@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@2.0.2...@cqfe/eslint-config@2.0.3) (2026-01-08)
+
+**Note:** Version bump only for package @cqfe/eslint-config
+
 ## [2.0.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@2.0.1...@cqfe/eslint-config@2.0.2) (2026-01-07)
 
 **Note:** Version bump only for package @cqfe/eslint-config

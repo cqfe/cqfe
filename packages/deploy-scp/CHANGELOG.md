@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.12](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.11...@cqfe/deploy-scp@0.10.12) (2026-01-08)
+
+**Note:** Version bump only for package @cqfe/deploy-scp
+
 ## [0.10.11](https://github.com/leoDreamer/cqfe/compare/@cqfe/deploy-scp@0.10.10...@cqfe/deploy-scp@0.10.11) (2026-01-07)
 
 ### Bug Fixes
