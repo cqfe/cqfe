@@ -25,7 +25,7 @@ const commonQualityRules = {
     },
   ],
   semi: ['error', 'never'],
-  'comma-dangle': ['error', 'always-multiline'],
+  'comma-dangle': ['error', 'always'],
   indent: ['error', 2, { SwitchCase: 1 }],
   'max-len': ['warn', { code: 120, tabWidth: 2 }],
 }
