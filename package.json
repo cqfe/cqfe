@@ -51,7 +51,8 @@
   "homepage": "https://cqfe.leoli.site/",
   "lint-staged": {
     "*.{js,vue,jsx,ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
     "*.{json,md}": [
       "prettier -c --write"

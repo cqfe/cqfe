@@ -37,7 +37,7 @@ async function buildApp(path: string, options: BuildOptions, extra: string[] = [
         execSync(`cp -rf ${path}/${output}.zip ${resolve(PROCESS_CWD, copy)}`)
       }
     }
-  } catch (_) {}
+  } catch (_err) {}
   logger.success(`build ${appName} success`)
 }
 

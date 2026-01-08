@@ -9,7 +9,6 @@
 export function pick(obj: Record<string, unknown>, keys: string[]) {
   return keys.reduce(
     (acc, key) => {
-       
       if (obj.hasOwnProperty(key)) {
         acc[key] = obj[key]
       }

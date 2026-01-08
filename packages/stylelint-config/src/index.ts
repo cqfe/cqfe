@@ -27,7 +27,7 @@ const stylelintConfig: Config = {
     },
     {
       files: ['**/*.vue', '**/*.html'],
-       
+
       customSyntax: require('postcss-html')({
         less: 'postcss-less',
         scss: 'postcss-scss',
@@ -35,7 +35,7 @@ const stylelintConfig: Config = {
     },
     {
       files: ['**/*.md'],
-       
+
       customSyntax: require('postcss-markdown')({
         less: 'postcss-less',
         scss: 'postcss-scss',
