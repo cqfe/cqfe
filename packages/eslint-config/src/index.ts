@@ -161,6 +161,6 @@ export default [
   },
   {
     // Ignore patterns from the root of the monorepo
-    ignores: ['node_modules/**/*', 'dist/**/*', '**/*.test.ts', '**/*.spec.ts'],
+    ignores: ['node_modules/**/*', 'dist/**/*', 'public/**/*', 'lib/**/*'],
   },
 ]
