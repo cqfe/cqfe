@@ -28,7 +28,6 @@ export function getConfig(): SdfeOptions {
     return {} as SdfeOptions
   }
 
-   
   let originConfig = require(configPath) as any
   originConfig = (originConfig.default || originConfig) as SdfeOptions // 获取默认导出或整个模块
   return originConfig

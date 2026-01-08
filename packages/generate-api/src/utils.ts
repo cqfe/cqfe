@@ -5,7 +5,7 @@ export function toCamelCase(str: string) {
   return str
     .replace(/{/g, '')
     .replace(/}/g, '')
-    .replace(/[-_/]([a-z|A-Z|0-9])/g, (match, p1) => p1.toUpperCase())
+    .replace(/[-_/]([a-z|A-Z|0-9])/g, (_match, p1) => p1.toUpperCase())
 }
 
 // init output file in disk

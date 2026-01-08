@@ -1,3 +1,2 @@
-export default {
-  extends: ['@cqfe/prettier-config']
-}
+import config from '@cqfe/prettier-config'
+export default config

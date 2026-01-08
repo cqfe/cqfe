@@ -1,4 +1,3 @@
- 
 import { resolve } from 'path'
 import { getConfig, logger } from '../utils'
 import { execSync } from 'child_process'

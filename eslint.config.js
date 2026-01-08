@@ -1,4 +1,4 @@
-import eslintConfig from '@cqfe/eslint-config';
+import eslintConfig from '@cqfe/eslint-config'
 
 export default [
   ...eslintConfig,
@@ -16,4 +16,4 @@ export default [
       'packages/vue-hooks/jessibuca-pro.js',
     ],
   },
-];
+]

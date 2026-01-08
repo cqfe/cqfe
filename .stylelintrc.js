@@ -1,3 +1,3 @@
 export default {
-  extends: ['@cqfe/stylelint-config']
+  extends: ['@cqfe/stylelint-config'],
 }

@@ -7,14 +7,14 @@ ESLint config used by cqfe team
 ### {root}/eslint.config.js
 
 ```js
-import cqfeEslintConfig from "@cqfe/eslint-config";
+import cqfeEslintConfig from '@cqfe/eslint-config'
 
 export default [
   ...cqfeEslintConfig.default,
   {
-    ignores: ["xx"],
+    ignores: ['node_modules/**/*', '**/*.d.ts'],
   },
-];
+]
 ```
 
 ### 破坏更新
