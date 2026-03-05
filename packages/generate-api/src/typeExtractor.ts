@@ -158,28 +158,6 @@ export function extractPathTypes(typesFilePath: string): Map<string, PathTypeInf
                     typeInfo.bodyInterface = getTypeAtPath(requestBodyType, checker, ['content', 'application/json'])
                   }
                 }
-
-                // 提取 responses
-                // const responsesProp = methodType.getProperty('responses')
-                // if (responsesProp) {
-                //   const responsesType = checker.getTypeOfSymbolAtLocation(responsesProp, methodSymbol)
-                //   // 尝试获取 200 响应
-                //   typeInfo.responseType = getTypeAtPath(responsesType, checker, ['200', 'content', 'application/json'])
-                //   // const successResponse = responsesType.getProperty('200')
-                //   // if (successResponse) {
-                //   //   const responseType = checker.getTypeOfSymbolAtLocation(successResponse, methodSymbol)
-                //   //   const contentProp = responseType.getProperty('content')
-                //   //   if (contentProp) {
-                //   //     const contentType = checker.getTypeOfSymbolAtLocation(contentProp, methodSymbol)
-                //   //     const jsonProp = contentType.getProperty('application/json')
-                //   //     if (jsonProp) {
-                //   //       const jsonType = checker.getTypeOfSymbolAtLocation(jsonProp, methodSymbol)
-                //   //       typeInfo.responseType = checker.typeToString(jsonType)
-                //   //     }
-                //   //   }
-                //   // }
-                // }
-
                 pathTypes.set(key, typeInfo)
               }
             }

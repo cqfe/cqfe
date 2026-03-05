@@ -1,0 +1,32 @@
+<% if (isFirst) { %><%= `/**
+ * API 类型定义和函数声明
+ * Auto generate by @cqfe/generate-api, do not modify
+ */
+declare namespace ${namespaceName} {` %>
+<% } %>
+<% if (hasBody) { %>  export interface <%= name %>Body {
+<%- bodyFields %>  }
+<% } %><% if (hasQueryParams) { %>  export interface <%= name %>Query {
+<%- queryFields %>  }
+<% } %><% if (hasPathParams) { %>  export interface <%= name %>Path {
+<%- pathFields %>  }
+<% } %>
+  /**
+   * <%= name %> - <%= description || '' %>
+<% if (hasPathParams) { %>   * @param {<%= namespaceName %>.<%= name %>Path} path - 路径参数
+<% } %><% if (hasQueryParams) { %>   * @param {<%= namespaceName %>.<%= name %>Query} query - 查询参数
+<% } %><% if (hasBody) { %>   * @param {<%= namespaceName %>.<%= name %>Body} body - 请求体数据
+<% } %>   * @param {Object} [options] - Axios 请求配置选项
+   * @returns {Promise<any>} API 响应数据
+   */
+  export function <%= name %>(
+<% if (hasPathParams) { %>    path: <%= name %>Path,
+<% } %><% if (hasQueryParams) { %>    query: <%= name %>Query,
+<% } %><% if (hasBody) { %>    body: <%= name %>Body,
+<% } %>    options?: any
+  ): Promise<any>
+<% if (isLast) { %>
+}
+export = <%= namespaceName %>
+export as namespace <%= namespaceName %>
+<% } %>

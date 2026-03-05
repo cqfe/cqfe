@@ -1,10 +1,14 @@
 <%- jsdoc %>
 export function <%= api.name %>(
-<% if (api.hasPathParams) { %>  path: NonNullable<paths['<%= api.url %>']['<%= api.method.toLowerCase() %>']['parameters']['path']>,
-<% } %><% if (api.hasQueryParams) { %>  query: NonNullable<paths['<%= api.url %>']['<%= api.method.toLowerCase() %>']['parameters']['query']>,
-<% } %><% if (api.hasBody) { %>  body: NonNullable<paths['<%= api.url %>']['<%= api.method.toLowerCase() %>']['requestBody']>,
-<% } %>  options?: any
-): Promise<NonNullable<paths[<%- api.url %>]['<%= api.method.toLowerCase() %>']['responses']['200']['content']['application/json']>> {
+<% if (api.hasPathParams) { %>  /** 路径参数 */
+  path: <%= api.namespaceName %>.<%= api.apiNameLower %>Path,
+<% } %><% if (api.hasQueryParams) { %>  /** 查询参数 */
+  query: <%= api.namespaceName %>.<%= api.apiNameLower %>Query,
+<% } %><% if (api.hasBody) { %>  /** 请求体数据 */
+  body: <%= api.namespaceName %>.<%= api.apiNameLower %>Body,
+<% } %>  /** Axios 请求配置选项 */
+  options?: any,
+): Promise<any> {
   return service({
     url: <%- api.url %>,
     method: '<%= api.method.toLowerCase() %>',<% if (api.hasQueryParams) { %>
