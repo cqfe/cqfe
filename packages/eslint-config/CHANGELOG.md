@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@2.0.6...@cqfe/eslint-config@2.0.7) (2026-03-05)
+
+### Features
+
+- **generate-api:** 重构生成方式 ([3e7c6e7](https://github.com/leoDreamer/cqfe/commit/3e7c6e7ca79744ed837865f2832a31f066a2edcb))
+
 ## [2.0.6](https://github.com/leoDreamer/cqfe/compare/@cqfe/eslint-config@2.0.5...@cqfe/eslint-config@2.0.6) (2026-01-08)
 
 **Note:** Version bump only for package @cqfe/eslint-config
