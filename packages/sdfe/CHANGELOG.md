@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@1.0.1...@cqfe/sdfe@1.0.2) (2026-03-05)
+
+### Bug Fixes
+
+- new generate api function ([69da26e](https://github.com/leoDreamer/cqfe/commit/69da26ee7f640bc174f4849ee5d5a420f1e057b2))
+
 ## [1.0.1](https://github.com/leoDreamer/cqfe/compare/@cqfe/sdfe@0.0.24...@cqfe/sdfe@1.0.1) (2026-03-05)
 
 ### Features
