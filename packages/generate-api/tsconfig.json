@@ -1,7 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "esModuleInterop": true
   },
   "include": ["./src/**/*", "test/uri.spec.ts", "test/case.spec.ts"],
   "exclude": ["./**/*.spec.ts"]

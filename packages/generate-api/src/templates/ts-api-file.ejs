@@ -1,0 +1,19 @@
+<%- jsdoc %>
+export function <%= api.name %>(
+<% if (api.hasPathParams) { %>  /** 路径参数 */
+  path: <%= api.namespaceName %>.<%= api.apiNameLower %>Path,
+<% } %><% if (api.hasQueryParams) { %>  /** 查询参数 */
+  query: <%= api.namespaceName %>.<%= api.apiNameLower %>Query,
+<% } %><% if (api.hasBody) { %>  /** 请求体数据 */
+  body: <%= api.namespaceName %>.<%= api.apiNameLower %>Body,
+<% } %>  /** Axios 请求配置选项 */
+  options?: any,
+): Promise<any> {
+  return service({
+    url: <%- api.url %>,
+    method: '<%= api.method.toLowerCase() %>',<% if (api.hasQueryParams) { %>
+    params: query,<% } %><% if (api.hasBody) { %>
+    data: body,<% } %>
+    ...options,
+  })
+}

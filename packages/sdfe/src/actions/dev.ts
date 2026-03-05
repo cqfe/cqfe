@@ -21,5 +21,5 @@ export default async function (options: BuildOptions, cmd: Record<string, any>) 
   // 需要构建的应用
   const apps = await getApp(options)
   logger.info('dev args', JSON.stringify({ ...options, ...cmd.args }, undefined, 2))
-  apps.forEach((app) => devApp(app, cmd.args))
+  await Promise.all(apps.map((app) => devApp(app, cmd.args)))
 }

@@ -39,6 +39,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-vue": "^10.6.2",
     "globals": "^17.0.0",
+    "minimatch": "^9.0.9",
     "vue-eslint-parser": "^10.2.0"
   },
   "devDependencies": {

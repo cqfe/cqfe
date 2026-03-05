@@ -153,3 +153,4 @@ coverage
 es
 .DS_Store
 packages/docs/.vitepress/cache
+packages/**/test/output

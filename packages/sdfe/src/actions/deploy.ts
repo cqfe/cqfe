@@ -7,7 +7,7 @@ import { NodeSSH } from 'node-ssh'
 import { execSync } from 'child_process'
 import prompts from 'prompts'
 import build from './build'
-import { pick } from 'lodash'
+import { pick } from 'lodash-es'
 import { IS_MONO_REPO } from '../constants'
 
 const ssh = new NodeSSH()

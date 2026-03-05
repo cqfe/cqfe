@@ -2,7 +2,7 @@ import { existsSync, readdirSync } from 'fs'
 import { IS_MONO_REPO, MULTI_APP_DIR, PROCESS_CWD } from './constants'
 import { resolve } from 'path'
 import prompts from 'prompts'
-import { difference, isEmpty } from 'lodash'
+import { difference, isEmpty } from 'lodash-es'
 import { logger } from './utils'
 
 export default async function (options: Record<string, any>): Promise<string[]> {
