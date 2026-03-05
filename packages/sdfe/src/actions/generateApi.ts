@@ -1,5 +1,5 @@
 import { GenerateApiOptions } from '../types'
-import { generateApi } from '@cqfe/generate-api'
+import generateAPIClient from '@cqfe/generate-api'
 import { getConfig, logger } from '../utils'
 
 export default async function (options: GenerateApiOptions) {
@@ -19,10 +19,9 @@ export default async function (options: GenerateApiOptions) {
   const conf = {
     ...apiConfig,
     url,
-    outPut: output,
-    servicePath: apiConfig.service,
+    output,
   }
   logger.info('genApi args', JSON.stringify({ ...conf }, undefined, 2))
-  await generateApi(conf)
+  await generateAPIClient(conf)
   logger.success('Generate api success')
 }
