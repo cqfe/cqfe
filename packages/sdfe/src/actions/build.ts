@@ -5,7 +5,7 @@ import { getAppOutput, getConfig, logger } from '../utils'
 import { resolve } from 'path'
 import { PROCESS_CWD } from '../constants'
 import { existsSync, mkdirSync } from 'fs'
-import { isUndefined } from 'lodash-es'
+import { isUndefined } from 'lodash'
 
 async function buildApp(path: string, options: BuildOptions, extra: string[] = []) {
   const appName = path.split('/').pop()

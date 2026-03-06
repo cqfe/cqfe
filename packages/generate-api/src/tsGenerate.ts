@@ -5,7 +5,7 @@ import * as path from 'path'
 import * as ejs from 'ejs'
 import { fileURLToPath } from 'url'
 import SwaggerParse from '@readme/openapi-parser'
-import { pick } from 'lodash-es'
+import { pick } from 'lodash'
 
 import {
   renderTemplate,
@@ -155,10 +155,11 @@ function generateEsmCode(
   console.log('📝 正在生成 ESM 版本的 API 函数...')
 
   // 使用文件名生成 namespace 名称
+  const typeFileName = path.basename(typesOutputPath, '.d.ts')
   const namespaceName = formatVarName(path.basename(typesOutputPath, '.d.ts'), true)
 
   // 只在文件头部添加一次 @typedef
-  let esmGeneratedCode = `/**\n * API 类型定义和函数声明\n * Auto generate by @cqfe/generate-api, do not modify\n */\n${servicePath}\n`
+  let esmGeneratedCode = `/**\n * API 类型定义和函数声明\n * Auto generate by @cqfe/generate-api, do not modify\n */\n/** @typedef {import('./${typeFileName}.d'）} ${namespaceName} */\n${servicePath}\n`
 
   apiFunctions.forEach((api) => {
     const operation = paths[api.url][api.method.toLowerCase()]
