@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/generate-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Open API toolkits for JS",
   "private": false,
   "publishConfig": {
@@ -35,7 +35,6 @@
     "prebuild": "npx tsc --build --clean",
     "build:lib": "npx tsc --module commonjs --outDir lib",
     "build:es": "npx tsc --module esnext --outDir es",
-    "postbuild": "cp -r src/templates lib/ && cp -r src/templates es/ && node scripts/fix-imports.cjs",
     "build": "npm run build:lib && npm run build:es"
   },
   "dependencies": {

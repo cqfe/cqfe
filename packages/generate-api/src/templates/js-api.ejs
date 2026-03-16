@@ -1,0 +1,10 @@
+<%- jsdoc %>
+export function <%= api.name %>(<%= api.params %>) {
+  return service({
+    url: <%- api.url %>,
+    method: '<%= api.method %>',<% if (api.hasQueryParams) { %>
+    params: query,<% } %><% if (api.hasBody) { %>
+    data: body,<% } %>
+    ...options,
+  })
+}

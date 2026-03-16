@@ -8,6 +8,7 @@ export default [
       '**/lib/**/*',
       '**/bin/**/*',
       '**/*.d.ts',
+      '**/test/output/**/*',
       '**/coverage/**/*',
       'packages/**/test/*.js',
       'packages/docs/.vitepress/**/*',
