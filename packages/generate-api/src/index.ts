@@ -13,7 +13,7 @@ export default async function generateAPIClient(options: GenerateAPIOptions): Pr
     url,
     output,
     generateJs = true,
-    generateTs = true,
+    generateTs = false,
     service = "import service from '@/utils/services'",
   } = options
 
@@ -89,12 +89,11 @@ export default async function generateAPIClient(options: GenerateAPIOptions): Pr
     const tsCode = generateTS(apiFunctions, namespace, service, definitions)
     fs.writeFileSync(tsPath, tsCode, 'utf-8')
     console.log(`✅ TS 文件生成成功：${tsPath}`)
-
-    const dtsPath = path.resolve(outputDir, `${fileBaseName}.d.ts`)
-    const dtsCode = generateDTS(apiFunctions, namespace, definitions)
-    fs.writeFileSync(dtsPath, dtsCode, 'utf-8')
-    console.log(`✅ d.ts 文件生成成功：${dtsPath}`)
   }
+  const dtsPath = path.resolve(outputDir, `${fileBaseName}.d.ts`)
+  const dtsCode = generateDTS(apiFunctions, namespace, definitions)
+  fs.writeFileSync(dtsPath, dtsCode, 'utf-8')
+  console.log(`✅ d.ts 文件生成成功：${dtsPath}`)
 
   console.log('🎉 API 客户端代码生成成功！')
 }

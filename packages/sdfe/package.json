@@ -1,6 +1,6 @@
 {
   "name": "@cqfe/sdfe",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Frontend develop tools for SDFE",
   "private": false,
   "publishConfig": {
@@ -29,7 +29,7 @@
   "author": "leoDreamer <leolichuan@qq.com>",
   "types": "index.d.ts",
   "dependencies": {
-    "@cqfe/generate-api": "^1.0.5",
+    "@cqfe/generate-api": "^1.0.7",
     "commander": "^12.1.0",
     "lodash": "^4.17.23",
     "node-ssh": "^13.2.1",
