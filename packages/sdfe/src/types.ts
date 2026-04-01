@@ -13,9 +13,12 @@ export interface ServerOption {
 
 export interface GenerateApiOptions {
   app: string
+  fileName: string
   url: string
   output: string
-  service: string
+  generateJs?: boolean
+  generateTs?: boolean
+  service?: string
 }
 
 export interface SdfeOptions {

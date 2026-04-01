@@ -1,6 +1,6 @@
 import type { SpecVersion } from './types'
 
-const ILLEGAL_CHARS = /[{}\/<>«»\$\s]/g
+const ILLEGAL_CHARS = /[\.{}\/<>«»\$\s]/g
 
 function segmentToPascalCase(segment: string): string {
   let cleaned = segment.replace(ILLEGAL_CHARS, '')

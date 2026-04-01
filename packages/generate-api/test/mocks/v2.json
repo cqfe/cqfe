@@ -119,7 +119,7 @@
         "security": [{ "petstore_auth": ["write:pets", "read:pets"] }]
       }
     },
-    "/pet/findByStatus": {
+    "/pet2.0/findByStatus": {
       "get": {
         "tags": ["pet"],
         "summary": "Finds Pets by status",
