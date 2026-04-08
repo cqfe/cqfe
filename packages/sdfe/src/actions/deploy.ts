@@ -18,7 +18,7 @@ async function sshConnect(server: ServerOption) {
   // 先检查带端口的变量是否存在，不存在则使用默认的
   let pwd = process.env[`${pwdKey}_${server.port || 22}`] || process.env[pwdKey]
   if (pwd) {
-    execSync(`echo ${pwd} | pbcopy`)
+    execSync(`echo '${pwd}' | pbcopy`)
     logger.success('环境变量读取密码成功')
   } else {
     logger.warn(`未读取到环境变量(PWD_${server.user}_${server.host.replace(/\./g, '_')})密码`)
