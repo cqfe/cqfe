@@ -64,8 +64,9 @@ export function generateTS(
   namespace: string,
   service: string,
   definitions: Record<string, Schema>,
+  fileBaseName: string,
 ): string {
-  let code = `${service}  \n`
+  let code = `${service}  \nimport type { ${namespace} } from './${fileBaseName}.d'\n`
 
   apiFunctions.forEach((api) => {
     const params = buildParams(api, namespace, true)
@@ -160,7 +161,7 @@ function buildParams(api: APIFunctionInfo, namespace: string, isTypeScript: bool
   }
 
   if (isTypeScript) {
-    params.push(`options?: ${namespace}.Obj = {}`)
+    params.push(`options: ${namespace}.Obj = {}`)
   } else {
     params.push('options = {}')
   }

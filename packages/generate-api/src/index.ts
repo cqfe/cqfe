@@ -86,7 +86,7 @@ export default async function generateAPIClient(options: GenerateAPIOptions): Pr
 
   if (generateTs) {
     const tsPath = path.resolve(outputDir, `${fileBaseName}.ts`)
-    const tsCode = generateTS(apiFunctions, namespace, service, definitions)
+    const tsCode = generateTS(apiFunctions, namespace, service, definitions, fileBaseName)
     fs.writeFileSync(tsPath, tsCode, 'utf-8')
     console.log(`✅ TS 文件生成成功：${tsPath}`)
   }
