@@ -99,6 +99,7 @@ export function generateDTS(
   let functionDeclarations = ''
 
   const usedTypes = new Set<string>()
+  const responseDataInterfaces = new Map<string, { name: string; schema: Schema; isArray: boolean }>()
 
   apiFunctions.forEach((api) => {
     const apiNameLower = api.name.charAt(0).toLowerCase() + api.name.slice(1)
@@ -114,13 +115,46 @@ export function generateDTS(
     }
 
     if (api.responseSchema) {
-      const responseType = generateTsType(api.responseSchema, 0, definitions)
+      const dataFieldInfo = extractDataFieldFromResponse(api.responseSchema, definitions)
+      let responseType: string
+
+      if (dataFieldInfo) {
+        const responseDataInterfaceName = `${api.name}ResponseData`
+        responseDataInterfaces.set(api.name, {
+          name: responseDataInterfaceName,
+          schema: dataFieldInfo.schema,
+          isArray: dataFieldInfo.isArray,
+        })
+
+        responseType = generateResponseTypeWithDataField(
+          api.responseSchema,
+          responseDataInterfaceName,
+          dataFieldInfo.isArray,
+          definitions,
+          usedTypes,
+        )
+      } else {
+        responseType = generateTsType(api.responseSchema, 0, definitions)
+      }
+
       functionDeclarations += `  export function ${api.name}(${buildTypeParams(api, namespace, apiNameLower)}): Promise<${responseType}>\n`
     } else {
       functionDeclarations += `  export function ${api.name}(${buildTypeParams(api, namespace, apiNameLower)}): Promise<any>\n`
     }
 
     collectTypeReferences(api.responseSchema, definitions, usedTypes)
+  })
+
+  // 生成 ResponseData interfaces
+  responseDataInterfaces.forEach(({ name, schema, isArray }) => {
+    if (schema && schema.$ref) {
+      const typeName = schema.$ref.split('/').pop()
+      if (typeName) {
+        interfaces += `export type ${name} = ${isArray ? `${sanitizeTypeName(typeName)}[]` : sanitizeTypeName(typeName)}\n`
+      }
+      return
+    }
+    interfaces += generateInterfaceFromSchema(name, schema, definitions) + '\n'
   })
 
   const typeDefinitions = generateTypeDefinitions(usedTypes, definitions)
@@ -281,4 +315,79 @@ function generateTypeDefinitions(usedTypes: Set<string>, definitions: Record<str
   })
 
   return code
+}
+
+function extractDataFieldFromResponse(
+  schema: Schema,
+  definitions: Record<string, Schema>,
+): { schema: Schema; isArray: boolean } | null {
+  if (!schema) return null
+
+  let currentSchema = schema
+
+  if (currentSchema.$ref) {
+    const typeName = currentSchema.$ref.split('/').pop()
+    if (typeName && definitions[typeName]) {
+      currentSchema = definitions[typeName]
+    } else {
+      return null
+    }
+  }
+
+  if (currentSchema.type === 'object' && currentSchema.properties?.data) {
+    const dataSchema = currentSchema.properties.data
+    if (dataSchema.type === 'array' && dataSchema.items) {
+      return { schema: dataSchema.items, isArray: true }
+    }
+    return { schema: dataSchema, isArray: false }
+  }
+
+  return null
+}
+
+function generateResponseTypeWithDataField(
+  schema: Schema,
+  responseDataInterfaceName: string,
+  isArray: boolean,
+  definitions: Record<string, Schema>,
+  usedTypes: Set<string>,
+): string {
+  let responseType = 'any'
+
+  if (schema.$ref) {
+    const typeName = schema.$ref.split('/').pop()
+    if (typeName && definitions[typeName]) {
+      const referencedSchema = definitions[typeName]
+      if (referencedSchema.type === 'object' && referencedSchema.properties) {
+        const nonDataFields = Object.entries(referencedSchema.properties)
+          .filter(([key]) => key !== 'data')
+          .map(([key, val]) => {
+            const isOptional = !referencedSchema.required?.includes(key)
+            const type = generateTsType(val, 0, definitions)
+            return `    ${key}${isOptional ? '?' : ''}: ${type}`
+          })
+          .join('\n')
+
+        const dataField = isArray ? `data?: ${responseDataInterfaceName}[]` : `data?: ${responseDataInterfaceName}`
+
+        responseType = `{\n${nonDataFields ? nonDataFields + '\n' : ''}    ${dataField}\n  }`
+      }
+    }
+  } else if (schema.type === 'object' && schema.properties) {
+    const nonDataFields = Object.entries(schema.properties)
+      .filter(([key]) => key !== 'data')
+      .map(([key, val]) => {
+        const isOptional = !schema.required?.includes(key)
+        const type = generateTsType(val, 0, definitions)
+        return `    ${key}${isOptional ? '?' : ''}: ${type}`
+      })
+      .join('\n')
+
+    const dataField = isArray ? `data?: ${responseDataInterfaceName}[]` : `data?: ${responseDataInterfaceName}`
+
+    responseType = `{\n${nonDataFields ? nonDataFields + '\n' : ''}    ${dataField}\n  }`
+  }
+
+  collectTypeReferences(schema, definitions, usedTypes)
+  return responseType
 }
